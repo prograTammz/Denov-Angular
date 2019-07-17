@@ -1,0 +1,41 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <span class="brand-logo">Denov</span>
+        <span></span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
+<mat-sidenav-container class="sidenav-container" (swiperight)="snav.open()" (swipeleft)="snav.close()">
+    <mat-sidenav #snav mode="over">
+      <mat-nav-list>
+        <mat-divider></mat-divider>
+        <a mat-list-item routerLink="./profile">My profile</a>
+        <a mat-list-item routerLink="./chat" ><div  matBadge="22" matBadgePosition="above after">Messages</div></a>
+        <a mat-list-item routerLink="./posts">My posts</a>
+        <a mat-list-item routerLink="./favs">Favorites</a>
+        <mat-divider></mat-divider>
+        <a mat-list-item routerLink="./news-aritcles">News & Articles</a>
+        <a mat-list-item routerLink= "./advices">Advices</a>
+        <a mat-list-item routerLink="./houses">Properties List</a>
+        <a mat-list-item routerLink="./tours">Tour schedule</a>
+        <a mat-list-item routerLink="./rents">Rent Schedule</a>
+        <a mat-list-item routerLink="./aboutus">AboutUs</a>
+        <a mat-list-item routerLink="./logout">Logout</a>
+
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="page-content">
+      <ng-content></ng-content>
+      
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <nav id="bottomNavBar" role="navigation">
+      <a href="#home" class="home bottomNavElm active"><i class="material-icons">home</i></a>
+      <a href="" class="bottomNavElm"><i class="material-icons">date_range</i></a>
+      <a href="#houselist" class="assetListing bottomNavElm bottomNavElmCenter centerElm"><i class="material-icons">list_alt</i></a>
+      <a href="" class="bottomNavElm"><i class="material-icons">360</i></a>
+      <a href="" class="bottomNavElm"><i class="material-icons">question_answer</i></a>
+  </nav>
