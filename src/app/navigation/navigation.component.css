@@ -4,6 +4,8 @@
     font-size: 40px;
     font-family: Satisfy, 'Times New Roman', Times, serif;
 
+    margin: 6px 0px 0px 10px;
+
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -11,19 +13,31 @@
     -ms-user-select: none;
     user-select: none;
 }
+.brand-logo span{
+    color: red;
+    font-size: 20px;
+}
 mat-toolbar{
     position: fixed;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
     top: 0;
     z-index: 2;
 }
+.action-button{
+    margin-left: auto;
+}
 mat-sidenav{
     position: fixed;
     margin-top: 64px;
     width: 250px;
     z-index: 3;
-    margin-bottom: 56px;
 }
+@media only screen and (max-width: 600px){
+    mat-sidenav{
+        margin-top: 56px;
+    }
+}
+
 .mat-line{
     font-size: 14px !important;
 }
@@ -62,4 +76,35 @@ mat-list-item.disabled{
     justify-content: center;
     margin: 0px 20px;
     text-align: center;
+}
+#bottomNavBar {
+    width: 100vw;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.16);
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.bottomNavElm {
+    color: #575757;
+}
+.bottomNavElm div{
+    font-weight: 100;
+    line-height: 12px;
+    font-size: 12px;
+}
+
+.active {
+    color: #fa824c;
+}
+
+.bottom-nav-logo{
+    font-family: Satisfy;
+    font-weight: bold;
+    font-size: 16px;
 }
