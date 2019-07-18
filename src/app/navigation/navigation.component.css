@@ -34,13 +34,19 @@ mat-sidenav{
 }
 .page-content{
     margin-top: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 @media only screen and (max-width: 600px){
     mat-sidenav{
         margin-top: 56px;
+        margin-bottom: 56px;
     }
     .page-content{
         margin-top: 56px;
+        margin-bottom: 56px;
     }
 }
 
@@ -96,7 +102,7 @@ mat-list-item.disabled{
     z-index: 1;
 }
 
-@media only screen and (min-width: 801px){
+@media only screen and (min-width: 601px){
     #bottomNavBar{
         display: none;
     }
