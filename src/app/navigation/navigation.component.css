@@ -34,7 +34,22 @@ mat-sidenav{
     justify-self: flex-start;
     margin-left: 15px;
 }
-
+mat-list-item.disabled{
+    cursor: not-allowed !important;
+    opacity: 0.5;
+    text-decoration: none;
+}
+.soon-badge, .vsoon-badge{
+    color: white;
+    background-color: red;
+    border-radius: 2px;
+    display: block;
+    padding: 5px;
+    text-transform: uppercase;
+}
+.vsoon-badge{
+    background-color: green;
+}
 .nav-bar--item-gray {
     color: #575757;
 }
