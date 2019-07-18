@@ -32,8 +32,14 @@ mat-sidenav{
     width: 250px;
     z-index: 3;
 }
+.page-content{
+    margin-top: 64px;
+}
 @media only screen and (max-width: 600px){
     mat-sidenav{
+        margin-top: 56px;
+    }
+    .page-content{
         margin-top: 56px;
     }
 }
@@ -88,6 +94,12 @@ mat-list-item.disabled{
     bottom: 0;
     background-color: white;
     z-index: 1;
+}
+
+@media only screen and (min-width: 801px){
+    #bottomNavBar{
+        display: none;
+    }
 }
 
 .bottomNavElm {
