@@ -41,3 +41,53 @@ section p span{
     font-weight: bold;
     font-size: 18px;
 }
+.scrollable-container{
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    
+}
+@media only screen and (min-width: 601px){
+    .scrollable-container{
+        overflow-x: scroll;
+    }
+   
+}
+.scrollable-content{
+    width: 2000px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    padding: 16px 0px;
+}
+.scrollable-element{
+    width: 210px;
+    margin-left: 10px;
+    padding: 15px;
+    display: inline-block;
+}
+
+.scrollable-element--icon{
+    font-size: 80px;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    display: block;
+    background: #cb2d3e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #ef473a, #cb2d3e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #ef473a, #cb2d3e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.scrollable-element--title{
+    font-family: Satisfy;
+    color: #fa824c;
+    margin: 0px 8px;
+    font-size: 20px;
+    text-align: center;
+}
+.scrollable-element--text{
+    text-align: center !important;
+}
