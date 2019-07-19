@@ -20,9 +20,14 @@ import { NavigationComponent } from './navigation/navigation.component';
 import {HammerGestureConfig, HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
 import { HomeComponent } from './page/home/home.component';
 
+declare var Hammer: any;
+
 export class MyHammerConfig extends HammerGestureConfig  {
-  overrides = <any>{
-    'swipe': {velocity: 0.4, threshold: 20} // override default settings
+  buildHammer(element: HTMLElement) {
+    let mc = new Hammer(element, {
+      touchAction: "pan-y"
+    });
+    return mc;
   }
 }
 
@@ -46,7 +51,10 @@ export class MyHammerConfig extends HammerGestureConfig  {
     MatButtonModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [{
+    provide: HAMMER_GESTURE_CONFIG,
+    useClass: MyHammerConfig ,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
