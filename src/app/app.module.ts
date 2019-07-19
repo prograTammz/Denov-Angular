@@ -10,6 +10,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -42,7 +43,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     MatIconModule,
     MatBadgeModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
