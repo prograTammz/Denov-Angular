@@ -8,39 +8,17 @@ import {
     animateChild
  } from '@angular/animations';
  export const FadeAnimation =
-    trigger('routeAnimations', [
-         transition('Home => *', [
-              query(':enter, :leave', 
-                   style({ position: 'fixed', width: '100%' }), 
-                   { optional: true }),        
-              group([
-                   query(':enter',[
-                       style({ opacity: 0 }),
-                       animate('0.2s ease-in-out', 
-                       style({ opacity: 1 }))
-                   ], { optional: true }),
-                   query(':leave', [
-                       style({ opacity: 1}),
-                       animate('0.2s ease-in-out', 
-                       style({ opacity: 0 }))
-                   ], { optional: true }),
-              ])
-         ]),
-         transition('* => Home', [
-              query(':enter, :leave', 
-                   style({ position: 'fixed',  width: '100%' }), 
-                   { optional: true }),
-              group([
-                   query(':enter', [
-                       style({ opacity: 0 }), 
-                       animate('0.2s ease-in-out', 
-                       style({ opacity: 1 }))
-                   ], { optional: true }),
-                   query(':leave', [
-                       style({ opacity: 1 }),
-                       animate('0.2s ease-in-out', 
-                       style({ opacity: 0 }))
-                       ], { optional: true }),
-               ])
-         ]),
- ]);
+ trigger('FadeAnimation', [
+     transition('* => *', [
+       query(
+         ':enter',
+         [style({ opacity: 0 }), animate('0.2s ease-in-out', style({ opacity: 1 }))],
+         { optional: true }
+       ),
+       query(
+         ':leave',
+          [style({ opacity: 1 }), animate('0.2s ease-in-out', style({ opacity: 0 }))],
+         { optional: true }
+       )
+     ])
+   ]);
