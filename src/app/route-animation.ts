@@ -7,7 +7,7 @@ import {
     group,
     animateChild
  } from '@angular/animations';
- export const slideInAnimation =
+ export const FadeAnimation =
     trigger('routeAnimations', [
          transition('Home => *', [
               query(':enter, :leave', 
