@@ -4,6 +4,8 @@ import {RouterModule, Routes, Router} from '@angular/router';
 
 import {HomeComponent} from '../app/page/home/home.component';
 
+import {BankingHomeComponent} from '../app/page/banking/banking-home/banking-home.component';
+
  const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
      {path: 'home', component: HomeComponent, data:{routeName:"Denov.Co"}},
@@ -12,7 +14,7 @@ import {HomeComponent} from '../app/page/home/home.component';
 //     {path: 'market', component: , data:{routeName:"Market"}},
 //     {path: 'dcurrency', component: , data:{routeName:"D-Currency"}},
 //     {path: 'eservices', component: , data:{routeName:"E-services"}},
-//     {path: 'bank', component: , data:{routeName:"Bank"}},
+    {path: 'banking', component: BankingHomeComponent, data:{routeName:"Banking"}},
 //     {path: '', component: , data:{routeName:"Denov.Co"}},
 //     {path: '**', component:, data:{routeName:"Erroooor"}}
  ]
