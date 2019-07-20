@@ -1,7 +1,7 @@
 <mat-toolbar>
   <mat-toolbar-row>
-      <button mat-icon-button (click)="snav.toggle()" aria-label="Side Menu toggle"><mat-icon [svgIcon]="snav.opened ? 'close' : 'menu'"  role="button"></mat-icon></button>
-    
+      <button mat-icon-button *ngIf="this.router.url == '/home'" (click)="snav.toggle()" aria-label="Side Menu toggle"><mat-icon [svgIcon]="snav.opened ? 'close' : 'menu'"  role="button"></mat-icon></button>
+      <button mat-icon-button *ngIf="this.router.url != '/home'"(click)="goBack()" aria-label="Return Back"><mat-icon role="button">keyboard_backspace</mat-icon></button>
     <span class="brand-logo">Denov.Co<span>beta</span></span>
     <button mat-icon-button [matMenuTriggerFor]="menu" class="action-button" aria-label="myDenov account menu">
             <mat-icon>account_circle</mat-icon>
@@ -197,7 +197,7 @@
 </mat-sidenav-container>
 
 <nav id="bottomNavBar" role="navigation">
-    <button mat-button class="bottomNavElm active"><mat-icon>account_balance</mat-icon><div>Bank</div></button>
+    <button mat-button routerLink="./banking" class="bottomNavElm active"><mat-icon>account_balance</mat-icon><div>Bank</div></button>
     <button mat-button class="bottomNavElm"><span class="bottom-nav-logo">E</span><div>E-services</div></button>
     <button mat-button class="bottomNavElm"><mat-icon>shopping_basket</mat-icon>  <div>Market</div></button>
     <button mat-button class="bottomNavElm"><mat-icon>local_shipping</mat-icon><div>Trucking</div></button>
