@@ -14,7 +14,7 @@ import { NavigationEnd,Router,ActivatedRoute,RouterEvent } from '@angular/router
 export class NavigationComponent implements OnInit {
 
   public title: string;
-  constructor(private sanitizer: DomSanitizer,private matIconRegistry: MatIconRegistry,private router: Router,private location: Location, private activatedRoute: ActivatedRoute) {
+  constructor(private sanitizer: DomSanitizer,private matIconRegistry: MatIconRegistry,public router: Router,private location: Location, private activatedRoute: ActivatedRoute) {
     this.matIconRegistry.addSvgIcon('menu', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/menu.svg'));
     this.matIconRegistry.addSvgIcon('close', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/close.svg'));
   }
