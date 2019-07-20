@@ -8,13 +8,13 @@ import {BankingHomeComponent} from '../app/page/banking/banking-home/banking-hom
 
  const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
-     {path: 'home', component: HomeComponent, data:{routeName:"Denov.Co"}},
+     {path: 'home', component: HomeComponent, data:{routeName:"Denov.Co",animation: 'Home'}},
 //     {path: 'commingSoon', component: , data:{routeName:"Denov.Co"}},
 //     {path: 'trucking', component: , data:{routeName:"Trucking"}},
 //     {path: 'market', component: , data:{routeName:"Market"}},
 //     {path: 'dcurrency', component: , data:{routeName:"D-Currency"}},
 //     {path: 'eservices', component: , data:{routeName:"E-services"}},
-    {path: 'banking', component: BankingHomeComponent, data:{routeName:"Banking"}},
+    {path: 'banking', component: BankingHomeComponent, data:{routeName:"Banking",animation: '*'}},
 //     {path: '', component: , data:{routeName:"Denov.Co"}},
 //     {path: '**', component:, data:{routeName:"Erroooor"}}
  ]
