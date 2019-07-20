@@ -5,16 +5,21 @@ import {RouterModule, Routes, Router} from '@angular/router';
 import {HomeComponent} from '../app/page/home/home.component';
 
 import {BankingHomeComponent} from '../app/page/banking/banking-home/banking-home.component';
+import {BankingTermsComponent} from '../app/page/banking/banking-terms/banking-terms.component';
 
  const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
-     {path: 'home', component: HomeComponent, data:{routeName:"Denov.Co",animation: 'Home'}},
+     {path: 'home', component: HomeComponent},
 //     {path: 'commingSoon', component: , data:{routeName:"Denov.Co"}},
 //     {path: 'trucking', component: , data:{routeName:"Trucking"}},
 //     {path: 'market', component: , data:{routeName:"Market"}},
 //     {path: 'dcurrency', component: , data:{routeName:"D-Currency"}},
 //     {path: 'eservices', component: , data:{routeName:"E-services"}},
-    {path: 'banking', component: BankingHomeComponent, data:{routeName:"Banking",animation: '*'}},
+    {path: 'banking', children:[
+      {path: '', redirectTo: 'overview', pathMatch: 'full'},
+      {path:'overview', component:BankingHomeComponent},
+      {path:'terms-conditions', component:BankingTermsComponent}
+    ]},
 //     {path: '', component: , data:{routeName:"Denov.Co"}},
 //     {path: '**', component:, data:{routeName:"Erroooor"}}
  ]
