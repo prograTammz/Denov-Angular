@@ -21,6 +21,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import {HammerGestureConfig, HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
 import { HomeComponent } from './page/home/home.component';
 import { BankingHomeComponent } from './page/banking/banking-home/banking-home.component';
+import { BankingTermsComponent } from './page/banking/banking-terms/banking-terms.component';
 
 declare var Hammer: any;
 
@@ -38,7 +39,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     AppComponent,
     NavigationComponent,
     HomeComponent,
-    BankingHomeComponent
+    BankingHomeComponent,
+    BankingTermsComponent
   ],
   imports: [
     BrowserModule,
