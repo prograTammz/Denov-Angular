@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
+import {AppRoutingModule} from './app-routing.module';
 
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -43,6 +44,7 @@ export class MyHammerConfig extends HammerGestureConfig  {
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    AppRoutingModule,
     MatSidenavModule,
     MatToolbarModule,
     MatDividerModule,
