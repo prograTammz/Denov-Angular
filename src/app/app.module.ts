@@ -26,6 +26,8 @@ import { BankingHomeComponent } from './page/banking/banking-home/banking-home.c
 import { BankingTermsComponent } from './page/banking/banking-terms/banking-terms.component';
 import { BankingFeesComponent } from './page/banking/banking-fees/banking-fees.component';
 import { BankingPlansComponent } from './page/banking/banking-plans/banking-plans.component';
+import { BankingAccountComponent } from './page/banking/banking-account/banking-account.component';
+import { BankingLoanComponent } from './page/banking/banking-loan/banking-loan.component';
 
 declare var Hammer: any;
 
@@ -46,7 +48,9 @@ export class MyHammerConfig extends HammerGestureConfig  {
     BankingHomeComponent,
     BankingTermsComponent,
     BankingFeesComponent,
-    BankingPlansComponent
+    BankingPlansComponent,
+    BankingAccountComponent,
+    BankingLoanComponent
   ],
   imports: [
     BrowserModule,
