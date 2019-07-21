@@ -4,8 +4,9 @@ import {RouterModule, Routes, Router} from '@angular/router';
 
 import {HomeComponent} from '../app/page/home/home.component';
 
-import {BankingHomeComponent} from '../app/page/banking/banking-home/banking-home.component';
-import {BankingTermsComponent} from '../app/page/banking/banking-terms/banking-terms.component';
+import {BankingHomeComponent}           from '../app/page/banking/banking-home/banking-home.component';
+import {BankingTermsComponent}          from '../app/page/banking/banking-terms/banking-terms.component';
+import {BankingWiretransferComponent}   from '../app/page/banking/banking-wiretransfer/banking-wiretransfer.component';
 
  const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -18,7 +19,8 @@ import {BankingTermsComponent} from '../app/page/banking/banking-terms/banking-t
     {path: 'banking', children:[
       {path: '', redirectTo: 'overview', pathMatch: 'full'},
       {path:'overview', component:BankingHomeComponent},
-      {path:'terms-conditions', component:BankingTermsComponent}
+      {path:'terms-conditions', component:BankingTermsComponent},
+      {path:'wire-transfer',component:BankingWiretransferComponent}
     ]},
 //     {path: '', component: , data:{routeName:"Denov.Co"}},
 //     {path: '**', component:, data:{routeName:"Erroooor"}}

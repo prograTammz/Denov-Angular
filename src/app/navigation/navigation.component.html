@@ -88,10 +88,10 @@
 
       <mat-list>
         <h3 mat-subheader>Denov Bank</h3>
-        <mat-list-item>
+        <mat-list-item [routerLink]="['/banking','plans']">
           <mat-icon mat-list-icon>
             assignment</mat-icon>
-          <h4 mat-line>Saving & Loan Plans</h4>
+          <h4 mat-line >Saving & Loan Plans</h4>
         </mat-list-item>
 
         <mat-list-item>
@@ -105,15 +105,15 @@
           <span class="soon-badge">soon</span>
         </mat-list-item>
 
-        <mat-list-item class="disabled" disableRipple>
+        <mat-list-item class="disabled" disableRipple [routerLink]="['/banking','wire-transfer']">
           <mat-icon mat-list-icon>
             input</mat-icon>
           <h4 mat-line>Wire Tranfer</h4>
           <span class="soon-badge">soon</span>
         </mat-list-item>
 
-        <mat-list-item>
-          <mat-icon mat-list-icon>
+        <mat-list-item [routerLink]="['/banking','terms-conditions']">
+          <mat-icon mat-list-icon >
             list_alt</mat-icon>
           <h4 mat-line>Banking Terms & Condition</h4>
         </mat-list-item>
