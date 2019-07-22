@@ -30,7 +30,7 @@
 
       <mat-list>
 
-        <mat-list-item>
+        <mat-list-item  [routerLink]="['/home','']">
           <mat-icon mat-list-icon>home</mat-icon>
           <h4 mat-line>Home</h4>
         </mat-list-item>
@@ -86,9 +86,9 @@
       <mat-divider></mat-divider>
 
 
-      <mat-list>
+      <mat-list >
         <h3 mat-subheader>Denov Bank</h3>
-        <mat-list-item [routerLink]="['/banking','plans']">
+        <mat-list-item [routerLink]="['/banking','plans']" >
           <mat-icon mat-list-icon>
             assignment</mat-icon>
           <h4 mat-line >Saving & Loan Plans</h4>
