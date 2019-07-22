@@ -1,0 +1,14 @@
+h3{
+    color: #fa824c;
+    font-size: 24px;
+    font-family: Satisfy;
+}
+mat-divider{
+    margin: 5px 0px;
+}
+p,i{
+    color: dimgray
+}
+i{
+    font-size: 12px;
+}
