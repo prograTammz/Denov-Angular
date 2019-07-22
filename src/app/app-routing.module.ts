@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule, Routes, Router} from '@angular/router';
 
-import {HomeComponent} from '../app/page/home/home.component';
+import {HomeComponent} from './page/home/home.component';
 
-import {BankingHomeComponent}           from '../app/page/banking/banking-home/banking-home.component';
-import {BankingTermsComponent}          from '../app/page/banking/banking-terms/banking-terms.component';
-import {BankingWiretransferComponent}   from '../app/page/banking/banking-wiretransfer/banking-wiretransfer.component';
+import {BankingHomeComponent}           from './page/banking/banking-home/banking-home.component';
+import {BankingTermsComponent}          from './page/banking/banking-terms/banking-terms.component';
+import {BankingWiretransferComponent}   from './page/banking/banking-wiretransfer/banking-wiretransfer.component';
+import { BankingPlansComponent }        from './page/banking/banking-plans/banking-plans.component';
 
  const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -20,7 +21,8 @@ import {BankingWiretransferComponent}   from '../app/page/banking/banking-wiretr
       {path: '', redirectTo: 'overview', pathMatch: 'full'},
       {path:'overview', component:BankingHomeComponent},
       {path:'terms-conditions', component:BankingTermsComponent},
-      {path:'wire-transfer',component:BankingWiretransferComponent}
+      {path:'wire-transfer',component:BankingWiretransferComponent},
+      {path: 'plans',component:BankingPlansComponent}
     ]},
 //     {path: '', component: , data:{routeName:"Denov.Co"}},
 //     {path: '**', component:, data:{routeName:"Erroooor"}}
