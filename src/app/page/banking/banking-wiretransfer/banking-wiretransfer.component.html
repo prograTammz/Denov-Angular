@@ -4,16 +4,16 @@
             <h4>Send money</h4>
             <form [formGroup]="wireTransfer" (ngSubmit)="onSubmit()" class="row">
                     <mat-form-field class="col-6 col-es-4">
-                        <input matInput type="text" placeholder="Reciever first name" formControlName="firstName">
+                        <input matInput type="text" placeholder="Reciever first name" formControlName="firstName" required>
                     </mat-form-field>
                     <mat-form-field class="col-6 col-es-4"> 
-                        <input matInput type="text" placeholder="Reciever second Name" formControlName="lastName">
+                        <input matInput type="text" placeholder="Reciever second Name" formControlName="lastName" required>
                     </mat-form-field>
                     <mat-form-field class="col-12">
                         <span matPrefix>$ &nbsp;</span>
-                        <input matInput type="number" placeholder="Amount sent" formControlName="amount">
+                        <input matInput type="number" placeholder="Amount sent" formControlName="amount" required>
                     </mat-form-field>
-                    <button mat-stroked-button type="submit">Wire Transfer !</button>
+                    <button mat-stroked-button type="submit" [disabled]="!wireTransfer.valid">Wire Transfer !</button>
                 </form>
     </mat-card-content>
 </mat-card>

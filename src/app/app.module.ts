@@ -17,6 +17,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -76,7 +77,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     MatTabsModule,
     MatInputModule,
     MatGridListModule,
-    MatTableModule
+    MatTableModule,
+    MatSnackBarModule
   ],
   providers: [{
     provide: HAMMER_GESTURE_CONFIG,
