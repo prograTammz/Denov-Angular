@@ -1,1 +1,25 @@
-<p>banking-wiretransfer works!</p>
+<h3>Denov Wire Transfer !</h3>
+<mat-card>
+    <mat-card-content>
+            <h4>Send money</h4>
+            <form [formGroup]="wireTransfer" (ngSubmit)="onSubmit()" class="row">
+                    <mat-form-field class="col-6 col-es-4">
+                        <input matInput type="text" placeholder="Reciever first name" formControlName="firstName">
+                    </mat-form-field>
+                    <mat-form-field class="col-6 col-es-4"> 
+                        <input matInput type="text" placeholder="Reciever second Name" formControlName="lastName">
+                    </mat-form-field>
+                    <mat-form-field class="col-12">
+                        <span matPrefix>$ &nbsp;</span>
+                        <input matInput type="number" placeholder="Amount sent" formControlName="amount">
+                    </mat-form-field>
+                    <button mat-stroked-button type="submit">Wire Transfer !</button>
+                </form>
+    </mat-card-content>
+</mat-card>
+
+<mat-card>
+        <mat-card-content>
+            <h4>Transactions</h4>
+        </mat-card-content>
+</mat-card>
