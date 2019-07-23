@@ -14,7 +14,7 @@
     saving targets, we have multiple interest rates, and multiple durations to choose between them,
     and even special packages with less fees than regular ones.
 <p>
-<button mat-raised-button>Loan & Saving Plans</button>
+<button mat-raised-button [routerLink]="['/banking','plans']">Loan & Saving Plans</button>
 </p>
 <h4>Opening an account</h4>
 <p>
@@ -38,4 +38,4 @@
     and any where, even if you are out city, and more even if you have no connection on your phone, it will be
     done automatically once your phone is back online.
 </p>
-<button mat-raised-button>Wire transfer</button>
+<button mat-raised-button [routerLink]="['/banking','wire-transfer']">Wire transfer</button>
