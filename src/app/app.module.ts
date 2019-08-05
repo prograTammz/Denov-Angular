@@ -19,6 +19,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -35,6 +36,7 @@ import { BankingPlansComponent } from './page/banking/banking-plans/banking-plan
 import { BankingAccountComponent } from './page/banking/banking-account/banking-account.component';
 import { BankingLoanComponent } from './page/banking/banking-loan/banking-loan.component';
 import { BankingWiretransferComponent } from './page/banking/banking-wiretransfer/banking-wiretransfer.component';
+import { LoginComponent } from './components/login/login.component';
 
 declare var Hammer: any;
 
@@ -58,7 +60,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     BankingPlansComponent,
     BankingAccountComponent,
     BankingLoanComponent,
-    BankingWiretransferComponent
+    BankingWiretransferComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -80,12 +83,14 @@ export class MyHammerConfig extends HammerGestureConfig  {
     MatGridListModule,
     MatTableModule,
     MatSnackBarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDialogModule
   ],
   providers: [{
     provide: HAMMER_GESTURE_CONFIG,
     useClass: MyHammerConfig ,
   }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[LoginComponent]
 })
 export class AppModule { }
