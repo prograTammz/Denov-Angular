@@ -6,7 +6,9 @@ import {DomSanitizer} from '@angular/platform-browser';
 import {Location} from '@angular/common';
 import { NavigationEnd,Router,ActivatedRoute,RouterEvent } from '@angular/router';
 import {MatSidenav} from '@angular/material/sidenav'
-import { Observable } from 'rxjs';
+import { Observable, fromEventPattern } from 'rxjs';
+
+import {LoginDialogService} from '../services/dialogs/login-dialog.service';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -18,7 +20,7 @@ export class NavigationComponent implements OnInit {
   private navigationEnd: Observable<RouterEvent>;
   public title: string;
 
-  constructor(private sanitizer: DomSanitizer,private matIconRegistry: MatIconRegistry,public router: Router,private location: Location, private activatedRoute: ActivatedRoute) {
+  constructor(private loginDialog: LoginDialogService,private sanitizer: DomSanitizer,private matIconRegistry: MatIconRegistry,public router: Router,private location: Location, private activatedRoute: ActivatedRoute) {
     this.matIconRegistry.addSvgIcon('menu', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/menu.svg'));
     this.matIconRegistry.addSvgIcon('close', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/close.svg'));
   }
@@ -33,5 +35,8 @@ export class NavigationComponent implements OnInit {
 
   goBack():void{
     this.location.back();
+  }
+  openLoginDialog(){
+    this.loginDialog.openModal();
   }
 }

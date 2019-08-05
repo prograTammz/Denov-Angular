@@ -7,11 +7,11 @@
             <mat-icon>account_circle</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-            <button mat-menu-item disabled>
+            <button mat-menu-item >
               <mat-icon>person_add</mat-icon>
               <span>Sign Up</span>
             </button>
-            <button mat-menu-item disabled>
+            <button mat-menu-item (click)="openLoginDialog()">
                 <mat-icon>launch</mat-icon>
                 <span>Sign In</span>
             </button>
