@@ -45,4 +45,7 @@ export class NavigationComponent implements OnInit {
   openLoginDialog(){
     this.loginDialog.openModal();
   }
+  logout(){
+    this.auth.logout();
+  }
 }
