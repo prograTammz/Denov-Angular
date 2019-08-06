@@ -169,5 +169,5 @@ snack-bar-container{
 }
 
 .mat-progress-spinner circle, .mat-spinner circle {
-    stroke: #fa824c;
+    stroke: red;
     }
