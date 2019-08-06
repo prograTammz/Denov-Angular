@@ -2,36 +2,37 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { User } from 'src/app/models/user.model';
+import {UserStorageService} from '../storage/user.service';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private userSubject: BehaviorSubject<any>;
   private isAuthSubject: BehaviorSubject<boolean>;
-  public User: Observable<any>;
   public isAuth: Observable<boolean>;
-  constructor(private http: HttpClient) {
-    this.userSubject = new BehaviorSubject<any>(JSON.parse(localStorage.getItem('user')));
+  constructor(private userStorage: UserStorageService,private http: HttpClient) {
+   
     this.isAuthSubject = new BehaviorSubject<boolean>(Boolean(localStorage.getItem('isAuth')));
-    this.User = this.userSubject.asObservable();
     this.isAuth = this.isAuthSubject.asObservable();
   }
 
   public login(email: string, password: string){
     return this.http.post<any>('http://localhost:3000/api/auth',{email,password})
-          .pipe(map(user=>{
-            if(user.token){
-              let tempUser = {
-                email: email,
-                token: user.token
-              }
-              localStorage.setItem('token',JSON.stringify(tempUser));
-              this.userSubject.next(tempUser);
+          .pipe(map(data=>{
+            if(data.user){
+              let user: User = data.user;
+              this.userStorage.storeUser(user);
               localStorage.setItem('isAuth','true');
               this.isAuthSubject.next(true);
             }
-            return user;
+            return data;
           }))
+  }
+  public logout(): void{
+    this.userStorage.removeUser();
+    localStorage.setItem('isAuth','false');
+    this.isAuthSubject.next(false);
+    
   }
 }
