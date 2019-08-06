@@ -15,10 +15,15 @@
                 <mat-icon>launch</mat-icon>
                 <span>Sign In</span>
             </button>
-            <button mat-menu-item disabled *ngIf="isAuth">
+            <button mat-menu-item  *ngIf="isAuth">
+              <mat-icon>perm_identity</mat-icon>
+              <span>MyDenov</span>
+            </button>
+            <button mat-menu-item (click)="logout()" *ngIf="isAuth">
               <mat-icon>exit_to_app</mat-icon>
               <span>Log Out</span>
             </button>
+            
           </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>
@@ -35,11 +40,6 @@
           <h4 mat-line>Home</h4>
         </mat-list-item>
 
-        <mat-list-item class="disabled" disableRipple>
-          <mat-icon mat-list-icon>perm_identity</mat-icon>
-          <h4 mat-line >myDenov</h4>
-          <span class="soon-badge">soon</span>
-        </mat-list-item>
         <mat-list-item class="disabled" disableRipple>
           <mat-icon mat-list-icon>store</mat-icon>
           <h4 mat-line>Purchase D-Currency</h4>
