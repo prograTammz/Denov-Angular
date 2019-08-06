@@ -1,5 +1,5 @@
 <h2>Login</h2>
-<form [formGroup]="login" (ngSubmit)="onSubmit()" class="row">
+<form *ngIf="!isLoading"[formGroup]="login" (ngSubmit)="onSubmit()" class="row">
     <mat-form-field class="col-12">
         <input matInput type="email" placeholder="Your E-mail" formControlName="email" required [email] ="true">
     </mat-form-field>
@@ -8,3 +8,6 @@
     </mat-form-field>
     <button mat-stroked-button type="submit" [disabled]="!login.valid">Login</button>
 </form>
+<div *ngIf="isLoading">
+    <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+</div>
