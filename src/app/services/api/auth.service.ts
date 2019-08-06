@@ -9,7 +9,7 @@ import {UserStorageService} from '../storage/user.service';
 })
 export class AuthService {
 
-  private isAuthSubject: BehaviorSubject<boolean>;
+  public isAuthSubject: BehaviorSubject<boolean>;
   public isAuth: Observable<boolean>;
   constructor(private userStorage: UserStorageService,private http: HttpClient) {
    
