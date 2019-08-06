@@ -167,3 +167,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 snack-bar-container{
     margin-bottom: 64px !important;
 }
+
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #fa824c;
+    }
