@@ -21,4 +21,7 @@ export class UserStorageService {
     localStorage.removeItem('user');
     this.userSubject.next(null);
   }
+  public getUser(): User{
+    return JSON.parse(localStorage.getItem('user'))
+  }
 }
