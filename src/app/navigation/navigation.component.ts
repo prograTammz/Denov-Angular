@@ -8,6 +8,7 @@ import { NavigationEnd,Router,ActivatedRoute,RouterEvent } from '@angular/router
 import {MatSidenav} from '@angular/material/sidenav'
 import { Observable, fromEventPattern } from 'rxjs';
 
+import {AuthService} from '../services/api/auth.service';
 import {LoginDialogService} from '../services/dialogs/login-dialog.service';
 @Component({
   selector: 'app-navigation',
@@ -19,10 +20,12 @@ export class NavigationComponent implements OnInit {
   @ViewChild(MatSidenav, {static: false}) private sideNav: MatSidenav;
   private navigationEnd: Observable<RouterEvent>;
   public title: string;
+  private isAuth;
 
-  constructor(private loginDialog: LoginDialogService,private sanitizer: DomSanitizer,private matIconRegistry: MatIconRegistry,public router: Router,private location: Location, private activatedRoute: ActivatedRoute) {
+  constructor(private auth: AuthService,private loginDialog: LoginDialogService,private sanitizer: DomSanitizer,private matIconRegistry: MatIconRegistry,public router: Router,private location: Location, private activatedRoute: ActivatedRoute) {
     this.matIconRegistry.addSvgIcon('menu', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/menu.svg'));
     this.matIconRegistry.addSvgIcon('close', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/close.svg'));
+    this.isAuth = false;
   }
 
   ngOnInit() {
@@ -30,6 +33,9 @@ export class NavigationComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         this.sideNav.close();
       }
+    });
+    this.auth.isAuth.subscribe(auth=>{
+      this.isAuth = auth;
     });
   }
 
