@@ -27,8 +27,11 @@
     </mat-form-field>
     <mat-form-field appearance="outline" class="col-12">
             <mat-label>Phone number</mat-label>
-            <input matInput type="tel" placeholder="Phone number" formControlName="phone" required>
+            <input matInput type="tel" placeholder="Phone number" formControlName="phoneNumber" required>
             <mat-error>Characters not allowed.</mat-error>
         </mat-form-field>
-    <button mat-flat-button class="col-4 col-es-4" type="submit" [disabled]="!register.valid">Register</button>
+    <button mat-flat-button class="col-4 col-es-4" type="submit" [disabled]="!register.valid">
+        <span *ngIf="!isLoading">Register</span>
+        <mat-progress-spinner diameter= "20" mode="indeterminate" *ngIf="isLoading"></mat-progress-spinner>
+    </button>
 </form>

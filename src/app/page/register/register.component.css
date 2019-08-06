@@ -9,3 +9,6 @@ button{
     font-family: roboto;
     color: white;
 }
+.mat-progress-spinner{
+    margin: auto;
+}

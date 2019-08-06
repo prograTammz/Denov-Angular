@@ -15,11 +15,13 @@ export class RegisterComponent implements OnInit {
     email:  new FormControl('',Validators.compose([Validators.required,Validators.email])),
     password:  new FormControl('',Validators.compose([Validators.required,Validators.minLength(8)])),
     repassword:  new FormControl('',Validators.compose([Validators.required,Validators.minLength(8)])),
-    phone:  new FormControl('',Validators.compose([Validators.required,Validators.pattern("^[0-9]*$")])),
+    phoneNumber:  new FormControl('',Validators.compose([Validators.required,Validators.pattern("^[0-9]*$")])),
   })
   passError: boolean;
+  isLoading: boolean;
   constructor(private _snackBar: MatSnackBar) { 
     this.passError = false;
+    this.isLoading = false;
   }
 
   ngOnInit() {
@@ -32,7 +34,9 @@ export class RegisterComponent implements OnInit {
       this.passError=true;
       return
     }
+    delete this.register.value.repassword;
     console.log(this.register.value)
+    this.isLoading = true;
     this._snackBar.open("Registerd", "Close", {duration:2000});
   }
 
