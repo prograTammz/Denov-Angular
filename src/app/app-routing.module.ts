@@ -9,9 +9,10 @@ import {BankingTermsComponent}          from './page/banking/banking-terms/banki
 import {BankingWiretransferComponent}   from './page/banking/banking-wiretransfer/banking-wiretransfer.component';
 import { BankingPlansComponent }        from './page/banking/banking-plans/banking-plans.component';
 
+import {RegisterComponent} from './page/register/register.component';
  const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
-     {path: 'home', component: HomeComponent},
+    {path: 'home', component: HomeComponent},
 //     {path: 'commingSoon', component: , data:{routeName:"Denov.Co"}},
 //     {path: 'trucking', component: , data:{routeName:"Trucking"}},
 //     {path: 'market', component: , data:{routeName:"Market"}},
@@ -24,6 +25,7 @@ import { BankingPlansComponent }        from './page/banking/banking-plans/banki
       {path:'wire-transfer',component:BankingWiretransferComponent},
       {path: 'plans',component:BankingPlansComponent}
     ]},
+    {path: 'register', component: RegisterComponent}
 //     {path: '', component: , data:{routeName:"Denov.Co"}},
 //     {path: '**', component:, data:{routeName:"Erroooor"}}
  ]

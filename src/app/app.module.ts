@@ -38,6 +38,7 @@ import { BankingAccountComponent } from './page/banking/banking-account/banking-
 import { BankingLoanComponent } from './page/banking/banking-loan/banking-loan.component';
 import { BankingWiretransferComponent } from './page/banking/banking-wiretransfer/banking-wiretransfer.component';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './page/register/register.component';
 
 declare var Hammer: any;
 
@@ -62,7 +63,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     BankingAccountComponent,
     BankingLoanComponent,
     BankingWiretransferComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
