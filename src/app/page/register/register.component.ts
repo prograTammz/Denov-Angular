@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators, FormGroupDirective, NgForm } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ErrorStateMatcher } from '@angular/material/core';
+import {UserService} from '../../services/api/user.service';
+import {Router} from '@angular/router';
+import { first } from 'rxjs/operators';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -19,7 +21,7 @@ export class RegisterComponent implements OnInit {
   })
   passError: boolean;
   isLoading: boolean;
-  constructor(private _snackBar: MatSnackBar) { 
+  constructor(private router: Router,private user: UserService,private _snackBar: MatSnackBar) { 
     this.passError = false;
     this.isLoading = false;
   }
@@ -35,9 +37,21 @@ export class RegisterComponent implements OnInit {
       return
     }
     delete this.register.value.repassword;
-    console.log(this.register.value)
     this.isLoading = true;
-    this._snackBar.open("Registerd", "Close", {duration:2000});
+    this.user.register(this.register.value)
+      .pipe(first())
+      .subscribe(
+        data =>{
+        this.router.navigate(['/home'])
+        this.isLoading = false;
+        this._snackBar.open("Succefully registerd & logged in", "Close", {duration:2000})
+        },
+        error=>{
+          this._snackBar.open(error.error, "Close", {duration:2000})
+        }
+    
+    )
+    ;
   }
 
 }
