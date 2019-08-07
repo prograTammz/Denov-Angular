@@ -4,6 +4,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { User } from 'src/app/models/user.model';
 import {UserStorageService} from '../storage/user.service';
+import { ConfigService } from './config.service';
+import {Config} from 'src/app/models/config.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,14 +13,20 @@ export class AuthService {
 
   public isAuthSubject: BehaviorSubject<boolean>;
   public isAuth: Observable<boolean>;
-  constructor(private userStorage: UserStorageService,private http: HttpClient) {
+  public url;
+  constructor(private config: ConfigService,private userStorage: UserStorageService,private http: HttpClient) {
    
     this.isAuthSubject = new BehaviorSubject<boolean>(JSON.parse(localStorage.getItem('isAuth')));
     this.isAuth = this.isAuthSubject.asObservable();
+
+    config.getConfig().subscribe((data: Config) =>{
+      this.url = data.url;
+    })
   }
 
   public login(email: string, password: string){
-    return this.http.post<any>('http://localhost:3000/api/auth',{email,password})
+    console.log(this.url);
+    return this.http.post<any>(this.url+'/api/auth',{email,password})
           .pipe(map(data=>{
             if(data.user){
               let user: User = data.user;
