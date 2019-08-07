@@ -21,6 +21,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -90,7 +91,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     MatSnackBarModule,
     MatExpansionModule,
     MatDialogModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatPaginatorModule
   ],
   providers: [{
     provide: HAMMER_GESTURE_CONFIG,
