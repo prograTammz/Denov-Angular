@@ -41,6 +41,8 @@ import { BankingWiretransferComponent } from './page/banking/banking-wiretransfe
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
 import { NewsComponent } from './page/news/news.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 declare var Hammer: any;
 
@@ -92,7 +94,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     MatExpansionModule,
     MatDialogModule,
     MatProgressSpinnerModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [{
     provide: HAMMER_GESTURE_CONFIG,
