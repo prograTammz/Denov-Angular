@@ -13,7 +13,7 @@ export class AuthService {
   public isAuth: Observable<boolean>;
   constructor(private userStorage: UserStorageService,private http: HttpClient) {
    
-    this.isAuthSubject = new BehaviorSubject<boolean>(Boolean(localStorage.getItem('isAuth')));
+    this.isAuthSubject = new BehaviorSubject<boolean>(JSON.parse(localStorage.getItem('isAuth')));
     this.isAuth = this.isAuthSubject.asObservable();
   }
 
