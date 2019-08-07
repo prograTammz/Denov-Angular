@@ -171,3 +171,8 @@ snack-bar-container{
 .mat-progress-spinner circle, .mat-spinner circle {
     stroke: red;
     }
+    h2{
+        color: #fa824c;
+        font-size: 24px;
+        font-family: Satisfy;
+    }
