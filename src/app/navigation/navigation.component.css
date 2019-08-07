@@ -52,6 +52,7 @@ mat-sidenav{
         margin-top: 0;
         padding-top: 30px;
         margin-bottom: 56px;
+        min-height: calc(100vh - 102px);
     }
     mat-toolbar{
         background-color: transparent;
