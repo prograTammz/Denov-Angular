@@ -20,7 +20,7 @@ export class NavigationComponent implements OnInit {
   @ViewChild(MatSidenav, {static: false}) private sideNav: MatSidenav;
   private navigationEnd: Observable<RouterEvent>;
   public title: string;
-  private isAuth;
+  public isAuth;
 
   constructor(private auth: AuthService,private loginDialog: LoginDialogService,private sanitizer: DomSanitizer,private matIconRegistry: MatIconRegistry,public router: Router,private location: Location, private activatedRoute: ActivatedRoute) {
     this.matIconRegistry.addSvgIcon('menu', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/menu.svg'));
