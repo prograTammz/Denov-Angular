@@ -6,6 +6,8 @@ branches:
   only:
     - master
 
+dist: xenial
+
 addons:
   chrome: stable
 
