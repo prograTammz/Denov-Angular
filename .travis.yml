@@ -19,9 +19,6 @@ cache:
 
 script:
   - ng build --prod
-after_success:
-  - rm -r  ~/../var/www/Denov-Angular/
-  - mv dist/Denov-Angular/ ~/../var/www
 
 
 deploy:
