@@ -10,6 +10,7 @@ import {BankingWiretransferComponent}   from './page/banking/banking-wiretransfe
 import { BankingPlansComponent }        from './page/banking/banking-plans/banking-plans.component';
 
 import {RegisterComponent} from './page/register/register.component';
+import {NewsComponent} from './page/news/news.component';
  const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
@@ -25,7 +26,8 @@ import {RegisterComponent} from './page/register/register.component';
       {path:'wire-transfer',component:BankingWiretransferComponent},
       {path: 'plans',component:BankingPlansComponent}
     ]},
-    {path: 'register', component: RegisterComponent}
+    {path: 'register', component: RegisterComponent},
+    {path: 'news', component: NewsComponent}
 //     {path: '', component: , data:{routeName:"Denov.Co"}},
 //     {path: '**', component:, data:{routeName:"Erroooor"}}
  ]
