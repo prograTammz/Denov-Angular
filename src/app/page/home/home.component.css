@@ -1,21 +1,40 @@
-.heading-background--image{
-    background-image: url("../../../assets/imgs/wallpaper.jpg");
+
+.heading-img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+}
+
+.heading-img--container{
     height: 30vh;
-    background-position: center;
-    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+@media only screen and (min-width: 601px){
+    .heading-img--container{
+        height: 45vh;
+    }
+   
 }
 .heading-text{
     height: 100%;
     width: 100%;
+    position: relative;
 }
 .heading-main{
     font-family: Satisfy;
     margin: 0;
     text-align: center;
-    padding-top: 5vh;
     color: white;
     font-size: 50px;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%) translateY(-50%);
 }
 .heading-secondry{
     color: white;
@@ -23,6 +42,11 @@
     font-size: 18px;   
     color: white;
     font-family: Satisfy;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 65%;
+    transform: translateX(-50%) translateY(-50%);
 }
 section{
     padding: 5px 0px;
