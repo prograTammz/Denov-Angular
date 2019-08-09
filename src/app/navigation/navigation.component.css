@@ -48,19 +48,8 @@ mat-sidenav{
         margin-top: 56px;
         margin-bottom: 56px;
     }
-    mat-toolbar-row button:last-of-type{
-        margin-left: 10px;
-    }
-    mat-toolbar-row button:nth-of-type(2){
-        margin-left: auto;
-    }
-    .install-button{
-        border-radius: 20px;
-        width: 80px;
-        border: 2px solid #fa824c;
-        color: #fa824c;
-        size: 24px;
-    }
+    
+    
     .brand-logo{
         font-size: 25px;
     }
@@ -68,7 +57,19 @@ mat-sidenav{
         display: none;
     }
 }
-
+mat-toolbar-row button:last-of-type{
+    margin-left: 10px;
+}
+mat-toolbar-row button:nth-of-type(2){
+    margin-left: auto;
+}
+.install-button{
+    border-radius: 20px;
+    width: 80px;
+    border: 2px solid #fa824c;
+    color: #fa824c;
+    size: 24px;
+}
 .mat-line{
     font-size: 14px !important;
 }
