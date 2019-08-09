@@ -7,9 +7,6 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="./assets/icon.png">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Satisfy&amp;display=swap" rel="stylesheet">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#fa824c">
   <meta name="theme-color" content="#fa824c">
@@ -35,5 +32,17 @@
 <body>
   <app-root></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: { families: [ 'Roboto:300,400,500|Satisfy|Material+Icons' ] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })(); </script>
 </body>
 </html>
