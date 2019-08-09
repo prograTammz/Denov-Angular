@@ -2,10 +2,13 @@
   <mat-toolbar-row>
       <button mat-icon-button *ngIf="this.router.url == '/home'" (click)="snav.toggle()" aria-label="Side Menu toggle"><mat-icon [svgIcon]="snav.opened ? 'close' : 'menu'"  role="button"></mat-icon></button>
       <button mat-icon-button *ngIf="this.router.url != '/home'"(click)="goBack()" aria-label="Return Back"><mat-icon role="button">keyboard_backspace</mat-icon></button>
+      
     <span class="brand-logo">Denov.Co<span>beta</span></span>
+    <button mat-icon-button *ngIf="isInstalled"class="install-button" (click)="goBack()" aria-label="install">Install<mat-icon role="button">vertical_align_bottom</mat-icon></button>
     <button mat-icon-button [matMenuTriggerFor]="menu" class="action-button" aria-label="myDenov account menu">
             <mat-icon>account_circle</mat-icon>
     </button>
+    
     <mat-menu #menu="matMenu">
             <button mat-menu-item *ngIf="!isAuth" [routerLink]="['/register']">
               <mat-icon>person_add</mat-icon>
@@ -29,7 +32,7 @@
 </mat-toolbar>
 
 
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container class="sidenav-container" hasBackdrop="false">
   <mat-sidenav #snav mode="over">
     <mat-nav-list>
 

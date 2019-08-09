@@ -48,34 +48,23 @@ mat-sidenav{
         padding-top: 30px;
         border-radius: 0 30px 0 0;
     }
-    .page-content{
-        margin-top: 0;
-        padding-top: 30px;
-        margin-bottom: 56px;
-        min-height: calc(100vh - 102px);
-    }
-    mat-toolbar{
-        background-color: transparent;
-        box-shadow: none;
-    }
-    mat-toolbar-row{
-        padding: 0;
-    }
-    mat-toolbar-row button{
-        width: 60px;
-        color: white;
-        background-color: #fa824c;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    }
-    mat-toolbar-row button:first-of-type{
-        padding-left: 20px;
-        border-radius: 0 30px 30px 0;
-    }
     mat-toolbar-row button:last-of-type{
-        padding-right: 20px;
-        border-radius: 30px 0 0 30px;
+        margin-left: 10px;
+    }
+    mat-toolbar-row button:nth-of-type(2){
+        margin-left: auto;
+    }
+    .install-button{
+        border-radius: 20px;
+        width: 80px;
+        border: 2px solid #fa824c;
+        color: #fa824c;
+        size: 24px;
     }
     .brand-logo{
+        font-size: 25px;
+    }
+    .brand-logo span{
         display: none;
     }
 }
