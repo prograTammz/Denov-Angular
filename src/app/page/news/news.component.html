@@ -14,7 +14,7 @@
 </mat-card>
 
 
-<button mat-fab aria-label="add a news" class="add-news" *ngIf="isAuthorized">
+<button mat-fab aria-label="add a news" class="add-news" *ngIf="isAuthorized" (click)="openDialog()">
         <mat-icon>add</mat-icon>
 </button>
 
