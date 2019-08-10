@@ -4,3 +4,20 @@
     bottom: 70px;
     right: 20px;
 }
+.mat-progress-spinner{
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+}
+.mat-card{
+    margin-bottom: 10px;
+}
+.mat-card:first-of-type{
+    margin-top: 20px;
+}
+h2{
+    display: inline;
+}
+.mat-raised-button{
+    float: right;
+}

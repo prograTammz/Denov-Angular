@@ -106,6 +106,6 @@ export class MyHammerConfig extends HammerGestureConfig  {
     useClass: MyHammerConfig ,
   }],
   bootstrap: [AppComponent],
-  entryComponents:[LoginComponent,InstallComponent],
+  entryComponents:[LoginComponent,InstallComponent,NewsFormComponent],
 })
 export class AppModule { }
