@@ -29,7 +29,7 @@ export class NewsService {
     }
    }
    getNews(page: number, size: number): Observable<News[]>{
-      return this.http.get(`${this.url}/api/news?pageNo=${page}&${size}`)
+      return this.http.get(`${this.url}/api/news?pageNo=${page}&size=${size}`)
       .pipe(
         first(),
         map((news: News[])=>{
