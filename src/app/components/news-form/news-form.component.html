@@ -6,7 +6,7 @@
     <mat-form-field class="col-12">
             <textarea matInput placeholder="Body" formControlName="body" required></textarea>
     </mat-form-field>
-    <button mat-stroked-button type="submit" [disabled]="!news.valid">Publish</button>
+    <button mat-stroked-button type="submit" [disabled]="!new.valid">Publish</button>
 </form>
 <div *ngIf="isLoading">
     <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
