@@ -8,9 +8,11 @@ export class UserStorageService {
 
   private userSubject: BehaviorSubject<User>;
   public User: Observable<User>;
+  public isAuth: boolean;
   constructor() {
     this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user')));
     this.User = this.userSubject.asObservable();
+    this.isAuth = JSON.parse(localStorage.getItem('isAuth'));
    }
 
   public storeUser(user: User): void{

@@ -18,9 +18,12 @@ export class NewsService {
    this.config.getConfig().subscribe((data: Config) =>{
       this.url = data.url;
     })
-    this.headers = new HttpHeaders({
-      'x-auth-token': this.user.getUser().token
-    })
+    if(this.user.isAuth){
+      this.headers = new HttpHeaders({
+        'x-auth-token': this.user.getUser().token
+      })
+    }
+    
     this.httpOptions={
       headers: this.headers
     }
