@@ -4,7 +4,7 @@
         <mat-card *ngFor="let item of newsList">
                 <mat-card-header>
                     <mat-card-title>{{item.title}}</mat-card-title>
-                    <mat-card-subtitle>By: {{item.author}} at: {{item.date}}</mat-card-subtitle>
+                    <mat-card-subtitle>By: {{item.author}} at: {{date(item.date)}}</mat-card-subtitle>
                 </mat-card-header>
                 <mat-card-content>
                     {{item.body}}

@@ -76,4 +76,8 @@ export class NewsComponent implements OnInit {
     this.isLoading = true;
     this.getNews(this.pageSize,this.pageIndex);
   }
+  date(dateString: string){
+    const date = new Date(dateString);
+    return date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
+  }
 }
