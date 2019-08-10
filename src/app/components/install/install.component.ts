@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {MatDialogRef} from '@angular/material/dialog';
 @Component({
   selector: 'app-install',
   templateUrl: './install.component.html',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InstallComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<InstallComponent>) {
+    
+   }
 
   ngOnInit() {
   }
-
+  closeModal(){
+    this.dialogRef.close();
+  }
 }
