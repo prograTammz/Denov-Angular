@@ -43,6 +43,8 @@ import { RegisterComponent } from './page/register/register.component';
 import { NewsComponent } from './page/news/news.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { InstallComponent } from './components/install/install.component';
+import { NewsFormComponent } from './components/news-form/news-form.component';
 
 declare var Hammer: any;
 
@@ -69,7 +71,9 @@ export class MyHammerConfig extends HammerGestureConfig  {
     BankingWiretransferComponent,
     LoginComponent,
     RegisterComponent,
-    NewsComponent
+    NewsComponent,
+    InstallComponent,
+    NewsFormComponent
   ],
   imports: [
     BrowserModule,
@@ -102,6 +106,6 @@ export class MyHammerConfig extends HammerGestureConfig  {
     useClass: MyHammerConfig ,
   }],
   bootstrap: [AppComponent],
-  entryComponents:[LoginComponent]
+  entryComponents:[LoginComponent,InstallComponent],
 })
 export class AppModule { }
