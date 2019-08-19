@@ -14,6 +14,7 @@ import {VehicleBrandComponent} from './page/priceguide/vehicle-brand/vehicle-bra
 import {RegisterComponent} from './page/register/register.component';
 import {NewsComponent} from './page/news/news.component';
 import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-list.component';
+import { VehicleDetailComponent } from './page/vehicle-detail/vehicle-detail.component';
  const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
@@ -32,7 +33,8 @@ import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-lis
     {path: 'vehicle',children:[
       {path: '', redirectTo: 'brands', pathMatch: 'full'},
       {path:'brands', component:VehicleBrandComponent},
-      {path:'list', component:VehicleListComponent}
+      {path:'list', component:VehicleListComponent},
+      {path: 'detail', component: VehicleDetailComponent}
     ]},
     {path: 'register', component: RegisterComponent},
     {path: 'news', component: NewsComponent}
