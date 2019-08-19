@@ -13,6 +13,7 @@ import {VehicleBrandComponent} from './page/priceguide/vehicle-brand/vehicle-bra
 
 import {RegisterComponent} from './page/register/register.component';
 import {NewsComponent} from './page/news/news.component';
+import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-list.component';
  const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
@@ -30,7 +31,8 @@ import {NewsComponent} from './page/news/news.component';
     ]},
     {path: 'vehicle',children:[
       {path: '', redirectTo: 'brands', pathMatch: 'full'},
-      {path:'brands', component:VehicleBrandComponent}
+      {path:'brands', component:VehicleBrandComponent},
+      {path:'list', component:VehicleListComponent}
     ]},
     {path: 'register', component: RegisterComponent},
     {path: 'news', component: NewsComponent}
