@@ -2,8 +2,9 @@
 <img id="animate-image"src="../../../assets/imgs/torrence.webp" alt="" class="col-3 col-es-2" [@photoState]="isAnimated ?'enlarge' : 'normal'" (@photoState.done) ="animationEnd($event)">
 <div class="row">
     <div class= "col-3 col-es-2" *ngFor="let item of brands">
-            <mat-card  (click)="toggle('../../../assets/imgs/torrence.webp', $event)" class="mat-elevation-z3" matRipple>
-                <img src="../../../assets/imgs/torrence.webp" alt="">
+            <mat-card  (click)="toggle(img, $event, placeHolder)" class="mat-elevation-z3" matRipple>
+                <img #img src="../../../assets/imgs/torrence.webp" alt="">
+                <div #placeHolder></div>
                 <mat-card-content>
                     <h3>Torrence {{isAnimated ? 'enlarge' : 'normal'}}</h3>
                     
