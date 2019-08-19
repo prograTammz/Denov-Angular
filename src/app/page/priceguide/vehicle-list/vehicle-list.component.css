@@ -1,0 +1,14 @@
+img{
+    width: 100%;
+}
+mat-card {
+    margin: 0 5px 15px 5px;
+    padding: 0;
+}
+mat-card-content{
+    margin-bottom: 0
+}
+h3{
+    padding: 10px;
+    color:#fa824c;
+}
