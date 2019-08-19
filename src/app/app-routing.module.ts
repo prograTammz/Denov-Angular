@@ -9,6 +9,8 @@ import {BankingTermsComponent}          from './page/banking/banking-terms/banki
 import {BankingWiretransferComponent}   from './page/banking/banking-wiretransfer/banking-wiretransfer.component';
 import { BankingPlansComponent }        from './page/banking/banking-plans/banking-plans.component';
 
+import {VehicleBrandComponent} from './page/priceguide/vehicle-brand/vehicle-brand.component';
+
 import {RegisterComponent} from './page/register/register.component';
 import {NewsComponent} from './page/news/news.component';
  const routes: Routes = [
@@ -25,6 +27,10 @@ import {NewsComponent} from './page/news/news.component';
       {path:'terms-conditions', component:BankingTermsComponent},
       {path:'wire-transfer',component:BankingWiretransferComponent},
       {path: 'plans',component:BankingPlansComponent}
+    ]},
+    {path: 'vehicle',children:[
+      {path: '', redirectTo: 'brands', pathMatch: 'full'},
+      {path:'brands', component:VehicleBrandComponent}
     ]},
     {path: 'register', component: RegisterComponent},
     {path: 'news', component: NewsComponent}
