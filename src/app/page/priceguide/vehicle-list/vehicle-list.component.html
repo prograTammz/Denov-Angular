@@ -1,10 +1,12 @@
 <h2>Vapid cars</h2>
+<img id="animate-image"src="../../../assets/imgs/torrence.webp" alt="" class="col-3 col-es-2" [@photoState]="isAnimated ?'enlarge' : 'normal'" (@photoState.done) ="animationEnd($event)">
 <div class="row">
     <div class= "col-3 col-es-2" *ngFor="let item of brands">
-            <mat-card  [routerLink]="['/vehicle']" class="mat-elevation-z3" matRipple>
+            <mat-card  (click)="toggle('../../../assets/imgs/torrence.webp', $event)" class="mat-elevation-z3" matRipple>
                 <img src="../../../assets/imgs/torrence.webp" alt="">
                 <mat-card-content>
-                    <h3>Torrence</h3>
+                    <h3>Torrence {{isAnimated ? 'enlarge' : 'normal'}}</h3>
+                    
                 </mat-card-content>
             </mat-card>
     </div>

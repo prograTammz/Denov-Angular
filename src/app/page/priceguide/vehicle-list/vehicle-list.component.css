@@ -1,4 +1,4 @@
-img{
+mat-card img{
     width: 100%;
 }
 mat-card {
@@ -11,4 +11,8 @@ mat-card-content{
 h3{
     padding: 10px;
     color:#fa824c;
+}
+#animate-image{
+    position: absolute;
+    z-index: 2;
 }
