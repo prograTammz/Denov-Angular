@@ -22,6 +22,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatRippleModule} from '@angular/material/core'
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -45,6 +46,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { InstallComponent } from './components/install/install.component';
 import { NewsFormComponent } from './components/news-form/news-form.component';
+import { VehicleBrandComponent } from './page/priceguide/vehicle-brand/vehicle-brand.component';
 
 declare var Hammer: any;
 
@@ -73,7 +75,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     RegisterComponent,
     NewsComponent,
     InstallComponent,
-    NewsFormComponent
+    NewsFormComponent,
+    VehicleBrandComponent
   ],
   imports: [
     BrowserModule,
@@ -99,6 +102,7 @@ export class MyHammerConfig extends HammerGestureConfig  {
     MatDialogModule,
     MatProgressSpinnerModule,
     MatPaginatorModule,
+    MatRippleModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [{
