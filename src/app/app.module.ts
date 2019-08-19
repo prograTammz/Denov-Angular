@@ -48,7 +48,7 @@ import { InstallComponent } from './components/install/install.component';
 import { NewsFormComponent } from './components/news-form/news-form.component';
 import { VehicleBrandComponent } from './page/priceguide/vehicle-brand/vehicle-brand.component';
 import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-list.component';
-import { VehicleDetailComponent } from './page/vehicle-detail/vehicle-detail.component';
+import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
 
 declare var Hammer: any;
 
