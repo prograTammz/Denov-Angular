@@ -14,7 +14,7 @@ import {VehicleBrandComponent} from './page/priceguide/vehicle-brand/vehicle-bra
 import {RegisterComponent} from './page/register/register.component';
 import {NewsComponent} from './page/news/news.component';
 import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-list.component';
-import { VehicleDetailComponent } from './page/vehicle-detail/vehicle-detail.component';
+import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
  const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
