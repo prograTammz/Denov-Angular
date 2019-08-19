@@ -20,7 +20,7 @@ import { Router, ActivatedRoute } from '@angular/router';
       })),
       transition('normal=>enlarge',[
         style({display: 'block', opacity: '0'}),
-        animate('400ms', style({opacity: '1', top: '16px',left:'16px', width:'calc(100% - 32px)'}))
+        animate('150ms', style({opacity: '1', top: '16px',left:'16px', width:'calc(100% - 32px)'}))
       ])
     ])
   ]
