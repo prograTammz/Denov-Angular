@@ -35,6 +35,7 @@ export class RoulettePageComponent implements OnInit {
       this.isSpinning= false;
       clearTimeout(this.timeout);
       this.wheel.nativeElement.innerHTML = land;
+      this.setColor(land);
     })
     
   }
@@ -45,12 +46,23 @@ export class RoulettePageComponent implements OnInit {
     if(totalTime >= max && !this.isSpinning){
       return;
     }
-    this.wheel.nativeElement.innerHTML = this.getRandomInt(36)
+    let land = this.getRandomInt(36)
+    this.setColor(land);
+    this.wheel.nativeElement.innerHTML = land;
     speed *= 1.09
     totalTime += speed;
-    console.log(this.isSpinning);
-    console.log(totalTime >= max && !this.isSpinning);
     
     this.timeout = setTimeout(()=>this.spinWheel(speed,totalTime,max), speed);
+  }
+  setColor(land: number){
+    this.wheel.nativeElement.className =" wheel col-12";
+    if(land % 2 === 0 ){
+      this.wheel.nativeElement.classList.toggle("red");
+    }else{
+      this.wheel.nativeElement.classList.toggle("black");
+    }
+    if( land === 0){
+      this.wheel.nativeElement.classList.toggle("green");
+    }
   }
 }

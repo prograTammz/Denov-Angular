@@ -1,4 +1,56 @@
+
 .wheel{
-    font-size: 72px;
-    font-family: satisfy
+    font-size: 125px;
+    font-weight: 200;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    
+}
+mat-icon{
+    text-align: center;
+    width: 100%;
+    font-size: 48px;
+}
+.money-card{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.12);
+    box-shadow: none;
+}
+h3, p{
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+}
+.money-card--left{
+    margin-right: 10px;
+}
+.money-card--right{
+    margin-left: 10px;
+}
+mat-card-content{
+    margin-bottom: 0
+}
+.red{
+    color: #ff0844;
+}
+.black{
+    color: black;
+}
+.green{
+    color: #50cc7f;
+}
+mat-button-toggle-group{
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.bet-button{
+    padding: 10px;
+    border-radius: 20px;
 }
