@@ -1,10 +1,68 @@
 <h2>Denov casino</h2>
 
 <div class="wheel col-12" #wheel>
- 19
+  19
 </div>
-<button (click) = "spin()">
-    spin
+<h3>
+  Table status: <span #status> Closed</span>
+</h3>
+
+<div class="row">
+  <div class="col-6">
+    <mat-card>
+      <mat-card-content>
+        <h3>Your bets</h3>
+        <p>30,000$</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col-6">
+    <mat-card>
+      <mat-card-content>
+        <h3>Your balance</h3>
+        <p>120,000$</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>
+
+<mat-button-toggle-group #group="matButtonToggleGroup" class="col-12">
+  <mat-button-toggle value="1st" class="col-4" aria-label="Text align left">
+    1st 12
+  </mat-button-toggle>
+  <mat-button-toggle value="2nd" class="col-4" aria-label="Text align center">
+    2nd 12
+  </mat-button-toggle>
+  <mat-button-toggle value="3rd" class="col-4" aria-label="Text align right">
+    3rd 12
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+<mat-button-toggle-group class="col-12">
+  <mat-button-toggle value="1st" class="col-6" aria-label="Text align left">
+    1-18
+  </mat-button-toggle>
+  <mat-button-toggle value="2nd" class="col-6" aria-label="Text align center">
+    19-36
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+<mat-button-toggle-group class="col-12">
+  <mat-button-toggle value="even" class="col-4" aria-label="Text align left">
+    Even
+  </mat-button-toggle>
+  <mat-button-toggle value="red" class="col-4" aria-label="Text align center">
+    Red
+  </mat-button-toggle>
+  <mat-button-toggle value="black" class="col-4" aria-label="Text align right">
+    Black
+  </mat-button-toggle>
+  <mat-button-toggle value="odd" class="col-4" aria-label="Text align right">
+    Odd
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+<button mat-raised-button class="col-12">
+    Bet
 </button>
-
-
