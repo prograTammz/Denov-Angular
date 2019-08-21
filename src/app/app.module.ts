@@ -23,6 +23,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatRippleModule} from '@angular/material/core'
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -109,6 +110,7 @@ export class MyHammerConfig extends HammerGestureConfig  {
     MatProgressSpinnerModule,
     MatPaginatorModule,
     MatRippleModule,
+    MatButtonToggleModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [{
