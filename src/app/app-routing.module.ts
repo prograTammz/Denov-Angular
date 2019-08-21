@@ -15,6 +15,7 @@ import {RegisterComponent} from './page/register/register.component';
 import {NewsComponent} from './page/news/news.component';
 import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-list.component';
 import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
+import { RoulettePageComponent } from './page/casino/roulette-page/roulette-page.component';
  const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
@@ -37,7 +38,8 @@ import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle
       {path: 'detail', component: VehicleDetailComponent}
     ]},
     {path: 'register', component: RegisterComponent},
-    {path: 'news', component: NewsComponent}
+    {path: 'news', component: NewsComponent},
+    {path: 'casino', component: RoulettePageComponent}
 //     {path: '', component: , data:{routeName:"Denov.Co"}},
 //     {path: '**', component:, data:{routeName:"Erroooor"}}
  ]
