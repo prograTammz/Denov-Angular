@@ -71,24 +71,16 @@
         <mat-list-item [routerLink]="['/vehicle']">
           <mat-icon mat-list-icon>book</mat-icon>
           <h4 mat-line>Vehicle price guide</h4>
-          <span class="vsoon-badge">soon</span>
         </mat-list-item>
 
-        <mat-list-item class="disabled" disableRipple>
+        <mat-list-item [routerLink]="['/casino']">
           <mat-icon mat-list-icon>casino</mat-icon>
           <h4 mat-line >Gambling</h4>
-          <span class="soon-badge">soon</span>
         </mat-list-item>
 
         <mat-list-item class="disabled" disableRipple>
           <mat-icon mat-list-icon>business_center</mat-icon>
           <h4 mat-line>Jobs Center</h4>
-          <span class="soon-badge">soon</span>
-        </mat-list-item>
-
-        <mat-list-item class="disabled" disableRipple>
-          <mat-icon mat-list-icon>attach_money</mat-icon>
-          <h4 mat-line>E-service Pricing</h4>
           <span class="soon-badge">soon</span>
         </mat-list-item>
       </mat-list>
@@ -205,7 +197,7 @@
 
 <nav id="bottomNavBar" role="navigation">
     <button mat-button routerLink="./banking" class="bottomNavElm active"><mat-icon>account_balance</mat-icon><div>Bank</div></button>
-    <button mat-button class="bottomNavElm"><span class="bottom-nav-logo">E</span><div>E-services</div></button>
+    <button mat-button routerLink="./casino" class="bottomNavElm"><mat-icon>casino</mat-icon><div>Gamble</div></button>
     <button mat-button class="bottomNavElm"><mat-icon>shopping_basket</mat-icon>  <div>Market</div></button>
     <button mat-button class="bottomNavElm"><mat-icon>local_shipping</mat-icon><div>Trucking</div></button>
     <button mat-button class="bottomNavElm"><mat-icon>money</mat-icon><div>D-Currency</div></button>
