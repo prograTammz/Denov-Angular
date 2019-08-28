@@ -43,7 +43,7 @@ import { LobbyPageComponent } from './page/casino/lobby-page/lobby-page.componen
     {path: 'casino',children:[
       {path: '', redirectTo: 'lobby', pathMatch: 'full'},
       {path: 'lobby', component: LobbyPageComponent},
-      {path: 'roulette', component: LobbyPageComponent}
+      {path: 'roulette', component: RoulettePageComponent}
     ]}
 //     {path: '', component: , data:{routeName:"Denov.Co"}},
 //     {path: '**', component:, data:{routeName:"Erroooor"}}
