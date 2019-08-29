@@ -54,6 +54,7 @@ import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle
 import { RoulettePageComponent } from './page/casino/roulette-page/roulette-page.component';
 import { LobbyPageComponent } from './page/casino/lobby-page/lobby-page.component';
 import { JoinTableComponent } from './components/join-table/join-table.component';
+import { JoinTableService } from './services/dialogs/join-table.service';
 
 declare var Hammer: any;
 
@@ -124,6 +125,6 @@ export class MyHammerConfig extends HammerGestureConfig  {
     useClass: MyHammerConfig ,
   }],
   bootstrap: [AppComponent],
-  entryComponents:[LoginComponent,InstallComponent,NewsFormComponent],
+  entryComponents:[LoginComponent,InstallComponent,NewsFormComponent, JoinTableComponent],
 })
 export class AppModule { }
