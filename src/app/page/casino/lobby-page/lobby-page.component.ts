@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {JoinTableService} from '../../../services/dialogs/join-table.service';
 @Component({
   selector: 'app-lobby-page',
   templateUrl: './lobby-page.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LobbyPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private joinTableModal: JoinTableService) { }
 
   ngOnInit() {
   }
 
+  joinTable(){
+    this.joinTableModal.openModal();
+  }
 }

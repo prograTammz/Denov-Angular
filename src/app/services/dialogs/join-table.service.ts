@@ -11,12 +11,12 @@ export class JoinTableService {
   constructor(public dialog: MatDialog) {
 
    }
-  openModal(): void{
+  public openModal(): void{
     const dialogRef = this.dialog.open(JoinTableComponent,{
       width:'300px'
     });
   }
-  closeModal(): void{
+  public closeModal(): void{
     this.dialogRef.close();
   }
 }
