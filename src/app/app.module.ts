@@ -53,6 +53,7 @@ import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-lis
 import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
 import { RoulettePageComponent } from './page/casino/roulette-page/roulette-page.component';
 import { LobbyPageComponent } from './page/casino/lobby-page/lobby-page.component';
+import { JoinTableComponent } from './components/join-table/join-table.component';
 
 declare var Hammer: any;
 
@@ -86,7 +87,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     VehicleListComponent,
     VehicleDetailComponent,
     RoulettePageComponent,
-    LobbyPageComponent
+    LobbyPageComponent,
+    JoinTableComponent
   ],
   imports: [
     BrowserModule,
