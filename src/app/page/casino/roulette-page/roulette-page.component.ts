@@ -11,6 +11,9 @@ export class RoulettePageComponent implements OnInit {
   @ViewChild('wheel',{static: true})
   private wheel: ElementRef;
 
+  private thirdBet: string;
+  private halfBet: string;
+  private numberBet: string;
   private socket: any;
   private isSpinning;
   private timeout;
@@ -64,5 +67,9 @@ export class RoulettePageComponent implements OnInit {
     if( land === 0){
       this.wheel.nativeElement.classList.toggle("green");
     }
+  }
+
+  bet(){
+    console.log(this.thirdBet + this.halfBet + this.numberBet);
   }
 }

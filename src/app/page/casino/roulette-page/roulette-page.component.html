@@ -25,7 +25,7 @@
 
   </div>
 
-  <mat-button-toggle-group #group="matButtonToggleGroup" class="col-12">
+  <mat-button-toggle-group [(ngModel)]="thirdBet" class="col-12">
     <mat-button-toggle value="1st" class="col-4" aria-label="Text align left">
       1st 12
     </mat-button-toggle>
@@ -37,7 +37,7 @@
     </mat-button-toggle>
   </mat-button-toggle-group>
 
-  <mat-button-toggle-group class="col-12">
+  <mat-button-toggle-group [(ngModel)]="halfBet" class="col-12">
     <mat-button-toggle value="1st" class="col-6" aria-label="Text align left">
       1-18
     </mat-button-toggle>
@@ -46,7 +46,7 @@
     </mat-button-toggle>
   </mat-button-toggle-group>
 
-  <mat-button-toggle-group class="col-12">
+  <mat-button-toggle-group [(ngModel)]="numberBet" class="col-12">
     <mat-button-toggle value="even" class="col-4" aria-label="Text align left">
       Even
     </mat-button-toggle>
@@ -61,7 +61,7 @@
     </mat-button-toggle>
   </mat-button-toggle-group>
 
-  <button mat-stroked-button class="col-12 bet-button">
+  <button mat-stroked-button  (click)= "bet()"class="col-12 bet-button">
     Place my bet
   </button>
 </section>
