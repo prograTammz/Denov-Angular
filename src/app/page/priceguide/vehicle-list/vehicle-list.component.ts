@@ -53,7 +53,7 @@ export class VehicleListComponent implements OnInit {
     elm.style.left = parentElm.offsetWidth+"px";
     this.isAnimated = !this.isAnimated;
   }
-  animationEnd(){
+  animationEnd(event){
     if(this.isAnimated){
       this.router.navigate(['/vehicle','detail']);
     }
