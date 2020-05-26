@@ -46,15 +46,12 @@ import { RegisterComponent } from './page/register/register.component';
 import { NewsComponent } from './page/news/news.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { InstallComponent } from './components/install/install.component';
 import { NewsFormComponent } from './components/news-form/news-form.component';
 import { VehicleBrandComponent } from './page/priceguide/vehicle-brand/vehicle-brand.component';
 import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-list.component';
 import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
 import { RoulettePageComponent } from './page/casino/roulette-page/roulette-page.component';
 import { LobbyPageComponent } from './page/casino/lobby-page/lobby-page.component';
-import { JoinTableComponent } from './components/join-table/join-table.component';
-import { JoinTableService } from './services/dialogs/join-table.service';
 
 declare var Hammer: any;
 
@@ -82,14 +79,12 @@ export class MyHammerConfig extends HammerGestureConfig  {
     LoginComponent,
     RegisterComponent,
     NewsComponent,
-    InstallComponent,
     NewsFormComponent,
     VehicleBrandComponent,
     VehicleListComponent,
     VehicleDetailComponent,
     RoulettePageComponent,
     LobbyPageComponent,
-    JoinTableComponent
   ],
   imports: [
     BrowserModule,
@@ -125,6 +120,6 @@ export class MyHammerConfig extends HammerGestureConfig  {
     useClass: MyHammerConfig ,
   }],
   bootstrap: [AppComponent],
-  entryComponents:[LoginComponent,InstallComponent,NewsFormComponent, JoinTableComponent],
+  entryComponents:[LoginComponent,NewsFormComponent],
 })
 export class AppModule { }
