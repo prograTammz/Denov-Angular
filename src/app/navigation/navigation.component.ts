@@ -26,6 +26,7 @@ export class NavigationComponent implements OnInit {
   constructor(private installDialog: InstallDialogService,private auth: AuthService,private loginDialog: LoginDialogService,private sanitizer: DomSanitizer,private matIconRegistry: MatIconRegistry,public router: Router,private location: Location, private activatedRoute: ActivatedRoute) {
     this.matIconRegistry.addSvgIcon('menu', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/menu.svg'));
     this.matIconRegistry.addSvgIcon('close', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/close.svg'));
+    this.matIconRegistry.addSvgIcon('burger-menu',sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/burger-icon.svg'));
     this.isAuth = false;
     this.isInstalled = false;
   }
