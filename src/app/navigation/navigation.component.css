@@ -1,10 +1,12 @@
 .brand-logo{
-    color: #fa824c;
-    font-weight: bold;
-    font-size: 40px;
-    font-family: Satisfy, 'Times New Roman', Times, serif;
+    color: #4F4E6C;
+    font-weight: 500;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
 
     margin: 6px 0px 0px 10px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
 
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -21,9 +23,17 @@ mat-toolbar{
     position: fixed;
     top: 0;
     z-index: 2;
+    background-color: #F0F0F9;
 }
 .action-button{
     margin-left: auto;
+}
+.mat-icon-button .mat-icon, .mat-icon-button i{
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    color: #4F4E6C;
 }
 mat-sidenav{
     position: fixed;
@@ -50,7 +60,7 @@ mat-sidenav{
         margin-bottom: 56px;
     }
     .brand-logo{
-        font-size: 25px;
+        font-size: 19px;
     }
 }
 mat-toolbar-row button:last-of-type{
