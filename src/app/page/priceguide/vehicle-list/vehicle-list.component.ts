@@ -5,7 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-vehicle-list',
   templateUrl: './vehicle-list.component.html',
-  styleUrls: ['./vehicle-list.component.css'],
+  styleUrls: ['./vehicle-list.component.scss'],
   animations: [
     trigger('photoState',[
       state('enlarge', style({

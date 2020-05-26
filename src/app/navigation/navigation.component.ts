@@ -10,11 +10,10 @@ import { Observable, fromEventPattern } from 'rxjs';
 
 import {AuthService} from '../services/api/auth.service';
 import {LoginDialogService} from '../services/dialogs/login-dialog.service';
-import {InstallDialogService} from '../services/dialogs/install-dialog.service';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.css']
+  styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
 
@@ -23,7 +22,7 @@ export class NavigationComponent implements OnInit {
   public title: string;
   public isAuth;
   public isInstalled: boolean;
-  constructor(private installDialog: InstallDialogService,private auth: AuthService,private loginDialog: LoginDialogService,private sanitizer: DomSanitizer,private matIconRegistry: MatIconRegistry,public router: Router,private location: Location, private activatedRoute: ActivatedRoute) {
+  constructor(private auth: AuthService,private loginDialog: LoginDialogService,private sanitizer: DomSanitizer,private matIconRegistry: MatIconRegistry,public router: Router,private location: Location, private activatedRoute: ActivatedRoute) {
     this.matIconRegistry.addSvgIcon('menu', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/menu.svg'));
     this.matIconRegistry.addSvgIcon('close', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/close.svg'));
     this.matIconRegistry.addSvgIcon('burger-menu',sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/burger-icon.svg'));
@@ -53,8 +52,5 @@ export class NavigationComponent implements OnInit {
   }
   logout(){
     this.auth.logout();
-  }
-  openInstallDialog(){
-    this.installDialog.openModal();
   }
 }

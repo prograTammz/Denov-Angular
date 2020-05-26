@@ -4,7 +4,7 @@ import {ConfigService} from "../../../services/api/config.service";
 @Component({
   selector: 'app-roulette-page',
   templateUrl: './roulette-page.component.html',
-  styleUrls: ['./roulette-page.component.css']
+  styleUrls: ['./roulette-page.component.scss']
 })
 export class RoulettePageComponent implements OnInit {
 

@@ -7,7 +7,7 @@ import { first } from 'rxjs/operators';
 @Component({
   selector: 'app-news-form',
   templateUrl: './news-form.component.html',
-  styleUrls: ['./news-form.component.css']
+  styleUrls: ['./news-form.component.scss']
 })
 export class NewsFormComponent implements OnInit {
 

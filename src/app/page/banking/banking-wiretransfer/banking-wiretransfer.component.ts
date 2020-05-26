@@ -19,7 +19,7 @@ const dummy: WireTransfer[] = [
 @Component({
   selector: 'app-banking-wiretransfer',
   templateUrl: './banking-wiretransfer.component.html',
-  styleUrls: ['./banking-wiretransfer.component.css']
+  styleUrls: ['./banking-wiretransfer.component.scss']
 })
 
 export class BankingWiretransferComponent implements OnInit {
