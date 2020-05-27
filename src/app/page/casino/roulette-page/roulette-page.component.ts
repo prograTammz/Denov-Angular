@@ -11,9 +11,9 @@ export class RoulettePageComponent implements OnInit {
   @ViewChild('wheel',{static: true})
   private wheel: ElementRef;
 
-  private thirdBet: string;
-  private halfBet: string;
-  private numberBet: string;
+  public thirdBet: string;
+  public halfBet: string;
+  public numberBet: string;
   private socket: any;
   private isSpinning;
   private timeout;
