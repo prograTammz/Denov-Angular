@@ -35,28 +35,10 @@ mat-toolbar{
     line-height: 32px;
     color: #4F4E6C;
 }
-mat-sidenav{
-    position: fixed;
-    margin-top: 64px;
-    width: 250px;
-    z-index: 3;
-}
-.page-content{
-    margin-top: 64px;
-    margin-left: auto;
-    margin-right: auto;
-    
-    min-height: calc(100vh - 144px);
-}
+
+
 @media only screen and (max-width: 600px){
-    .page-content{
-        margin-top: 56px;
-        margin-bottom: 56px;
-    }
-    mat-sidenav{
-        margin-top: 56px;
-        margin-bottom: 56px;
-    }
+    
     .brand-logo{
         font-size: 19px;
     }
@@ -78,22 +60,7 @@ mat-toolbar-row button:nth-of-type(2){
     justify-self: flex-start;
     margin-left: 15px;
 }
-mat-list-item.disabled{
-    cursor: not-allowed !important;
-    opacity: 0.5;
-    text-decoration: none;
-}
-.soon-badge, .vsoon-badge{
-    color: white;
-    background-color: red;
-    border-radius: 2px;
-    display: block;
-    padding: 5px;
-    text-transform: uppercase;
-}
-.vsoon-badge{
-    background-color: green;
-}
+
 .nav-bar--item-gray {
     color: #575757;
 }
