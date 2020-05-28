@@ -1,8 +1,8 @@
 {
   "name": "Denov",
   "short_name": "Denov",
-  "theme_color": "#fa824c",
-  "background_color": "#fafafa",
+  "theme_color": "#5C68BD",
+  "background_color": "#4F4E6C",
   "display": "standalone",
   "orientation": "portrait-primary",
   "description": "Denvo.co delivers e-services to los santos to make life easier.",
