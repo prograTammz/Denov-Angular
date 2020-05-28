@@ -7,17 +7,9 @@
     margin: auto;
 }
 .home-head-text > p,h1{
-    color:#2D3139;
     padding: 0 16px;
-    width:80%;
 }
-.home-head-text h1{
-    font-weight: 200;
-    font-size: 50px;
-}
-.home-head-text p{
-    font-size: 18px;
-}
+
 .home-head-img img{
     width: 100%;
     align-content: center;
@@ -28,9 +20,6 @@
 @media only screen and (max-width: 900px) {
     .home-head-text{
         order: 2;
-    }
-    .home-head-text h1{
-        font-size: 30px;
     }
     .right{
         order: 0;
