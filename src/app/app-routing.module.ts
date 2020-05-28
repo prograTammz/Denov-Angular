@@ -24,13 +24,8 @@ import { LobbyPageComponent } from './page/casino/lobby-page/lobby-page.componen
 //     {path: 'market', component: , data:{routeName:"Market"}},
 //     {path: 'dcurrency', component: , data:{routeName:"D-Currency"}},
 //     {path: 'eservices', component: , data:{routeName:"E-services"}},
-    {path: 'banking', children:[
-      {path: '', redirectTo: 'overview', pathMatch: 'full'},
-      {path:'overview', loadChildren: ()=> import('./page/banking/banking-home.module').then(m=> m.BankingHomeModule)},
-      {path:'terms-conditions', component:BankingTermsComponent},
-      {path:'wire-transfer',component:BankingWiretransferComponent},
-      {path: 'plans',component:BankingPlansComponent}
-    ]},
+    {path: 'banking', loadChildren: ()=> import('./page/banking/banking-home.module').then(m=> m.BankingHomeModule)},
+    
     {path: 'vehicle',children:[
       {path: '', redirectTo: 'brands', pathMatch: 'full'},
       {path:'brands', component:VehicleBrandComponent},
