@@ -16,6 +16,7 @@ import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-lis
 import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
 import { RoulettePageComponent } from './page/casino/roulette-page/roulette-page.component';
 import { LobbyPageComponent } from './page/casino/lobby-page/lobby-page.component';
+import {NotfoundComponent} from './page/notfound/notfound.component';
  const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
@@ -38,9 +39,9 @@ import { LobbyPageComponent } from './page/casino/lobby-page/lobby-page.componen
       {path: '', redirectTo: 'lobby', pathMatch: 'full'},
       {path: 'lobby', component: LobbyPageComponent},
       {path: 'roulette', component: RoulettePageComponent}
-    ]}
+    ]},
 //     {path: '', component: , data:{routeName:"Denov.Co"}},
-//     {path: '**', component:, data:{routeName:"Erroooor"}}
+     {path: '**', component:NotfoundComponent, data:{routeName:"Error"}}
  ]
 @NgModule({
     declarations: [],
