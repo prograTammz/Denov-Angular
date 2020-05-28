@@ -43,8 +43,8 @@ import { NewsFormComponent } from './components/news-form/news-form.component';
 import { VehicleBrandComponent } from './page/priceguide/vehicle-brand/vehicle-brand.component';
 import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-list.component';
 import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
-import { RoulettePageComponent } from './page/casino/roulette-page/roulette-page.component';
-import { LobbyPageComponent } from './page/casino/lobby-page/lobby-page.component';
+// import { RoulettePageComponent } from './page/casino/roulette-page/roulette-page.component';
+// import { LobbyPageComponent } from './page/casino/lobby-page/lobby-page.component';
 
 declare var Hammer: any;
 
@@ -69,8 +69,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     VehicleBrandComponent,
     VehicleListComponent,
     VehicleDetailComponent,
-    RoulettePageComponent,
-    LobbyPageComponent,
+    // RoulettePageComponent,
+    // LobbyPageComponent,
   ],
   imports: [
     BrowserModule,
