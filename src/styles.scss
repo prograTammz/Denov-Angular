@@ -4,7 +4,7 @@ html, body { height: 100%; }
 body { 
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-
+    color: #2D3139;
 }
 
 @import '~@angular/material/theming';
@@ -182,10 +182,11 @@ snack-bar-container{
 .mat-progress-spinner circle, .mat-spinner circle {
     stroke: red;
 }
-
+@media only screen and (max-width: 500px) {
+}
 h1{
     font-weight: 200;
-    font-size: 6rem;
+    font-size: 4.5rem;
     letter-spacing: -1.5px;
 }
 h2{
@@ -212,6 +213,9 @@ h6{
     font-weight: 500;
     font-size: 1.25rem;
     letter-spacing: 0.15px;
+}
+.subhead{
+    font-size: 1.375rem
 }
 .subtitle-1{
     font-weight: 400;
@@ -249,4 +253,19 @@ h6{
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-size: 0.625rem;
+}
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 3.0em;
+    }
+    h2{
+        font-size: 2.5em;
+    }
+    h3{
+        font-size: 2em;
+    }
+    h4{
+        font-size: 1.75em;
+    }
+
 }
