@@ -9,22 +9,18 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
-import {MatBadgeModule} from '@angular/material/badge';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatTableModule} from '@angular/material/table';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatRippleModule} from '@angular/material/core'
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,7 +28,6 @@ import { NavigationComponent } from './navigation/navigation.component';
 
 
 
-import {HammerGestureConfig, HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
 import { HomeComponent } from './page/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
@@ -45,19 +40,7 @@ import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-lis
 import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { NotfoundComponent } from './page/notfound/notfound.component';
-// import { RoulettePageComponent } from './page/casino/roulette-page/roulette-page.component';
-// import { LobbyPageComponent } from './page/casino/lobby-page/lobby-page.component';
 
-declare var Hammer: any;
-
-export class MyHammerConfig extends HammerGestureConfig  {
-  buildHammer(element: HTMLElement) {
-    let mc = new Hammer(element, {
-      touchAction: "pan-y"
-    });
-    return mc;
-  }
-}
 
 @NgModule({
   declarations: [
@@ -88,27 +71,20 @@ export class MyHammerConfig extends HammerGestureConfig  {
     MatDividerModule,
     MatListModule,
     MatIconModule,
-    MatBadgeModule,
     MatMenuModule,
     MatButtonModule,
     MatCardModule,
     MatTabsModule,
     MatInputModule,
-    MatGridListModule,
-    MatTableModule,
     MatSnackBarModule,
     MatExpansionModule,
     MatDialogModule,
     MatProgressSpinnerModule,
-    MatPaginatorModule,
     MatRippleModule,
-    MatButtonToggleModule,
+    MatPaginatorModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [{
-    provide: HAMMER_GESTURE_CONFIG,
-    useClass: MyHammerConfig ,
-  }],
+  providers: [],
   bootstrap: [AppComponent],
   entryComponents:[LoginComponent,NewsFormComponent],
 })

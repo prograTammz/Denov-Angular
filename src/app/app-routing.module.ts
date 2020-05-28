@@ -14,8 +14,6 @@ import {RegisterComponent} from './page/register/register.component';
 import {NewsComponent} from './page/news/news.component';
 import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-list.component';
 import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
-import { RoulettePageComponent } from './page/casino/roulette-page/roulette-page.component';
-import { LobbyPageComponent } from './page/casino/lobby-page/lobby-page.component';
 import {NotfoundComponent} from './page/notfound/notfound.component';
  const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -35,11 +33,11 @@ import {NotfoundComponent} from './page/notfound/notfound.component';
     ]},
     {path: 'register', component: RegisterComponent},
     {path: 'news', component: NewsComponent},
-    {path: 'casino',children:[
-      {path: '', redirectTo: 'lobby', pathMatch: 'full'},
-      {path: 'lobby', component: LobbyPageComponent},
-      {path: 'roulette', component: RoulettePageComponent}
-    ]},
+    // {path: 'casino',children:[
+    //   {path: '', redirectTo: 'lobby', pathMatch: 'full'},
+    //   {path: 'lobby', component: LobbyPageComponent},
+    //   {path: 'roulette', component: RoulettePageComponent}
+    // ]},
 //     {path: '', component: , data:{routeName:"Denov.Co"}},
      {path: '**', component:NotfoundComponent, data:{routeName:"Error"}}
  ]
