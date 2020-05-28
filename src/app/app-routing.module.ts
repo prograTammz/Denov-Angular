@@ -4,7 +4,6 @@ import {RouterModule, Routes, Router} from '@angular/router';
 
 import {HomeComponent} from './page/home/home.component';
 
-import {BankingHomeComponent}           from './page/banking/banking-home/banking-home.component';
 import {BankingTermsComponent}          from './page/banking/banking-terms/banking-terms.component';
 import {BankingWiretransferComponent}   from './page/banking/banking-wiretransfer/banking-wiretransfer.component';
 import { BankingPlansComponent }        from './page/banking/banking-plans/banking-plans.component';
@@ -27,7 +26,7 @@ import { LobbyPageComponent } from './page/casino/lobby-page/lobby-page.componen
 //     {path: 'eservices', component: , data:{routeName:"E-services"}},
     {path: 'banking', children:[
       {path: '', redirectTo: 'overview', pathMatch: 'full'},
-      {path:'overview', component:BankingHomeComponent},
+      {path:'overview', loadChildren: ()=> import('./page/banking/banking-home/banking-home.module').then(m=> m.BankingHomeModule)},
       {path:'terms-conditions', component:BankingTermsComponent},
       {path:'wire-transfer',component:BankingWiretransferComponent},
       {path: 'plans',component:BankingPlansComponent}
