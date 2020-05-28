@@ -26,7 +26,7 @@ import { LobbyPageComponent } from './page/casino/lobby-page/lobby-page.componen
 //     {path: 'eservices', component: , data:{routeName:"E-services"}},
     {path: 'banking', children:[
       {path: '', redirectTo: 'overview', pathMatch: 'full'},
-      {path:'overview', loadChildren: ()=> import('./page/banking/banking-home/banking-home.module').then(m=> m.BankingHomeModule)},
+      {path:'overview', loadChildren: ()=> import('./page/banking/banking-home.module').then(m=> m.BankingHomeModule)},
       {path:'terms-conditions', component:BankingTermsComponent},
       {path:'wire-transfer',component:BankingWiretransferComponent},
       {path: 'plans',component:BankingPlansComponent}

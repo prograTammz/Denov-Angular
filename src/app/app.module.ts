@@ -34,12 +34,6 @@ import { NavigationComponent } from './navigation/navigation.component';
 
 import {HammerGestureConfig, HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
 import { HomeComponent } from './page/home/home.component';
-import { BankingTermsComponent } from './page/banking/banking-terms/banking-terms.component';
-import { BankingFeesComponent } from './page/banking/banking-fees/banking-fees.component';
-import { BankingPlansComponent } from './page/banking/banking-plans/banking-plans.component';
-import { BankingAccountComponent } from './page/banking/banking-account/banking-account.component';
-import { BankingLoanComponent } from './page/banking/banking-loan/banking-loan.component';
-import { BankingWiretransferComponent } from './page/banking/banking-wiretransfer/banking-wiretransfer.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
 import { NewsComponent } from './page/news/news.component';
@@ -68,12 +62,6 @@ export class MyHammerConfig extends HammerGestureConfig  {
     AppComponent,
     NavigationComponent,
     HomeComponent,
-    BankingTermsComponent,
-    BankingFeesComponent,
-    BankingPlansComponent,
-    BankingAccountComponent,
-    BankingLoanComponent,
-    BankingWiretransferComponent,
     LoginComponent,
     RegisterComponent,
     NewsComponent,
