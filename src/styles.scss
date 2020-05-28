@@ -178,7 +178,9 @@ $custom-typography: mat-typography-config($font-family: '"Montserrat", sans-seri
 snack-bar-container{
     margin-bottom: 64px !important;
 }
-
+.mat-icon{
+    color: #4F4E6C;
+}
 .mat-progress-spinner circle, .mat-spinner circle {
     stroke: red;
 }
