@@ -1,7 +1,6 @@
 mat-sidenav{
     position: fixed;
     margin-top: 64px;
-    width: 250px;
     z-index: 3;
 }
 .page-content{
@@ -29,12 +28,9 @@ mat-list-item.disabled{
 }
 .soon-badge, .vsoon-badge{
     color: white;
-    background-color: red;
+    background-color: #5AB1AC;
     border-radius: 2px;
     display: block;
     padding: 5px;
     text-transform: uppercase;
-}
-.vsoon-badge{
-    background-color: green;
 }
