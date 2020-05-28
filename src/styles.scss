@@ -182,3 +182,71 @@ snack-bar-container{
 .mat-progress-spinner circle, .mat-spinner circle {
     stroke: red;
 }
+
+h1{
+    font-weight: 200;
+    font-size: 6rem;
+    letter-spacing: -1.5px;
+}
+h2{
+    font-weight: 200;
+    font-size: 3.75rem;
+    letter-spacing: -0.5px;
+}
+h3{
+    font-weight: 400;
+    font-size: 3em;
+    letter-spacing: 0px;
+}
+h4{
+    font-weight: 400;
+    font-size: 2.125rem;
+    letter-spacing: 0.25px;
+}
+h5{
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+}
+h6{
+    font-weight: 500;
+    font-size: 1.25rem;
+    letter-spacing: 0.15px;
+}
+.subtitle-1{
+    font-weight: 400;
+    letter-spacing: 0.15px;
+    font-size: 1rem;
+}   
+.subtitle-2{
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    font-size: 0.875rem;
+}
+.body-1{
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+}
+.body-2{
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    font-size: 0.875rem;
+}
+.button{
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    font-size: 0.875rem;
+}
+.caption{
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    font-size: 0.75rem;
+}
+.overline{
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.625rem;
+}
