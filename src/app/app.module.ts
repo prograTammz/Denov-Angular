@@ -58,8 +58,6 @@ import { SoonComponent } from './page/soon/soon.component';
     SideNavComponent,
     NotfoundComponent,
     SoonComponent,
-    // RoulettePageComponent,
-    // LobbyPageComponent,
   ],
   imports: [
     BrowserModule,
