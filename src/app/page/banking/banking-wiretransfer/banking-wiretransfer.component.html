@@ -1,42 +1,46 @@
-<h3>Denov Wire Transfer !</h3>
-<mat-card>
+<section class="page-wrapper">
+  <h3>Denov Wire Transfer</h3>
+  <h4>Send money</h4>
+  <mat-card>
     <mat-card-content>
-            <h4>Send money</h4>
-            <form [formGroup]="wireTransfer" (ngSubmit)="onSubmit()" class="row">
-                    <mat-form-field class="col-6 col-es-4">
-                        <input matInput type="text" placeholder="Reciever first name" formControlName="firstName" required>
-                    </mat-form-field>
-                    <mat-form-field class="col-6 col-es-4"> 
-                        <input matInput type="text" placeholder="Reciever second Name" formControlName="lastName" required>
-                    </mat-form-field>
-                    <mat-form-field class="col-12">
-                        <span matPrefix>$ &nbsp;</span>
-                        <input matInput type="number" placeholder="Amount sent" formControlName="amount" required>
-                    </mat-form-field>
-                    <button mat-stroked-button type="submit" [disabled]="!wireTransfer.valid">Wire Transfer !</button>
-                </form>
+      <form [formGroup]="wireTransfer" (ngSubmit)="onSubmit()" class="row">
+        <mat-form-field  appearance="outline" class="col-12">
+            <mat-label>Reciever first name</mat-label>
+          <input matInput type="text" formControlName="firstName" required>
+        </mat-form-field>
+        <mat-form-field  appearance="outline" class="col-12">
+            <mat-label>Reciever last name</mat-label>
+          <input matInput type="text" formControlName="lastName" required>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="col-12">
+          
+          <mat-label>Amount sent</mat-label>
+          <input matInput type="number" formControlName="amount" required>
+        </mat-form-field>
+        <button mat-stroked-button class="button" type="submit" [disabled]="!wireTransfer.valid">Wire Transfer</button>
+      </form>
     </mat-card-content>
-</mat-card>
+  </mat-card>
 
-            <h4>Transactions</h4>
-            <table mat-table #table [dataSource]="dummyData" class="mat-elevation-z8">
-                <ng-container matColumnDef="firstName">
-                    <th mat-header-cell *matHeaderCellDef> First Name </th>
-                    <td mat-cell *matCellDef="let row"> {{row.firstName}} </td>
-                </ng-container>
-                <ng-container matColumnDef="lastName">
-                        <th mat-header-cell *matHeaderCellDef> Last Name </th>
-                        <td mat-cell *matCellDef="let row"> {{row.lastName}} </td>
-                </ng-container>
-                <ng-container matColumnDef="amount">
-                        <th mat-header-cell *matHeaderCellDef> Amount </th>
-                        <td mat-cell *matCellDef="let row"> {{row.amount}} </td>
-                </ng-container>
-                <ng-container matColumnDef="date">
-                        <th mat-header-cell *matHeaderCellDef> Date </th>
-                        <td mat-cell *matCellDef="let row"> {{this.convertDate(row.date)}} </td>
-                    </ng-container>
-                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-            </table>
-
+  <h4>Transactions</h4>
+  <table mat-table #table [dataSource]="dummyData">
+    <ng-container matColumnDef="firstName">
+      <th mat-header-cell *matHeaderCellDef> First Name </th>
+      <td mat-cell *matCellDef="let row"> {{row.firstName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef> Last Name </th>
+      <td mat-cell *matCellDef="let row"> {{row.lastName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="amount">
+      <th mat-header-cell *matHeaderCellDef> Amount </th>
+      <td mat-cell *matCellDef="let row"> {{row.amount}} </td>
+    </ng-container>
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let row"> {{this.convertDate(row.date)}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</section>

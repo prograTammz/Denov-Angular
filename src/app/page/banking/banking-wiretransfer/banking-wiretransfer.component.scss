@@ -1,11 +1,26 @@
-h3{
-    color: #fa824c;
-    font-size: 24px;
-    font-family: Satisfy;
-}
+
 mat-card:first-of-type{
     margin-bottom: 10px;
+}
+mat-form-field{
+    display: block;
+}
+button{
+    width: 100%;
+    padding: 5px;
+    border-radius: 0;
 }
 table{
     width: 100%;
 }
+.mat-card{
+    border-radius: 0;
+    box-shadow: none;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-end {
+    border-radius: 0px !important;
+  }
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-start {
+    border-radius: 0px !important;
+  }
