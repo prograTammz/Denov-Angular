@@ -10,7 +10,7 @@ export class AddNewsDialogService {
   constructor(public dialog: MatDialog) { }
   openModal(): void{
     const dialogRef = this.dialog.open(NewsFormComponent,{
-      width:'300px'
+      width:'400px'
     });
   }
   closeModal(): void{

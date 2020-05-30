@@ -1,23 +1,43 @@
+
 .add-news{
-    background-color: #fa824c;
     position: fixed;
     bottom: 70px;
     right: 20px;
+    color: white;
+    mat-icon{
+        color: white;
+    }
+    box-shadow: none;
 }
 .mat-progress-spinner{
     position: absolute;
     top: calc(50% - 50px);
     left: calc(50% - 50px);
 }
+
 .mat-card{
     margin-bottom: 10px;
+    box-shadow: none;
+    background-color: #F0F0F9;
+    border-radius: 0;
 }
-.mat-card:first-of-type{
-    margin-top: 20px;
+::ng-deep .mat-card-header-text {
+    margin: 0 !important;
+  }
+.mat-card:last-of-type{
+    margin-bottom: 0;
+}
+.mat-paginator{
+    width: 100%;
+    background-color: #F0F0F9;
 }
 h2{
-    display: inline;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-.mat-raised-button{
-    float: right;
+.news-header{
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    justify-content: space-between;
 }

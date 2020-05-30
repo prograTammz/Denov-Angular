@@ -1,12 +1,14 @@
 <h2>Publish News</h2>
 <form *ngIf="!isLoading"[formGroup]="new" (ngSubmit)="onSubmit()" class="row">
-    <mat-form-field class="col-12">
+    <mat-form-field appearance="outline" class="col-12">
+        <mat-label>news Title</mat-label>
         <input matInput type="text" placeholder="Title" formControlName="title" required>
     </mat-form-field>
-    <mat-form-field class="col-12">
+    <mat-form-field  appearance="outline" class="col-12">
+        <mat-label>News Body</mat-label>
             <textarea matInput placeholder="Body" formControlName="body" required></textarea>
     </mat-form-field>
-    <button mat-stroked-button type="submit" [disabled]="!new.valid">Publish</button>
+    <button mat-stroked-button class="button" type="submit" [disabled]="!new.valid">Publish</button>
 </form>
 <div *ngIf="isLoading">
     <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>

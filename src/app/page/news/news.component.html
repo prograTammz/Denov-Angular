@@ -1,27 +1,36 @@
-<h2>Latest news</h2>
-<button mat-raised-button (click)="refresh()">Refresh <mat-icon>refresh</mat-icon></button>
-<div *ngIf="!isLoading">
-        <mat-card *ngFor="let item of newsList">
-                <mat-card-header>
-                    <mat-card-title>{{item.title}}</mat-card-title>
-                    <mat-card-subtitle>By: {{item.author}} at: {{date(item.date)}}</mat-card-subtitle>
-                </mat-card-header>
-                <mat-card-content>
-                    {{item.body}}
-                </mat-card-content>
-            </mat-card>
-            
-            
-            <button mat-fab aria-label="add a news" class="add-news" *ngIf="isAuthorized" (click)="openDialog()">
-                    <mat-icon>add</mat-icon>
-            </button>
-         
-</div>
-<div *ngIf="isLoading">
-        <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
-</div>
-<mat-paginator [length]="length"
+
+
+        <div class="news-header">
+                <h2>Latest news</h2>
+                <button mat-stroked-button class="button"(click)="refresh()">Refresh <mat-icon>refresh</mat-icon></button>
+        </div>
+        <mat-paginator [length]="length"
                           [pageSize]="pageSize"
                           [pageSizeOptions]="pageSizeOptions"
                           (page)="onPaginateChange($event)">
             </mat-paginator>
+<section class="page-wrapper">         
+        <div *ngIf="!isLoading">
+                <mat-card *ngFor="let item of newsList">
+                        <mat-card-header>
+                        <mat-card-title>{{item.title}}</mat-card-title>
+                        <mat-card-subtitle>By: {{item.author}} at: {{date(item.date)}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content>
+                        {{item.body}}
+                        </mat-card-content>
+                </mat-card>
+                
+                
+                <button mat-fab aria-label="add a news" color="primary" class="add-news" *ngIf="isAuthorized" (click)="openDialog()">
+                        <mat-icon>add</mat-icon>
+                </button>
+                
+        </div>
+        <div *ngIf="isLoading">
+                <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+        </div>
+</section>
+
+
+
