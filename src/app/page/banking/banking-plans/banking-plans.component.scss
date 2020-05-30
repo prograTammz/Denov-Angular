@@ -1,14 +1,19 @@
-h3{
-    color: #fa824c;
-    font-size: 24px;
-    font-family: Satisfy;
-}
+
 mat-divider{
     margin: 5px 0px;
 }
-p,i{
-    color: dimgray
+.mat-expansion-panel{
+    box-shadow: none;
+    border-radius: 0;
+    background-color: #F0F0F9;
 }
-i{
-    font-size: 12px;
+.mat-accordion .mat-expansion-panel:first-of-type{
+    border-radius: 0;
+}
+.mat-accordion .mat-expansion-panel:last-of-type{
+    border-radius: 0;
+}
+.mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover{
+    background-color: #78849E;
+    color: white;
 }
