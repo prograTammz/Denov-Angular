@@ -1,44 +1,46 @@
-
-
-<picture >
-        <source srcset="../../../assets/imgs/bankwallpaper.webp" type="image/webp">
-        <img class="heading-img" src="../../../assets/imgs/bankwallpaper.jpg" alt="A picture in a bank lobby">
-</picture>
-<h3>Denov Bank !</h3>
-<p>
+<picture>
+    <source srcset="../../../assets/imgs/bankwallpaper.webp" type="image/webp">
+    <img class="heading-img" src="../../../assets/imgs/bankwallpaper.jpg" alt="A picture in a bank lobby">
+  </picture>
+<section class="page-wrapper">
+  <h3>Denov Bank !</h3>
+  <p>
     Denov bank is the core of Denov services as all the paid services will require,
     a money transaction, which can be only done through Denov bank. Denov bank also
-    provide interests with many plans to suit all the customers, which also providing 
+    provide interests with many plans to suit all the customers, which also providing
     Loans and funding for your projects. You can even wire transfer the money to someone
     else even if you are out of the city. All that can only be done through Denov Bank.
-</p>
-<h4>Loaning and saving Plans</h4>
-    We have many plans for loaning and saving to suit all your business plans and your future
-    saving targets, we have multiple interest rates, and multiple durations to choose between them,
-    and even special packages with less fees than regular ones.
-<p>
-<button mat-raised-button [routerLink]="['/banking','plans']">Loan & Saving Plans</button>
-</p>
-<h4>Opening an account</h4>
-<p>
+  </p>
+  <h4>Loaning and saving Plans</h4>
+  We have many plans for loaning and saving to suit all your business plans and your future
+  saving targets, we have multiple interest rates, and multiple durations to choose between them,
+  and even special packages with less fees than regular ones.
+  <p>
+    <button mat-stroked-button class="button" [routerLink]="['/banking','plans']">Loan & Saving Plans</button>
+  </p>
+  <h4>Opening an account</h4>
+  <p>
     Opening an account is easy, all you have to do is making a request and we will contact
     you to visit our office deposit the required money, You can even even open endless number
     of account and choose the default one for Denov services.
-</p>
-<button mat-raised-button>Open your acount Now !</button>
-<h4>Getting a Loan</h4>
-<p>
-    If you want a loan you will have to fill out a form after you pick the suitable <a [routerLink]="['/banking','plans']">plan</a>
+  </p>
+  <button mat-stroked-button class="button">Open your acount Now !</button>
+  <h4>Getting a Loan</h4>
+  <p>
+    If you want a loan you will have to fill out a form after you pick the suitable <a
+      [routerLink]="['/banking','plans']">plan</a>
     for your loan, you even find a calculator which will help you out in calculating your loan. However
-    you will have to provide different requirments and agree to our <a [routerLink]="['/banking','terms-conditions']">terms & conditions</a>.
+    you will have to provide different requirments and agree to our <a
+      [routerLink]="['/banking','terms-conditions']">terms & conditions</a>.
     Your loan will be pending until one of our bankers check it, if it's approved you will be contacted
     by the bank to recieve your Loan and sign on required papers.
-</p>
-<button mat-raised-button>Get your loan !</button>
-<h4>Wire transfer</h4>
-<p>
+  </p>
+  <button mat-stroked-button class="button">Get your loan !</button>
+  <h4>Wire transfer</h4>
+  <p>
     You can wire transfer specific amount of money to the desired person having a denov bank account, any time
     and any where, even if you are out city, and more even if you have no connection on your phone, it will be
     done automatically once your phone is back online.
-</p>
-<button mat-raised-button [routerLink]="['/banking','wire-transfer']">Wire transfer</button>
+  </p>
+  <button mat-stroked-button class="button"[routerLink]="['/banking','wire-transfer']">Wire transfer</button>
+</section>
