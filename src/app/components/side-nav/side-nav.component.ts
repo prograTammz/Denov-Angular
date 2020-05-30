@@ -19,7 +19,7 @@ export class SideNavComponent implements OnInit {
   
   constructor(private sidenavService: SideNavService) { 
     this.viewWidth = window.innerWidth;
-    this.isDesktop = false;
+    this.isDesktop = true;
   }
 
 
@@ -32,5 +32,8 @@ export class SideNavComponent implements OnInit {
   onResize(event) {
     this.viewWidth = event.target.innerWidth;
     this.isDesktop = false;
+    if(this.viewWidth > 1050){
+      this.isDesktop = true;
+    }
   }
 }

@@ -36,7 +36,6 @@ export class NavigationComponent implements OnInit {
     this.matIconRegistry.addSvgIcon('close', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/close.svg'));
     this.matIconRegistry.addSvgIcon('burger-menu',sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/burger-icon.svg'));
     this.isAuth = false;
-    this.isInstalled = false;
     this.viewWidth = window.innerWidth;
     this.isDesktop = false;
   }
