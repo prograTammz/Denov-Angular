@@ -18,12 +18,18 @@ export class SideNavComponent implements OnInit {
   public isDesktop: boolean;
   
   constructor(private sidenavService: SideNavService) { 
-    this.viewWidth = window.innerWidth;
-    this.isDesktop = true;
+    this.viewWidth = 0;
+    this.isDesktop = false;
   }
 
 
   ngOnInit(): void {
+    this.viewWidth = window.innerWidth;
+    if(this.viewWidth > 1050){
+      this.isDesktop = true;
+    }else{
+      this.isDesktop = false;
+    }
   }
   
   ngAfterViewInit(): void {
