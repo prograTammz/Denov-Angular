@@ -4,25 +4,25 @@ import {RouterModule, Routes, Router} from '@angular/router';
 
 import {HomeComponent} from './page/home/home.component';
 
-import {BankingTermsComponent}          from './page/banking/banking-terms/banking-terms.component';
-import {BankingWiretransferComponent}   from './page/banking/banking-wiretransfer/banking-wiretransfer.component';
-import { BankingPlansComponent }        from './page/banking/banking-plans/banking-plans.component';
-
 import {VehicleBrandComponent} from './page/priceguide/vehicle-brand/vehicle-brand.component';
 
 import {RegisterComponent} from './page/register/register.component';
 import {NewsComponent} from './page/news/news.component';
+
 import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-list.component';
 import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
+
 import {NotfoundComponent} from './page/notfound/notfound.component';
+import {SoonComponent} from './page/soon/soon.component';
+
  const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
-//     {path: 'commingSoon', component: , data:{routeName:"Denov.Co"}},
-//     {path: 'trucking', component: , data:{routeName:"Trucking"}},
-//     {path: 'market', component: , data:{routeName:"Market"}},
-//     {path: 'dcurrency', component: , data:{routeName:"D-Currency"}},
-//     {path: 'eservices', component: , data:{routeName:"E-services"}},
+    {path: 'soon', component: SoonComponent, data:{routeName:"Denov.Co"}},
+    {path: 'trucking',  redirectTo: '/soon', data:{routeName:"Trucking"}},
+    {path: 'market',    redirectTo: '/soon', data:{routeName:"Market"}},
+    {path: 'office',    redirectTo: '/soon', data:{routeName:"Market"}},
+    {path: 'casino',    redirectTo: '/soon', data:{routeName:"Market"}},
     {path: 'banking', loadChildren: ()=> import('./page/banking/banking-home.module').then(m=> m.BankingHomeModule)},
     {path: 'info', loadChildren: ()=> import('./page/info/info-routing.module').then(m=>m.AboutUsRoutingModule)},
     {path: 'vehicle',children:[
@@ -33,13 +33,7 @@ import {NotfoundComponent} from './page/notfound/notfound.component';
     ]},
     {path: 'register', component: RegisterComponent},
     {path: 'news', component: NewsComponent},
-    // {path: 'casino',children:[
-    //   {path: '', redirectTo: 'lobby', pathMatch: 'full'},
-    //   {path: 'lobby', component: LobbyPageComponent},
-    //   {path: 'roulette', component: RoulettePageComponent}
-    // ]},
-//     {path: '', component: , data:{routeName:"Denov.Co"}},
-     {path: '**', component:NotfoundComponent, data:{routeName:"Error"}}
+    {path: '**', component:NotfoundComponent, data:{routeName:"Error"}}
  ]
 @NgModule({
     declarations: [],
