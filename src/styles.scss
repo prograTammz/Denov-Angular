@@ -173,7 +173,9 @@ $custom-typography: mat-typography-config($font-family: '"Montserrat", sans-seri
     width: 100%;
     flex-wrap: wrap;
 }
-
+.page-wrapper{
+    padding: 20px;
+}
 
 snack-bar-container{
     margin-bottom: 64px !important;
