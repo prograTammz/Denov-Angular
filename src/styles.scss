@@ -9,9 +9,13 @@ body {
 
 @import '~@angular/material/theming';
 
+    $primary: mat-palette($mat-blue-grey,400);
+    $warn: mat-palette($mat-red,500);
+    $custom-typography: mat-typography-config($font-family: '"Montserrat", sans-serif;');
 
-$custom-typography: mat-typography-config($font-family: '"Montserrat", sans-serif;');
+    $theme: mat-light-theme($primary,$warn);
 
+@include angular-material-theme($theme);
 @include mat-core($custom-typography);
 
 
@@ -93,6 +97,9 @@ $custom-typography: mat-typography-config($font-family: '"Montserrat", sans-seri
     }
     .col-es-4 {
         width: 100%;
+    }
+    .col-offset-es-0{
+        margin: 0;
     }
     .col-offset-es-1 {
         margin-left: 25%;
@@ -176,6 +183,8 @@ $custom-typography: mat-typography-config($font-family: '"Montserrat", sans-seri
 }
 .page-wrapper{
     padding: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 snack-bar-container{
