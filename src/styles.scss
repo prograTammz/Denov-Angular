@@ -1,21 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100%;}
 body { 
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    color: #2D3139;
 }
+
+@function mat-light-theme-foreground($color) {
+    @return (
+        base:              $color,
+        divider:           $black-12-opacity,
+        dividers:          $black-12-opacity,
+        disabled:          rgba($color, 0.38),
+        disabled-button:   rgba($color, 0.38),
+        disabled-text:     rgba($color, 0.38),
+        hint-text:         rgba($color, 0.38),
+        secondary-text:    rgba($color, 0.54),
+        icon:              rgba($color, 0.54),
+        icons:             rgba($color, 0.54),
+        text:              rgba($color, 0.87),
+        slider-off:        rgba($color, 0.26),
+        slider-off-active: rgba($color, 0.38),
+    );
+};
+
+// You can put any color here. I've chosen mat-color($my-app-primary, 700)
+
+
 
 @import '~@angular/material/theming';
 
     $primary: mat-palette($mat-blue-grey,400);
     $warn: mat-palette($mat-red,500);
     $custom-typography: mat-typography-config($font-family: '"Montserrat", sans-serif;');
+    $foreground: mat-light-theme-foreground(mat-color($mat-grey,800));
 
     $theme: mat-light-theme($primary,$warn);
+    $theme-custom: map-merge($theme,(foreground: $foreground));
 
-@include angular-material-theme($theme);
+@include angular-material-theme($theme-custom);
 @include mat-core($custom-typography);
 
 
