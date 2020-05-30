@@ -40,6 +40,7 @@ import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-lis
 import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { NotfoundComponent } from './page/notfound/notfound.component';
+import { SoonComponent } from './page/soon/soon.component';
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { NotfoundComponent } from './page/notfound/notfound.component';
     VehicleDetailComponent,
     SideNavComponent,
     NotfoundComponent,
+    SoonComponent,
     // RoulettePageComponent,
     // LobbyPageComponent,
   ],
