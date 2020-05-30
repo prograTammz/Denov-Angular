@@ -1,7 +1,7 @@
 <mat-toolbar>
   <mat-toolbar-row>
-      <button mat-icon-button *ngIf="this.router.url == '/home'" (click)="sideNavigationToggle()" aria-label="Side Menu toggle"><mat-icon [svgIcon]="sideNav.isOpened() ? 'close' : 'burger-menu'"  role="button"></mat-icon></button>
-      <button mat-icon-button *ngIf="this.router.url != '/home'"(click)="goBack()" aria-label="Return Back"><mat-icon role="button">keyboard_backspace</mat-icon></button>
+      <button mat-icon-button *ngIf="this.router.url == '/home' && !isDesktop" (click)="sideNavigationToggle()" aria-label="Side Menu toggle"><mat-icon [svgIcon]="sideNav.isOpened() ? 'close' : 'burger-menu'"  role="button"></mat-icon></button>
+      <button mat-icon-button *ngIf="this.router.url != '/home' && !isDesktop"(click)="goBack()" aria-label="Return Back"><mat-icon role="button">keyboard_backspace</mat-icon></button>
       
     <span class="brand-logo">Denov</span>
     <button mat-icon-button [matMenuTriggerFor]="menu" class="action-button" aria-label="myDenov account menu">
