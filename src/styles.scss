@@ -237,9 +237,6 @@ snack-bar-container{
 .mat-icon{
     color: #4F4E6C;
 }
-.mat-progress-spinner circle, .mat-spinner circle {
-    stroke: red;
-}
 @media only screen and (max-width: 500px) {
 }
 h1{
@@ -326,4 +323,16 @@ h6{
         font-size: 1.75em;
     }
 
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-end {
+    border-radius: 0px !important;
+  }
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-start {
+    border-radius: 0px !important;
+  }
+.mat-dialog-container{
+    border-radius: 0 !important;
+    background-color: #F0F0F9 ;
+    box-shadow: none;
 }
