@@ -24,7 +24,7 @@ import {NotfoundComponent} from './page/notfound/notfound.component';
 //     {path: 'dcurrency', component: , data:{routeName:"D-Currency"}},
 //     {path: 'eservices', component: , data:{routeName:"E-services"}},
     {path: 'banking', loadChildren: ()=> import('./page/banking/banking-home.module').then(m=> m.BankingHomeModule)},
-    
+    {path: 'info', loadChildren: ()=> import('./page/info/info-routing.module').then(m=>m.AboutUsRoutingModule)},
     {path: 'vehicle',children:[
       {path: '', redirectTo: 'brands', pathMatch: 'full'},
       {path:'brands', component:VehicleBrandComponent},
