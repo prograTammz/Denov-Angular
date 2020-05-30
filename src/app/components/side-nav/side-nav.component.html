@@ -1,16 +1,16 @@
 <mat-sidenav-container class="sidenav-container" hasBackdrop="false">
-  <mat-sidenav #snav opened="true"[mode]="isDesktop ? 'side' : 'over' ">
+  <mat-sidenav #snav opened="true" [mode]="isDesktop ? 'side' : 'over' ">
     <mat-nav-list>
 
       <mat-list>
-
         <mat-list-item [routerLink]="['/home']">
           <mat-icon mat-list-icon>home</mat-icon>
           <h4 mat-line>Home</h4>
         </mat-list-item>
-
-
-
+        <mat-list-item [routerLink]="['/news']">
+          <mat-icon mat-list-icon>local_libraryk</mat-icon>
+          <h4 mat-line>News</h4>
+        </mat-list-item>
       </mat-list>
 
       <mat-divider></mat-divider>
@@ -164,16 +164,13 @@
           <h4 mat-line>Invest in Denov</h4>
           <span class="soon-badge">soon</span>
         </mat-list-item>
-        <mat-list-item [routerLink]="['/news']">
-          <mat-icon mat-list-icon>local_libraryk</mat-icon>
-          <h4 mat-line>News</h4>
-        </mat-list-item>
+
         <mat-list-item>
           <mat-icon mat-list-icon>work</mat-icon>
           <h4 mat-line>Careers</h4>
         </mat-list-item>
         <mat-list-item [routerLink]="['/info','aboutus']">
-          <mat-icon mat-list-icon >info</mat-icon>
+          <mat-icon mat-list-icon>info</mat-icon>
           <h4 mat-line>About Us</h4>
         </mat-list-item>
         <mat-list-item [routerLink]="['/info','contactus']">
