@@ -1,0 +1,72 @@
+<img class="col-es-4 col-8"src="assets/illustrations/undraw_interview.svg" loading="lazy" alt="Get hired with denov">
+<section class="page-wrapper">
+    <h1>Denov careers</h1>
+    <p class="body-1">Denov offers great working environment and great working experience as it delivers services
+         in the best methodologies and provide what have never been provided to Los Santos before.</p>
+    <p class="body-1">
+        Denov offers various benefits to it's employee beside the salaries to ensure high quality of life, as well as
+        high loyality from it's employees once they are highly satisfied with their working experience with Denov.
+    </p>
+    <h2>Benefits</h2>
+        <div class="row">
+            <div class="col-6 col-s-12 col-es-4">
+                <div class="content">
+                    <h4>Salary</h4>
+                    <p>Denov offers one of the highest salaries in Los Santos ranging from 4,000$ per hour up to 20,000$ per hour from driver to the CEO.
+                        Denov aims to make it's employees one of the best in Los Santos and have the highest living conditions with the best social status. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-6 col-s-12 col-es-4">
+                <div class="content">
+                    <h4>Housing</h4>
+                    <p>Denov offers houses for rents with room mates that you work with or standalone houses, the houses will be closer to the office and also
+                    lower than market price, if you are short incash you won't lose your house, it will be cut from your salary with special aid.</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-s-12 col-es-4">
+                <div class="content">
+                    <h4>Banking service</h4>
+                    <p>You will recieve your salary with Denov Banking at which you can make savign account and take easy loans with it, Denov employees will have lowwer loaning interest
+                        rates with automatic salary payments, also 100% off on the banking fees.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-6 col-s-12 col-es-4">
+                <div class="content">
+                    <h4>Transportation</h4>
+                    <p>Denov will offer some vehicle that you can use for your transportation and special drivers to pick you up to your office during your office hours. The transportation
+                        aims to reduce the transportation cost for the employees and eliminate any diffculties they face daily.
+                    </p>
+                </div>
+            </div>
+        </div>
+    <h2>Open positions</h2>
+    <div class="row">
+        <div class="col-4 col-s-6 col-es-4" *ngFor="let job of jobs">
+            <div class="content" >
+                <h4 class="job-title">{{job.title}}</h4>
+                <mat-list>
+                    <div mat-subheader>Benefits</div>
+                    <mat-list-item *ngFor="let benefit of job.benefits">
+                      <mat-icon mat-list-icon>{{benefit.icon}}</mat-icon>
+                      <div mat-line>{{benefit.text}}</div>
+                    </mat-list-item>
+
+                    <mat-divider></mat-divider>
+
+                    <div mat-subheader>Roles</div>
+                    <mat-list-item *ngFor="let role of job.roles">
+                      <mat-icon mat-list-icon>{{role.icon}}</mat-icon>
+                      <div mat-line>{{role.text}}</div>
+                    </mat-list-item>
+                  </mat-list>
+            </div>
+
+            
+        </div>
+    </div>
+</section>
