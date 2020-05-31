@@ -2,7 +2,11 @@ mat-sidenav{
     position: fixed;
     margin-top: 64px;
     z-index: 3;
+    
 }
+.mat-drawer{
+    box-shadow: none;
+}   
 .page-content{
     margin-top: 64px;
     margin-left: auto;
