@@ -26,10 +26,7 @@ import {MatRippleModule} from '@angular/material/core'
 
 //angular material modules to be moved to other modules
 import {MatInputModule} from '@angular/material/input';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
-import {MatPaginatorModule} from '@angular/material/paginator';
 
 import { AppComponent } from './app.component';
 
@@ -85,14 +82,11 @@ import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle
     MatMenuModule,
     MatButtonModule,
     MatCardModule,
-    MatTabsModule,
     MatInputModule,
     MatSnackBarModule,
-    MatExpansionModule,
     MatDialogModule,
     MatProgressSpinnerModule,
     MatRippleModule,
-    MatPaginatorModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
