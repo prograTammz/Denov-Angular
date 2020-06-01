@@ -9,9 +9,10 @@ import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import { InvestComponent } from './invest/invest.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 @NgModule({
-  declarations: [CareerComponent, InvestComponent],
+  declarations: [CareerComponent, InvestComponent, AboutusComponent],
   imports: [
     CommonModule,
     InformationRoutingModule,
