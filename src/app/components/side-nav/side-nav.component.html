@@ -17,15 +17,35 @@
 
 
       <mat-list>
-        <h3 mat-subheader class="overline">Denov Bank</h3>
-        <mat-list-item>
+        <h3 mat-subheader class="overline" >Denov Bank</h3>
+        <mat-list-item class="disabled" disableRipple>
           <mat-icon mat-list-icon>account_balance_wallet</mat-icon>
           <h4 mat-line>Wallet</h4>
+          <span class="soon-badge">soon</span>
         </mat-list-item>
 
-        <mat-list-item>
+        <mat-list-item class="disabled" disableRipple>
           <mat-icon mat-list-icon>contactless</mat-icon>
           <h4 mat-line>Transaction request</h4>
+          <span class="soon-badge">soon</span>
+        </mat-list-item>
+
+        <mat-list-item class="disabled" disableRipple>
+          <mat-icon mat-list-icon>account_balance</mat-icon>
+          <h4 mat-line>Open account</h4>
+          <span class="soon-badge">soon</span>
+        </mat-list-item>
+
+        <mat-list-item class="disabled" disableRipple>
+          <mat-icon mat-list-icon>payments</mat-icon>
+          <h4 mat-line>Request Loan</h4>
+          <span class="soon-badge">soon</span>
+        </mat-list-item>
+
+        <mat-list-item [routerLink]="['/banking','wire-transfer']" class="disabled" disableRipple>
+          <mat-icon mat-list-icon>input</mat-icon>
+          <h4 mat-line>Wire Tranfer</h4>
+          <span class="soon-badge">soon</span>
         </mat-list-item>
 
         <mat-list-item [routerLink]="['/banking','plans']">
@@ -34,20 +54,9 @@
           <h4 mat-line>Saving & Loan Plans</h4>
         </mat-list-item>
 
-        <mat-list-item>
-          <mat-icon mat-list-icon>account_balance</mat-icon>
-          <h4 mat-line>Open account</h4>
-        </mat-list-item>
-
-        <mat-list-item>
-          <mat-icon mat-list-icon>payments</mat-icon>
-          <h4 mat-line>Request Loan</h4>
-        </mat-list-item>
-
-        <mat-list-item [routerLink]="['/banking','wire-transfer']">
-          <mat-icon mat-list-icon>
-            input</mat-icon>
-          <h4 mat-line>Wire Tranfer</h4>
+        <mat-list-item [routerLink]="['/banking','fees']">
+          <mat-icon mat-list-icon>monetization_on</mat-icon>
+          <h4 mat-line>Banking Fees</h4>
         </mat-list-item>
 
         <mat-list-item [routerLink]="['/banking','terms-conditions']">
