@@ -25,7 +25,6 @@ import {SoonComponent} from './page/soon/soon.component';
     {path: 'casino',    redirectTo: '/soon', data:{routeName:"Market"}},
     {path: 'banking', loadChildren: ()=> import('./page/banking/banking-home.module').then(m=> m.BankingHomeModule)},
     { path: 'information', loadChildren: () => import('./page/information/information.module').then(m => m.InformationModule) },
-    {path: 'info', loadChildren: ()=> import('./page/info/info-routing.module').then(m=>m.AboutUsRoutingModule)},
     {path: 'vehicle',children:[
       {path: '', redirectTo: 'brands', pathMatch: 'full'},
       {path:'brands', component:VehicleBrandComponent},
