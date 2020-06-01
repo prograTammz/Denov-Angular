@@ -16,12 +16,16 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
+import {MatListModule} from '@angular/material/list';
+import { BankingFeesComponent } from './banking-fees/banking-fees.component';
+
 @NgModule({
   declarations: [
     BankingHomeComponent,
     BankingTermsComponent,
     BankingWiretransferComponent,
-    BankingPlansComponent
+    BankingPlansComponent,
+    BankingFeesComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +39,8 @@ import {MatInputModule} from '@angular/material/input';
     MatTabsModule,
     FormsModule,
     ReactiveFormsModule,
-    BankRoutingModule
+    BankRoutingModule,
+    MatListModule
   ]
 })
 export class BankingHomeModule { }
