@@ -159,10 +159,9 @@
       <mat-divider></mat-divider>
       <mat-list>
         <h3 mat-subheader class="overline">Denov Info</h3>
-        <mat-list-item class="disabled" disableRipple>
+        <mat-list-item [routerLink]="['/information','invest']">
           <mat-icon mat-list-icon>show_chart</mat-icon>
           <h4 mat-line>Invest in Denov</h4>
-          <span class="soon-badge">soon</span>
         </mat-list-item>
 
         <mat-list-item [routerLink]="['/information','career']">
