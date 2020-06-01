@@ -25,26 +25,14 @@ export class NewsComponent implements OnInit {
     this.isAuthorized = true;
     this.isLoading = false;
     this.newsList = [{
+      title:"Cambria Qiao is the new CoFounder",
+      body:"Miloslav Lavrenty has sold 25% of the Denov shares to Cambria. She has recieved the position of CEO as she got declared to be the Co-Founder beside Miloslav. Cambria showed her extreme happiness of join Denov.co and promised to place the best effort to grow Denov.",
+      author:"Denov Admin",
+      date:new Date("2020-06-1")},{
       title:"Denov is coming back",
       body:"Denov is coming back, the development of denov has resumed. Miloslav lavrenty has returned back to business.",
       author:"Denov Admin",
-      date:new Date("2020-05-27")},
-      {title:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ipsum at leo blandit accumsan.",
-      body:"Donec sed libero sed nisi molestie vestibulum non eu enim. Proin nec leo porta, facilisis diam non, scelerisque orci. Vestibulum commodo nec eros nec faucibus. Donec volutpat non nibh sit amet condimentum. Integer rutrum leo eget tempus facilisis. Donec bibendum finibus tortor, sed egestas sem dictum sed. Curabitur elementum bibendum risus, vitae lobortis metus rutrum sed. Praesent vel nisi varius, ultricies mi a, iaculis enim. Nam luctus nulla et cursus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus sapien felis, gravida sed purus fringilla, fermentum imperdiet sem.",
-      author:"Denov Admin",
-      date:new Date("2020-05-27")},
-      {title:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ipsum at leo blandit accumsan.",
-      body:"Donec sed libero sed nisi molestie vestibulum non eu enim. Proin nec leo porta, facilisis diam non, scelerisque orci. Vestibulum commodo nec eros nec faucibus. Donec volutpat non nibh sit amet condimentum. Integer rutrum leo eget tempus facilisis. Donec bibendum finibus tortor, sed egestas sem dictum sed. Curabitur elementum bibendum risus, vitae lobortis metus rutrum sed. Praesent vel nisi varius, ultricies mi a, iaculis enim. Nam luctus nulla et cursus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus sapien felis, gravida sed purus fringilla, fermentum imperdiet sem.",
-      author:"Denov Admin",
-      date:new Date("2020-05-27")},
-      {title:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ipsum at leo blandit accumsan.",
-      body:"Donec sed libero sed nisi molestie vestibulum non eu enim. Proin nec leo porta, facilisis diam non, scelerisque orci. Vestibulum commodo nec eros nec faucibus. Donec volutpat non nibh sit amet condimentum. Integer rutrum leo eget tempus facilisis. Donec bibendum finibus tortor, sed egestas sem dictum sed. Curabitur elementum bibendum risus, vitae lobortis metus rutrum sed. Praesent vel nisi varius, ultricies mi a, iaculis enim. Nam luctus nulla et cursus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus sapien felis, gravida sed purus fringilla, fermentum imperdiet sem.",
-      author:"Denov Admin",
-      date:new Date("2020-05-27")},
-      {title:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel ipsum at leo blandit accumsan.",
-      body:"Donec sed libero sed nisi molestie vestibulum non eu enim. Proin nec leo porta, facilisis diam non, scelerisque orci. Vestibulum commodo nec eros nec faucibus. Donec volutpat non nibh sit amet condimentum. Integer rutrum leo eget tempus facilisis. Donec bibendum finibus tortor, sed egestas sem dictum sed. Curabitur elementum bibendum risus, vitae lobortis metus rutrum sed. Praesent vel nisi varius, ultricies mi a, iaculis enim. Nam luctus nulla et cursus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus sapien felis, gravida sed purus fringilla, fermentum imperdiet sem.",
-      author:"Denov Admin",
-      date:new Date("2020-05-27")}];
+      date:new Date("2020-05-27")},];
    }
 
   ngOnInit() {

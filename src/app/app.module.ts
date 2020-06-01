@@ -46,8 +46,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
 
 //to be moved to news Module
-import { NewsComponent } from './page/news/news.component';
-import { NewsFormComponent } from './components/news-form/news-form.component';
+
 
 //to be moved to priceGuide Module
 import { VehicleBrandComponent } from './page/priceguide/vehicle-brand/vehicle-brand.component';
@@ -64,8 +63,6 @@ import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    NewsComponent,
-    NewsFormComponent,
     VehicleBrandComponent,
     VehicleListComponent,
     VehicleDetailComponent,
@@ -100,6 +97,6 @@ import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents:[LoginComponent,NewsFormComponent],
+  entryComponents:[LoginComponent],
 })
 export class AppModule { }
