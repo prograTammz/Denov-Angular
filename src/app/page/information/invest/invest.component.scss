@@ -1,0 +1,38 @@
+img{
+    margin: 30px auto;
+    display: block;
+    max-height: 400px;
+}
+h1{
+    margin: 10px;
+    text-align: center;
+}
+.price{
+    margin: auto;
+    text-align: center;
+    h3{
+        font-size: 4em;
+        margin-bottom: 10px;
+    }
+    .price-value{
+        font-size: 3.5em;
+        mat-icon{
+            font-size: 40px;
+        }
+    }
+}
+span{
+    display: block;
+    margin: 10px 0;
+}
+.stock-amount{
+    font-size: 2em;
+}
+.green{
+    color: #2ECC71;
+}
+.content{
+    margin: 20px;
+    padding: 15px;
+    background-color: #F0F0F9;
+}
