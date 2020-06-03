@@ -1,19 +1,38 @@
 <section class="page-wrapper">
-    <h2>Type</h2>
+    <h1>Denov Vehicle Price Guide</h1>
+    <p class="body-1">The prices are based on the dealerships and the suggested price are based on the market, we have performed surveys while also monitoring the market,
+        In the future the price guide will be smart with power of the AI and will update the price and able to detect the high demand or trends based on the
+        listed vehicles on Denov MarketPlace.
+    </p>
+    
+    <mat-form-field  appearance="outline" class="col-12">
+        <mat-label>Search</mat-label>
+        <mat-icon matSuffix>search</mat-icon>
+      <input matInput type="text" formControlName="search" >
+    </mat-form-field>
+    <h2>Body Style</h2>
     <div class="row">
         <div class= "col-4 col-es-2" *ngFor="let item of brands">
             <!-- <div class="vehicle-card">
 
             </div> -->
                 <mat-card  [routerLink]="['/vehicle','list']" class="mat-elevation-z3" matRipple>
-                    <img src="../../../assets/imgs/brand.png" alt="">
+                    <img src="../../../assets/imgs/rebla.jpg" alt="">
                     <mat-card-content>
-                        <h6>Bolloka</h6>
+                        <h6>SUV</h6>
                     </mat-card-content>
                 </mat-card>
         </div>
         
     </div>
+    <p class="body-1">
+        The prices on the insurance and upgrades are based on the the garages avergae prices and the insurance company pricing, We are constantly monitoring the market to
+        update our price guide with any updates that happens on the dealerships, registeration, insurance or Upgrades.
+    </p>
+    <p class="body-1">Denov price guide is free and will always be free, it aims to make it easy for Los Santos to check the prices of their favourite vehicle or the vehicle
+        they are willing to buy with ease. Denov price guide also offer ability to download the whole price guide offline so you can check it if you have no connection, or
+        have faster performance on loading the guide instead of loading the pages everytime if you constantly relying on it.
+    </p>
 </section>
 
 
