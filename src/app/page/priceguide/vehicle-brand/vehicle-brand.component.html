@@ -10,21 +10,25 @@
         <mat-icon matSuffix>search</mat-icon>
       <input matInput type="text" formControlName="search" >
     </mat-form-field>
+    
     <h2>Body Style</h2>
     <div class="row">
-        <div class= "col-4 col-es-2" *ngFor="let item of brands">
-            <!-- <div class="vehicle-card">
+            <div class="vehicle-card col-4 col-s-6 col-es-4" *ngFor="let item of brands">
+                
+                <div class="vehicle-card-body ">
+                    <img class="vehicle-card-cover" src="../../../assets/imgs/torrence.webp" alt="">
+                    <div class="vehicle-card-content">
+                        <h6>Sedan</h6>
+                        <p>A wide list of SUV with <strong>120</strong> vehicle in the list</p>
+                        <button mat-stroked-button class="vehicle-card-button" [routerLink]="['/vehicle','list']">Explore <mat-icon>arrow_right_alt</mat-icon></button>
+                    </div>
+                    
+                </div>
 
-            </div> -->
-                <mat-card  [routerLink]="['/vehicle','list']" class="mat-elevation-z3" matRipple>
-                    <img src="../../../assets/imgs/rebla.jpg" alt="">
-                    <mat-card-content>
-                        <h6>SUV</h6>
-                    </mat-card-content>
-                </mat-card>
         </div>
         
     </div>
+    
     <p class="body-1">
         The prices on the insurance and upgrades are based on the the garages avergae prices and the insurance company pricing, We are constantly monitoring the market to
         update our price guide with any updates that happens on the dealerships, registeration, insurance or Upgrades.
@@ -33,6 +37,7 @@
         they are willing to buy with ease. Denov price guide also offer ability to download the whole price guide offline so you can check it if you have no connection, or
         have faster performance on loading the guide instead of loading the pages everytime if you constantly relying on it.
     </p>
+    <button mat-stroked-button class="vehicle-card-button">Download<mat-icon>vertical_align_bottom</mat-icon></button>
 </section>
 
 
