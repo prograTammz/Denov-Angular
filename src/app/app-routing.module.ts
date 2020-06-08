@@ -4,7 +4,6 @@ import {RouterModule, Routes, Router} from '@angular/router';
 
 import {HomeComponent} from './page/home/home.component';
 
-import {VehicleBrandComponent} from './page/priceguide/vehicle-brand/vehicle-brand.component';
 
 import {RegisterComponent} from './page/register/register.component';
 import {NewsComponent} from './page/news/news.component';
@@ -28,8 +27,7 @@ import {SoonComponent} from './page/soon/soon.component';
     { path: 'news', loadChildren: () => import('./page/news/news.module').then(m => m.NewsModule) },
     { path: 'priceguide', loadChildren: () => import('./page/priceguide/priceguide.module').then(m => m.PriceguideModule)},
     {path: 'vehicle',children:[
-      {path: '', redirectTo: 'brands', pathMatch: 'full'},
-      {path:'brands', component:VehicleBrandComponent},
+      {path: '', redirectTo: 'list', pathMatch: 'full'},
       {path:'list', component:VehicleListComponent},
       {path: 'detail', component: VehicleDetailComponent}
     ]},

@@ -46,7 +46,6 @@ import { RegisterComponent } from './page/register/register.component';
 
 
 //to be moved to priceGuide Module
-import { VehicleBrandComponent } from './page/priceguide/vehicle-brand/vehicle-brand.component';
 import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-list.component';
 import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
 
@@ -60,7 +59,6 @@ import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    VehicleBrandComponent,
     VehicleListComponent,
     VehicleDetailComponent,
     SideNavComponent,
