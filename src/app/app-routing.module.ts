@@ -26,6 +26,7 @@ import {SoonComponent} from './page/soon/soon.component';
     {path: 'banking', loadChildren: ()=> import('./page/banking/banking-home.module').then(m=> m.BankingHomeModule)},
     { path: 'information', loadChildren: () => import('./page/information/information.module').then(m => m.InformationModule) },
     { path: 'news', loadChildren: () => import('./page/news/news.module').then(m => m.NewsModule) },
+    { path: 'priceguide', loadChildren: () => import('./page/priceguide/priceguide.module').then(m => m.PriceguideModule)},
     {path: 'vehicle',children:[
       {path: '', redirectTo: 'brands', pathMatch: 'full'},
       {path:'brands', component:VehicleBrandComponent},
