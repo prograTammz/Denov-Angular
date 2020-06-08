@@ -5,21 +5,21 @@
         listed vehicles on Denov MarketPlace.
     </p>
     
-    <!-- <mat-form-field  appearance="outline" class="col-12">
+    <mat-form-field  appearance="outline" class="col-12">
         <mat-label>Search</mat-label>
         <mat-icon matSuffix>search</mat-icon>
       <input matInput type="text" formControlName="search" >
-    </mat-form-field> -->
+    </mat-form-field>
     
     <h2>Body Style</h2>
     <div class="row">
-            <div class="vehicle-card col-4 col-s-6 col-es-4" *ngFor="let vehicleClass of vehicleClassList">
+            <div class="vehicle-card col-4 col-s-6 col-es-4" *ngFor="let item of brands">
                 
                 <div class="vehicle-card-body ">
-                    <img class="vehicle-card-cover" src="../../../assets/imgs/priceguide/{{vehicleClass.imgUrl}}.jpg" alt="{{vehicleClass.imgAlt}}">
+                    <img class="vehicle-card-cover" src="../../../assets/imgs/torrence.webp" alt="">
                     <div class="vehicle-card-content">
-                        <h6>{{vehicleClass.class}}</h6>
-                        <p>A wide list of SUV with <strong>{{vehicleClass.count}}</strong> vehicle in the list</p>
+                        <h6>Sedan</h6>
+                        <p>A wide list of SUV with <strong>120</strong> vehicle in the list</p>
                         <button mat-stroked-button class="vehicle-card-button" [routerLink]="['/vehicle','list']">Explore <mat-icon>arrow_right_alt</mat-icon></button>
                     </div>
                     
@@ -39,3 +39,5 @@
     </p>
     <button mat-stroked-button class="vehicle-card-button">Download<mat-icon>vertical_align_bottom</mat-icon></button>
 </section>
+
+
