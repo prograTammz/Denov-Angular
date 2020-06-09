@@ -70,6 +70,9 @@ export class NavigationComponent implements OnInit {
   goBack():void{
     this.location.back();
   }
+  goHome():void{
+    this.router.navigate(['home']);
+  }
   openLoginDialog(){
     this.loginDialog.openModal();
   }
