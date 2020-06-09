@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {VehicleClass} from '../vehicleclass';
-
+import {FormControl,FormGroup} from '@angular/forms';
+import { Router} from '@angular/router';
 @Component({
   selector: 'app-priceguide-overview',
   templateUrl: './priceguide-overview.component.html',
@@ -9,7 +10,11 @@ import {VehicleClass} from '../vehicleclass';
 export class PriceguideOverviewComponent implements OnInit {
 
   vehicleClassList:VehicleClass[];
-  constructor() { 
+  searchGroupInput= new FormGroup({
+    searchInput: new FormControl('')
+  });
+  searchValue: string;
+  constructor(private router: Router) { 
     this.vehicleClassList=[
       {class:"SUV",count:25, imgUrl:"rebla-gts",imgAlt:"Rebla SUV vehicle"},
       {class:"Motorcycle",count:35, imgUrl:"akuma",imgAlt:"Akuma motorcycle"},
@@ -29,9 +34,13 @@ export class PriceguideOverviewComponent implements OnInit {
       {class:"Offroad",count:18, imgUrl:"mesa",imgAlt:"Mesa offroad vehicle"},
       {class:"Coupe",count:18, imgUrl:"zion-cabrio",imgAlt:"Zion Cabrio coupe vehicle"},
     ]
+    this.searchValue ="";
   }
 
   ngOnInit(): void {
   }
 
+  search(){
+    this.router.navigate(['priceguide','search',this.searchValue.toLowerCase()])
+  }
 }

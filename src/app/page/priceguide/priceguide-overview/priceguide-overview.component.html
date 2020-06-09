@@ -4,12 +4,14 @@
         In the future the price guide will be smart with power of the AI and will update the price and able to detect the high demand or trends based on the
         listed vehicles on Denov MarketPlace.
     </p>
+    <form [formGroup]="searchGroupInput" (ngSubmit)="search()">
+        <mat-form-field  appearance="outline" class="col-12">
+            <mat-label>Search</mat-label>
+            <mat-icon matSuffix>search</mat-icon>
+          <input matInput type="text" formControlName="searchInput" [(ngModel)]="searchValue" >
+        </mat-form-field>
+    </form>
     
-    <!-- <mat-form-field  appearance="outline" class="col-12">
-        <mat-label>Search</mat-label>
-        <mat-icon matSuffix>search</mat-icon>
-      <input matInput type="text" formControlName="search" >
-    </mat-form-field> -->
     
     <h2>Body Style</h2>
     <div class="row">
