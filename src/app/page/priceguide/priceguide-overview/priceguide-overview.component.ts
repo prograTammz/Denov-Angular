@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {VehicleClass} from '../vehicleclass';
+
 @Component({
   selector: 'app-priceguide-overview',
   templateUrl: './priceguide-overview.component.html',
@@ -20,7 +21,7 @@ export class PriceguideOverviewComponent implements OnInit {
       {class:"Compact",count:13, imgUrl:"blista",imgAlt:"Blista compact vehicle"},
       {class:"Muscle",count:39, imgUrl:"dominator-classic",imgAlt:"Dominator Classic Muscle car"},
       {class:"Pick-up",count:11, imgUrl:"sadler",imgAlt:"Sadler vehicle"},
-      {class:"Taxi",count:2, imgUrl:"rebla-gts",imgAlt:"Rebla SUV vehicle"},
+      {class:"Taxi",count:2, imgUrl:"stanier-taxi",imgAlt:"Stanier taxi vehicle"},
       {class:"Aircraft",count:8, imgUrl:"velum",imgAlt:"Velum aircraft vehicle"},
       {class:"Industrial",count:20, imgUrl:"mule",imgAlt:"Mule truck"},
       {class:"Bike",count:6, imgUrl:"bmx",imgAlt:"BMX bike"},
