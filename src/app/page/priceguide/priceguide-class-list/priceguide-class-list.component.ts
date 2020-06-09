@@ -47,7 +47,6 @@ export class PriceguideClassListComponent implements OnInit {
     .valueChanges.subscribe((result:any)=>{
       this.vehicles = result.data && result.data.getClass;
       this.loading = result.loading;
-      console.log(this.vehicles);
       this.error = result.error;
     })
   }
