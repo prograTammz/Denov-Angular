@@ -48,6 +48,7 @@ import { RegisterComponent } from './page/register/register.component';
 //to be moved to priceGuide Module
 import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-list.component';
 import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
+import { GraphQLModule } from './graphql.module';
 
 
 
@@ -85,7 +86,8 @@ import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle
     MatDialogModule,
     MatProgressSpinnerModule,
     MatRippleModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    GraphQLModule
   ],
   providers: [],
   bootstrap: [AppComponent],
