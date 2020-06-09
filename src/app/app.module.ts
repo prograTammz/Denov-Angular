@@ -16,7 +16,6 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
@@ -26,7 +25,6 @@ import {MatRippleModule} from '@angular/material/core'
 
 //angular material modules to be moved to other modules
 import {MatInputModule} from '@angular/material/input';
-import {MatCardModule} from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 
@@ -73,12 +71,10 @@ import { GraphQLModule } from './graphql.module';
     AppRoutingModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatDividerModule,
     MatListModule,
     MatIconModule,
     MatMenuModule,
     MatButtonModule,
-    MatCardModule,
     MatInputModule,
     MatSnackBarModule,
     MatDialogModule,

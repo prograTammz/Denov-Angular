@@ -7,6 +7,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { PriceguideOverviewComponent } from './priceguide-overview/priceguide-overview.component';
 import { PriceguideClassListComponent } from './priceguide-class-list/priceguide-class-list.component';
@@ -18,7 +19,8 @@ import { PriceguideClassListComponent } from './priceguide-class-list/priceguide
     FormsModule,
     MatIconModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatProgressSpinnerModule
   ]
 })
 export class PriceguideModule { }
