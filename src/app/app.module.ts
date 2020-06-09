@@ -40,11 +40,6 @@ import { SoonComponent } from './page/soon/soon.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
 
-//to be moved to news Module
-
-
-//to be moved to priceGuide Module
-import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
 import { GraphQLModule } from './graphql.module';
 
 
@@ -57,7 +52,6 @@ import { GraphQLModule } from './graphql.module';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    VehicleDetailComponent,
     SideNavComponent,
     NotfoundComponent,
     SoonComponent,
