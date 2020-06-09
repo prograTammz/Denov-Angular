@@ -1,0 +1,26 @@
+img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.vehicle-card-body{
+    background-color: #F0F0F9;
+    margin: 10px;
+}
+.vehicle-card-content{
+    padding: 10px;
+}
+.vehicle-card-button{
+    width: 100%;
+    padding: 5px;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+.vehicle-card-cover{
+    height: 200px;
+    object-fit: cover;
+}
+.mat-progress-spinner{
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+}

@@ -20,7 +20,7 @@
                     <div class="vehicle-card-content">
                         <h6>{{vehicleClass.class}}</h6>
                         <p>A wide list of SUV with <strong>{{vehicleClass.count}}</strong> vehicle in the list</p>
-                        <button mat-stroked-button class="vehicle-card-button" [routerLink]="['/vehicle','list']">Explore <mat-icon>arrow_right_alt</mat-icon></button>
+                        <button mat-stroked-button class="vehicle-card-button" [routerLink]="['/priceguide','class',vehicleClass.class | lowercase]">Explore <mat-icon>arrow_right_alt</mat-icon></button>
                     </div>
                     
                 </div>

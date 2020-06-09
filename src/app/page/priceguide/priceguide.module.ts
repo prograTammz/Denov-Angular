@@ -9,8 +9,9 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 
 import { PriceguideOverviewComponent } from './priceguide-overview/priceguide-overview.component';
+import { PriceguideClassListComponent } from './priceguide-class-list/priceguide-class-list.component';
 @NgModule({
-  declarations: [PriceguideOverviewComponent],
+  declarations: [PriceguideOverviewComponent, PriceguideClassListComponent],
   imports: [
     CommonModule,
     PriceguideRoutingModule,
