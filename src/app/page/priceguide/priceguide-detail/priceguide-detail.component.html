@@ -39,11 +39,12 @@
         </div>
 
         <h3>Upgrades pricing</h3>
-        <div class="vehicle-detail-list">
+        <div class="vehicle-detail-list" *ngFor="let upgrade of upgrades">
+            <div>
+                <span class="vehicle-detail-item"><b>{{upgrade.name}}</b> {{upgrade.price | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
+                <mat-divider></mat-divider>
+            </div>
             
-            <span class="vehicle-detail-item"><b>Repair vehicle</b> $500</span>
-            <mat-divider></mat-divider>
-            <span class="vehicle-detail-item"><b>Clean Vehicle</b> $500</span>
         </div>
     </div>
     <p><i>*The Insurance price are subjected to change, and also they aren't 100% accurate we are working to make sure of them. </i></p>
