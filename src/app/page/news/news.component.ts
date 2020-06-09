@@ -25,12 +25,18 @@ export class NewsComponent implements OnInit {
     this.isAuthorized = true;
     this.isLoading = false;
     this.newsList = [
+      {title:"Denov Launches it's price guide with huge increase in share price .",
+      body:`Denov has published it's priceguide service to be the first and the only online digital vehicle price guide in Los Santos, Miloslav Lavrenty celebrated the first offical release of Denov's first
+      feature with the development team and promises a great update buy the beginning of the next week. Denov's share price jumped to 37.68$ with nearly 20% increase this week and nearly 56% increase
+       since last month, due to the high demand on purchase stock shares. Denov's stock price expected to jump near 45$ after the release of the online marketplace and near 60$ at the release of Denov Casino.`,
+      author:"Denov Admin",
+      date:new Date("2020-06-09")},
       {title:"Denov to Launch it's price guide !",
       body:`Denov will publish it's first feature tommorow at 8:00 PM `,
       author:"Denov IT",
       date:new Date("2020-06-08")},
       {title:"Denov has it's first share holder",
-      body:`Miloslav Lavrenty has sold 500 Share to Christoper Lombardi for 30$ each as he wishes stronger relations in the future and more investors to invest in Denov ! `,
+      body:`Miloslav Lavrenty has sold 500 Share to Christoper Lombardi for 30$ each as hewishes stronger relations in the future and more investors to invest in Denov ! `,
       author:"Denov Admin",
       date:new Date("2020-06-08")},
       {title:"Denov is officially the first digital Casino in Los Santos",
