@@ -8,7 +8,6 @@ import {HomeComponent} from './page/home/home.component';
 import {RegisterComponent} from './page/register/register.component';
 import {NewsComponent} from './page/news/news.component';
 
-import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-list.component';
 import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
 
 import {NotfoundComponent} from './page/notfound/notfound.component';
@@ -28,8 +27,7 @@ import {SoonComponent} from './page/soon/soon.component';
     { path: 'priceguide', loadChildren: () => import('./page/priceguide/priceguide.module').then(m => m.PriceguideModule)},
     {path: 'vehicle',children:[
       {path: '', redirectTo: 'list', pathMatch: 'full'},
-      {path:'list', component:VehicleListComponent},
-      {path: 'detail', component: VehicleDetailComponent}
+      {path: 'detail/:id', component: VehicleDetailComponent}
     ]},
     {path: 'register', component: RegisterComponent},
     {path: 'news', component: NewsComponent},

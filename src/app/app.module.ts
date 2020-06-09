@@ -46,7 +46,6 @@ import { RegisterComponent } from './page/register/register.component';
 
 
 //to be moved to priceGuide Module
-import { VehicleListComponent } from './page/priceguide/vehicle-list/vehicle-list.component';
 import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
 import { GraphQLModule } from './graphql.module';
 
@@ -60,7 +59,6 @@ import { GraphQLModule } from './graphql.module';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    VehicleListComponent,
     VehicleDetailComponent,
     SideNavComponent,
     NotfoundComponent,
