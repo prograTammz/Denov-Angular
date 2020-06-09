@@ -1,0 +1,51 @@
+<div *ngIf="loading">
+    <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+  </div>
+  <div *ngIf="error">
+    Error :(
+  </div>
+<img *ngIf="!loading" class="cover-img" src="https://api.denov.co/{{vehicle.img_url}}" alt="{{vehicle.name}} Vehicle image">
+<section *ngIf="!loading" class="page-wrapper">
+    <h1>{{vehicle.name | titlecase}}</h1>
+    <div>
+
+        <h3>Pricing</h3>
+        <div class="vehicle-detail-list">
+            <span class="vehicle-detail-item"><b>Retail price</b> {{vehicle.retail_price | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
+            <mat-divider></mat-divider>
+            <span class="vehicle-detail-item"><b>Registeration cost</b> {{vehicle.registeration_cost | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
+            <mat-divider></mat-divider>
+            <span class="vehicle-detail-item"><b>Total dealership price</b> {{vehicle.dealership_price | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
+            <mat-divider></mat-divider>
+            <span class="vehicle-detail-item"><b>Insurance*</b> {{vehicle.insurance_price | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
+            <mat-divider></mat-divider>
+            <span class="vehicle-detail-item"><b>Suggested Used Price</b>* {{vehicle.minimum_price | currency:'USD':'symbol-narrow':'1.0-0'}} - {{vehicle.maximum_price | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
+
+        </div>
+
+        <h3>Specification</h3>
+        <div class="vehicle-detail-list">
+            
+
+            <span class="vehicle-detail-item"><b>Vehicle class</b> {{vehicle.vehicle_class | titlecase}}</span>
+            <mat-divider></mat-divider>
+            <span class="vehicle-detail-item"><b>Inventory</b> {{vehicle.inventory | titlecase}}</span>
+            <mat-divider></mat-divider>
+            <span class="vehicle-detail-item"><b>Passenger capactiy</b> {{vehicle.passenger_capacity}}</span>
+            <mat-divider></mat-divider>
+            <span class="vehicle-detail-item"><b>Drive train</b> {{vehicle.drive_train | titlecase}}</span>
+            <mat-divider></mat-divider>
+            <span class="vehicle-detail-item"><b>Dealership</b> {{vehicle.dealership | titlecase}}</span>
+        </div>
+
+        <h3>Upgrades pricing</h3>
+        <div class="vehicle-detail-list">
+            
+            <span class="vehicle-detail-item"><b>Repair vehicle</b> $500</span>
+            <mat-divider></mat-divider>
+            <span class="vehicle-detail-item"><b>Clean Vehicle</b> $500</span>
+        </div>
+    </div>
+    <p><i>*The Insurance price are subjected to change, and also they aren't 100% accurate we are working to make sure of them. </i></p>
+    <p><i>*The suggested price is calculated according to 60% - 80% of the vehicle's retail price</i></p>
+</section>

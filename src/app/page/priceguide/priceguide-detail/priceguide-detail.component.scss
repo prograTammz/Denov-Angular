@@ -1,0 +1,26 @@
+img{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+@media only screen and (min-width: 800px) {
+    img{
+        max-height: 500px;
+    }
+}
+mat-list, mat-card{
+    padding: 0
+}
+
+.vehicle-detail-list{
+    background-color: #F0F0F9;
+}
+.vehicle-detail-item{
+    padding: 15px 10px;
+    display: inline-block;
+}
+.mat-progress-spinner{
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+}

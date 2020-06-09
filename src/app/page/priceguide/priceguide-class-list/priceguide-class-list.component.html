@@ -14,8 +14,8 @@
             <img class="vehicle-card-cover" src="https://api.denov.co/{{vehicle.img_url}}" alt="{{vehicle.name}} Vehicle image" loading="lazy">
             <div class="vehicle-card-content">
                 <h6>{{vehicle.name | titlecase}}</h6>
-                <p>You can puchase {{vehicle.name| titlecase}} at <strong>{{vehicle.dealership}}</strong> for <strong>${{vehicle.retail_price}}</strong></p>
-                <button mat-stroked-button class="vehicle-card-button" [routerLink]="['/vehicle','detail',vehicle.id]">More details<mat-icon>arrow_right_alt</mat-icon></button>
+                <p>You can puchase {{vehicle.name| titlecase}} at <strong>{{vehicle.dealership}}</strong> for <strong>{{vehicle.retail_price | currency:'USD':'symbol-narrow':'1.0-0'}}</strong></p>
+                <button mat-stroked-button class="vehicle-card-button" [routerLink]="['/priceguide','detail',vehicle.id]">More details<mat-icon>arrow_right_alt</mat-icon></button>
             </div>
             
         </div>
