@@ -8,7 +8,6 @@ import {HomeComponent} from './page/home/home.component';
 import {RegisterComponent} from './page/register/register.component';
 import {NewsComponent} from './page/news/news.component';
 
-import { VehicleDetailComponent } from './page/priceguide/vehicle-detail/vehicle-detail.component';
 
 import {NotfoundComponent} from './page/notfound/notfound.component';
 import {SoonComponent} from './page/soon/soon.component';
@@ -25,12 +24,7 @@ import {SoonComponent} from './page/soon/soon.component';
     { path: 'information', loadChildren: () => import('./page/information/information.module').then(m => m.InformationModule) },
     { path: 'news', loadChildren: () => import('./page/news/news.module').then(m => m.NewsModule) },
     { path: 'priceguide', loadChildren: () => import('./page/priceguide/priceguide.module').then(m => m.PriceguideModule)},
-    {path: 'vehicle',children:[
-      {path: '', redirectTo: 'list', pathMatch: 'full'},
-      {path: 'detail/:id', component: VehicleDetailComponent}
-    ]},
     {path: 'register', component: RegisterComponent},
-    {path: 'news', component: NewsComponent},
     
     
     {path: '**', component:NotfoundComponent, data:{routeName:"Error"}}
