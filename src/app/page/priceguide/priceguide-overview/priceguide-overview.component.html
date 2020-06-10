@@ -21,7 +21,7 @@
                     <img class="vehicle-card-cover" src="../../../assets/imgs/priceguide/{{vehicleClass.imgUrl}}.jpg" alt="{{vehicleClass.imgAlt}}">
                     <div class="vehicle-card-content">
                         <h6>{{vehicleClass.class}}</h6>
-                        <p>A wide list of SUV with <strong>{{vehicleClass.count}}</strong> vehicle in the list</p>
+                        <p>A wide list of {{vehicleClass.class}}s with <strong>{{vehicleClass.count}}</strong> vehicle in the list</p>
                         <button mat-stroked-button class="vehicle-card-button" [routerLink]="['/priceguide','class',vehicleClass.class | lowercase]">Explore <mat-icon>arrow_right_alt</mat-icon></button>
                     </div>
                     
