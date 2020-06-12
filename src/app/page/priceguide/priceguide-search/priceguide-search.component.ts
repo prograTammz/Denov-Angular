@@ -50,7 +50,7 @@ export class PriceguideSearchComponent implements OnInit {
     this.apollo.watchQuery({
       query: SearchQuery,
       variables:{
-        keyword: this.searchValue
+        keyword: this.searchValue.toLowerCase()
     }
     })
     .valueChanges.subscribe((result:any)=>{
