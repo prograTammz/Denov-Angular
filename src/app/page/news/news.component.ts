@@ -25,6 +25,30 @@ export class NewsComponent implements OnInit {
     this.isAuthorized = true;
     this.isLoading = false;
     this.newsList = [
+      {title:"Denov's CEO Miloslav Lavrenty had a murder attempt",
+      body:`Miloslav Lavrenty was robbed by armed gang in his office in 12th of June and the sensitive information of Denov operations and stack holders was stole,
+       Miloslav Lavrenty was moved to France for check ups and recovery for a week, Denov has witnessed a steep lose in it's share price as the operations are postponed.`,
+      author:"Denov Admin",
+      date:new Date("2020-06-11")},
+      {title:"Denov publishes it's development plan with the timeline",
+      body:`Denov.co's development team has met Miloslav Lavrenty, Denov's CEO, and show cased it's development plan with the timeline as the following:
+      1- Denov account + Imporved Denov news + New Denov Stocks system: 19th of June.
+      2- Denov Casino + Denov Fee system+ Denov Earning system for investors and management: 26th of June.
+      3- Denov Marketplace + Denov Stock managment system: 3rd July.
+      4- Denov Banking + Denov Contracts: 20th July.
+      5- Improvments and updates till 13th August.
+      Next development plan will be announced with new Denov digital Products, the development teams promises performance improvment and vehicle price calculator by the end of this week`,
+      author:"Denov Development",
+      date:new Date("2020-06-11")},
+      {title:"Denov reached 500+ Views from 200+ visitors",
+      body:`Denov.co started to catch it's visitors as tens of visitors visits it daily to check it's price guide. Miloslav Lavrenty expresses his contentment with these news as he promises 
+      to hit a thousand visitor by the end of the month `,
+      author:"Denov Admin",
+      date:new Date("2020-06-11")},
+      {title:"Denov started to purchase it's trucking flee",
+      body:`Denov.co started to purchase it's flee for it's Denov Trucking service, The target is 20 van, 15 mid-size trucks, 5 large sized trucks with investments of $2.5Million  `,
+      author:"Denov Admin",
+      date:new Date("2020-06-10")},
       {title:"Denov Launches it's price guide with huge increase in share price .",
       body:`Denov has published it's priceguide service to be the first and the only online digital vehicle price guide in Los Santos, Miloslav Lavrenty celebrated the first offical release of Denov's first
       feature with the development team and promises a great update buy the beginning of the next week. Denov's share price jumped to 37.68$ with nearly 20% increase this week and nearly 56% increase
