@@ -4,7 +4,10 @@
   <div *ngIf="error">
     Error :(
   </div>
-<img *ngIf="!loading" class="cover-img" src="https://api.denov.co/{{vehicle.img_url}}" alt="{{vehicle.name}} Vehicle image">
+<picture *ngIf="!loading" class="cover-img">
+    <source srcset="https://api.denov.co/{{vehicle.img_url}}.webp" type="image/webp">
+    <img class="heading-img" src="https://api.denov.co/{{vehicle.img_url}}.jpg" alt="{{vehicle.name}} Vehicle image">
+  </picture>
 <section *ngIf="!loading" class="page-wrapper">
     <h1>{{vehicle.name | titlecase}}</h1>
     <div>
@@ -51,7 +54,7 @@
             <td mat-cell *matCellDef="let row"> {{row.cost | currency:'USD':'symbol-narrow':'1.0-0'}} </td>
             </ng-container>
             <ng-container matColumnDef="accumulativeCost">
-                <th mat-header-cell *matHeaderCellDef>Accumulative cost</th>
+                <th mat-header-cell *matHeaderCellDef>Accum. cost</th>
                 <td mat-cell *matCellDef="let row"> {{row.accumulativeCost | currency:'USD':'symbol-narrow':'1.0-0'}} </td>
                 </ng-container>
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

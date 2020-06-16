@@ -18,7 +18,10 @@
             <div class="vehicle-card col-4 col-s-6 col-es-4" *ngFor="let vehicleClass of vehicleClassList">
                 
                 <div class="vehicle-card-body ">
-                    <img class="vehicle-card-cover" src="../../../assets/imgs/priceguide/{{vehicleClass.imgUrl}}.jpg" alt="{{vehicleClass.imgAlt}}">
+                    <picture class="vehicle-card-cover" loading="lazy">
+                        <source srcset="https://api.denov.co//priceguide/{{vehicleClass.class | lowercase}}/{{vehicleClass.imgUrl}}.webp" type="image/webp">
+                        <img class="heading-img" src="https://api.denov.co//priceguide/{{vehicleClass.class | lowercase}}/{{vehicleClass.imgUrl}}.jpg" alt="{{vehicleClass.imgAlt}}">
+                      </picture>
                     <div class="vehicle-card-content">
                         <h6>{{vehicleClass.class}}</h6>
                         <p>A wide list of {{vehicleClass.class}}s with <strong>{{vehicleClass.count}}</strong> vehicle in the list</p>

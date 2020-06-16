@@ -16,7 +16,7 @@ export class PriceguideOverviewComponent implements OnInit {
   searchValue: string;
   constructor(private router: Router) { 
     this.vehicleClassList=[
-      {class:"SUV",count:25, imgUrl:"rebla-gts",imgAlt:"Rebla SUV vehicle"},
+      {class:"SUV",count:25, imgUrl:"hellhound",imgAlt:"Hellhound SUV vehicle"},
       {class:"Motorcycle",count:35, imgUrl:"akuma",imgAlt:"Akuma motorcycle"},
       {class:"Sedan",count:42, imgUrl:"taranis",imgAlt:"Taranis Sedan vehicle"},
       {class:"Sport",count:43, imgUrl:"zr-380-mod",imgAlt:"Zr-380-mod Coupe vehicle"},
