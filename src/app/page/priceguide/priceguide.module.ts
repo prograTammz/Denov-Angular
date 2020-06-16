@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatTableModule} from '@angular/material/table';
 
 import { PriceguideOverviewComponent } from './priceguide-overview/priceguide-overview.component';
 import { PriceguideClassListComponent } from './priceguide-class-list/priceguide-class-list.component';
@@ -27,7 +28,8 @@ import { PriceguideSearchComponent } from './priceguide-search/priceguide-search
     MatInputModule,
     MatProgressSpinnerModule,
     MatDividerModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatTableModule
   ]
 })
 export class PriceguideModule { }

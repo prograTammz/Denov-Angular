@@ -13,15 +13,17 @@
         <div class="vehicle-detail-list">
             <span class="vehicle-detail-item"><b>Retail price</b> {{vehicle.retail_price | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
             <mat-divider></mat-divider>
-            <span class="vehicle-detail-item"><b>Registeration cost</b> {{vehicle.registeration_cost | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
+            <span class="vehicle-detail-item"><b>Registeration cost</b>* {{vehicle.registeration_cost | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
             <mat-divider></mat-divider>
-            <span class="vehicle-detail-item"><b>Total dealership price</b> {{vehicle.dealership_price | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
+            <span class="vehicle-detail-item"><b>Total dealership price</b>* {{vehicle.dealership_price | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
             <mat-divider></mat-divider>
-            <span class="vehicle-detail-item"><b>Insurance*</b> {{vehicle.insurance_price | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
+            <span class="vehicle-detail-item"><b>Insurance</b> {{vehicle.insurance_price | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
             <mat-divider></mat-divider>
-            <span class="vehicle-detail-item"><b>Suggested Used Price</b>* {{vehicle.minimum_price | currency:'USD':'symbol-narrow':'1.0-0'}} - {{vehicle.maximum_price | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
-
+            <span class="vehicle-detail-item"><b>Suggested Used Stock Price</b>* {{vehicle.minimum_price | currency:'USD':'symbol-narrow':'1.0-0'}} - {{vehicle.maximum_price | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
         </div>
+        <p><i>**The dealerships currently sell the vehicles for it's retail price, the registeration cost is free.</i></p>
+        <p><i>*The suggested price is calculated according to 60% - 80% of the vehicle's retail price</i></p>
+        
 
         <h3>Specification</h3>
         <div class="vehicle-detail-list">
@@ -38,7 +40,28 @@
             <span class="vehicle-detail-item"><b>Dealership</b> {{vehicle.dealership | titlecase}}</span>
         </div>
 
+        <h3>Maintenance Schedule</h3>
+        <table mat-table #table [dataSource]="maintance">
+            <ng-container matColumnDef="mileage">
+            <th mat-header-cell *matHeaderCellDef>Mileage</th>
+            <td mat-cell *matCellDef="let row"> {{row.mileage}} </td>
+            </ng-container>
+            <ng-container matColumnDef="cost">
+            <th mat-header-cell *matHeaderCellDef>Cost</th>
+            <td mat-cell *matCellDef="let row"> {{row.cost | currency:'USD':'symbol-narrow':'1.0-0'}} </td>
+            </ng-container>
+            <ng-container matColumnDef="accumulativeCost">
+                <th mat-header-cell *matHeaderCellDef>Accumulative cost</th>
+                <td mat-cell *matCellDef="let row"> {{row.accumulativeCost | currency:'USD':'symbol-narrow':'1.0-0'}} </td>
+                </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
         <h3>Upgrades pricing</h3>
+        <p><i>Denov highly recommends upgrading your vehicle at <b>Auto Exotics</b> and special thanks to <b>Zack McAdams</b> and <b>Hiroshi Nakazato</b> for their help
+            in collecting the upgrades prices.
+        </i></p>
         <div class="vehicle-detail-list" *ngFor="let upgrade of upgrades">
             <div>
                 <span class="vehicle-detail-item"><b>{{upgrade.name}}</b> {{upgrade.price | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
@@ -47,6 +70,4 @@
             
         </div>
     </div>
-    <p><i>*The Insurance price are subjected to change, and also they aren't 100% accurate we are working to make sure of them. </i></p>
-    <p><i>*The suggested price is calculated according to 60% - 80% of the vehicle's retail price</i></p>
 </section>

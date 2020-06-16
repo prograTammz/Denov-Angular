@@ -24,3 +24,14 @@ mat-list, mat-card{
     top: calc(50% - 50px);
     left: calc(50% - 50px);
 }
+table{
+    width: 100%;
+    background-color: #F0F0F9;
+}
+th{
+    font-weight: 600;
+    font-size: 18px;
+}
+td{
+    font-size: 16px;
+}
