@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { InformationRoutingModule } from './information-routing.module';
 import { CareerComponent } from './career/career.component';
 
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
@@ -19,7 +20,8 @@ import { ContactusComponent } from './contactus/contactus.component';
     InformationRoutingModule,
     MatListModule,
     MatIconModule,
-    MatDividerModule
+    MatDividerModule,
+    NgxChartsModule
   ]
 })
 export class InformationModule { }

@@ -16,12 +16,27 @@
         their dividens through <strong>Denov Bank</strong> as the investors are required to own an <strong>active</strong> Denov banking account, to insure there isn't any money laundry
         involved with Denov operations.
     </p>
-    <div class="col-6 col-s-12 col-es-4 price">
+    <div class="col-12 price">
         <h3>Today's price</h3>
-        <span class="price-value red">$ 32.47 <mat-icon class="red">trending_down</mat-icon></span>
         <span class="stock-amount">100,000 shares</span>
     </div>
-    <h3>
+    <div class="row">
+        <div class="col-12 chart">
+            <ngx-charts-line-chart 
+                [results]="priceList" 
+                [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel"
+                [xAxis]="xAxis"
+                [yAxis]="yAxis"
+                [xAxisLabel]="xAxisLabel"
+                [yAxisLabel]="yAxisLabel"
+                [scheme]="colorScheme"
+            >
+            </ngx-charts-line-chart>
+        </div>
+    </div>
+    
+    <h3 class="col-12">
         Share owners:
     </h3>
 
@@ -31,7 +46,7 @@
                 <h5>Miloslav Lavrenty</h5>
                 <span class="subtitle-1">94,000 Share</span>
                 <span class="subtitle-1">Founder, Chairman</span>
-                <span class="subtitle-1">Owns: 94.0%, worth: 3.0Million</span>
+                <span class="subtitle-1">Owns: 94.0%</span>
             </div>
         </div>
         <div class="col-4 col-s-6 col-es-4">
@@ -39,7 +54,7 @@
                 <h5>Aaron Reyes</h5>
                 <span class="subtitle-1">3000 Share</span>
                 <span class="subtitle-1">Share Holder</span>
-                <span class="subtitle-1">Owns: 3%, worth: $97,410</span>
+                <span class="subtitle-1">Owns: 3%</span>
             </div>
         </div>
         <div class="col-4 col-s-6 col-es-4">
@@ -47,7 +62,7 @@
                 <h5>Travis Williams</h5>
                 <span class="subtitle-1">1250 Share</span>
                 <span class="subtitle-1">Share Holder</span>
-                <span class="subtitle-1">Owns: 1.25%, worth: $40,587</span>
+                <span class="subtitle-1">Owns: 1.25%</span>
             </div>
         </div>
         <div class="col-4 col-s-6 col-es-4">
@@ -55,7 +70,7 @@
                 <h5>Dontavious Bullord</h5>
                 <span class="subtitle-1">1250 Share</span>
                 <span class="subtitle-1">Share Holder</span>
-                <span class="subtitle-1">Owns: 1.25%, worth: $40,587</span>
+                <span class="subtitle-1">Owns: 1.25%</span>
             </div>
         </div>
         <div class="col-4 col-s-6 col-es-4">
@@ -63,7 +78,7 @@
                 <h5>Christopher Lombardi</h5>
                 <span class="subtitle-1">500 Share</span>
                 <span class="subtitle-1">Share Holder</span>
-                <span class="subtitle-1">Owns: 0.5%, worth: $16,235</span>
+                <span class="subtitle-1">Owns: 0.5%</span>
             </div>
         </div>
     </div>
