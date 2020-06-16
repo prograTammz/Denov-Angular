@@ -25,18 +25,52 @@ export class NewsComponent implements OnInit {
     this.isAuthorized = true;
     this.isLoading = false;
     this.newsList = [
+      {title:"Denov's Capital hit One Million dollars for the first time",
+    body:`Miloslav Lavrenty expresses hish contentment with reaching 1 million in capital and hopes to reach 2.5M in capital by the end of July and the company value raises to 6 Million dollars.`,
+    author:"Denov Admin",
+    date:new Date("2020-06-16")},
+    {title:"A leading trucking company is suspected for the murderer attempt of Denov's CEO",
+    body:`Miloslav Lavrenty's murderer attempt investigation has lead that a Leading trucking company is suspected for the incident. Miloslav has pointed that if the future evidence that will
+     be collected proved the current claims, it will declare a business war.`,
+    author:"Denov Admin",
+    date:new Date("2020-06-15")},
+    {title:"Denov has contracted with secruity company: Gruppe 6",
+    body:`Miloslav Lavrenty has contracted with Gruppe 6 to increase the secruity of Denov, and has installed CCTV and alarms around the office to prevent what has happened last itme`,
+    author:"Denov Admin",
+    date:new Date("2020-06-15")},
+      {title:"150+ views from 80+ visitor in a single day",
+      body:`Denov has gained 150+ views yesterday from many visitors, 50+ was new visitors that hasn't being using Denov, the last updates has increase the awarness of Denov as a brand
+      and build up it's reputation with maintenance schedule they price calculator is expected to increase the engagment of the users around Los santos`,
+      author:"Denov Admin",
+      date:new Date("2020-06-14")},
+      {title:"Denov has made $200,000 of profits in a single day !",
+      body:`Denov has earned $200,000 in profits yesterday and built up a reputation in car dealership which will give give a huge boost when the online
+      marketplace takes place.`,
+      author:"Denov Admin",
+      date:new Date("2020-06-13")},
+      {title:"New updates by Denov",
+      body:`Denov has improved current features and more updates will be comming into them too soon.
+      <ul>
+        <li>Stocks prices are now displayed in charts as removed the worth of each stockholder.</li>
+        <li>News are now displayed in better form.</li>
+        <li>Added Maintenance Schedule pricing to priceguide and fixes to the insurance pricing</li>
+      </ul>`,
+      author:"Denov Admin",
+      date:new Date("2020-06-13")},
       {title:"Denov's CEO Miloslav Lavrenty had a murder attempt",
       body:`Miloslav Lavrenty was robbed by armed gang in his office in 12th of June and the sensitive information of Denov operations and stack holders was stole,
        Miloslav Lavrenty was moved to France for check ups and recovery for a week, Denov has witnessed a steep lose in it's share price as the operations are postponed.`,
       author:"Denov Admin",
-      date:new Date("2020-06-11")},
+      date:new Date("2020-06-12")},
       {title:"Denov publishes it's development plan with the timeline",
       body:`Denov.co's development team has met Miloslav Lavrenty, Denov's CEO, and show cased it's development plan with the timeline as the following:
-      1- Denov account + Imporved Denov news + New Denov Stocks system: 19th of June.
-      2- Denov Casino + Denov Fee system+ Denov Earning system for investors and management: 26th of June.
-      3- Denov Marketplace + Denov Stock managment system: 3rd July.
-      4- Denov Banking + Denov Contracts: 20th July.
-      5- Improvments and updates till 13th August.
+      <ol>
+      <li>Denov account + Imporved Denov news + New Denov Stocks system: 19th of June.</li>
+      <li>Denov Casino + Denov Fee system+ Denov Earning system for investors and management: 26th of June.</li>
+      <li>Denov Marketplace + Denov Stock managment system: 3rd July.</li>
+      <li>Denov Banking + Denov Contracts: 20th July.</li>
+      <li>Improvments and updates till 13th August.</li>
+      </ol>
       Next development plan will be announced with new Denov digital Products, the development teams promises performance improvment and vehicle price calculator by the end of this week`,
       author:"Denov Development",
       date:new Date("2020-06-11")},
