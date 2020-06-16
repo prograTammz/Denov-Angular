@@ -1,11 +1,11 @@
 <div class="header">
   <div class="news-header">
     <h2>Latest news</h2>
-    <button mat-stroked-button class="button" (click)="refresh()">Refresh <mat-icon>refresh</mat-icon></button>
+    <!-- <button mat-stroked-button class="button" (click)="refresh()">Refresh <mat-icon>refresh</mat-icon></button> -->
   </div>
-  <mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+  <!-- <mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
     (page)="onPaginateChange($event)">
-  </mat-paginator>
+  </mat-paginator> -->
 </div>
 
 <section class="page-wrapper">
@@ -15,8 +15,7 @@
         <mat-card-title>{{item.title}}</mat-card-title>
         <mat-card-subtitle>By: {{item.author}} at: {{date(item.date)}}</mat-card-subtitle>
       </mat-card-header>
-      <mat-card-content>
-        {{item.body}}
+      <mat-card-content [innerHtml]= "item.body">
       </mat-card-content>
     </mat-card>
 
