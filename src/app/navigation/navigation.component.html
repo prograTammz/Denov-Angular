@@ -4,11 +4,11 @@
       <button mat-icon-button *ngIf="this.router.url != '/home' && !isDesktop"(click)="goBack()" aria-label="Return Back"><mat-icon role="button">keyboard_backspace</mat-icon></button>
       
     <span class="brand-logo" (click)="goHome()">Denov</span>
-    <!-- <button mat-icon-button [matMenuTriggerFor]="menu" class="action-button" aria-label="myDenov account menu">
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="action-button" aria-label="myDenov account menu">
             <mat-icon>account_circle</mat-icon>
-    </button> -->
+    </button>
     
-    <!-- <mat-menu #menu="matMenu">
+    <mat-menu #menu="matMenu">
             <button mat-menu-item *ngIf="!isAuth" [routerLink]="['/register']">
               <mat-icon>person_add</mat-icon>
               <span>Sign Up</span>
@@ -26,7 +26,7 @@
               <span>Log Out</span>
             </button>
             
-          </mat-menu> -->
+          </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>
 
