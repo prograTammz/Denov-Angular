@@ -4,7 +4,7 @@ import { MatIconRegistry } from '@angular/material/icon';
 import {DomSanitizer} from '@angular/platform-browser';
 
 import {Location} from '@angular/common';
-import { NavigationEnd,Router,ActivatedRoute,RouterEvent } from '@angular/router';
+import { Event,NavigationCancel,NavigationEnd,NavigationError,NavigationStart,Router,ActivatedRoute,RouterEvent } from '@angular/router';
 import {MatSidenav} from '@angular/material/sidenav';
 
 import { Observable, fromEventPattern } from 'rxjs';
@@ -25,12 +25,13 @@ import {SideNavService} from '../components/side-nav/side-nav.service';
 export class NavigationComponent implements OnInit {
 
   
-  private navigationEnd: Observable<RouterEvent>;
+  private navigationStart: Observable<RouterEvent>;
   public title: string;
   public isAuth;
   public isInstalled: boolean;
   public viewWidth: number;
   public isDesktop: boolean;
+  public isLoading: boolean;
   constructor(private sideNav:SideNavService, private auth: AuthService,private loginDialog: LoginDialogService,private sanitizer: DomSanitizer,private matIconRegistry: MatIconRegistry,public router: Router,private location: Location, private activatedRoute: ActivatedRoute) {
     this.matIconRegistry.addSvgIcon('menu', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/menu.svg'));
     this.matIconRegistry.addSvgIcon('close', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/close.svg'));
@@ -38,20 +39,36 @@ export class NavigationComponent implements OnInit {
     this.isAuth = false;
     this.viewWidth = window.innerWidth;
     this.isDesktop = false;
+    this.isLoading = false;
+
+    
   }
 
   ngOnInit() {
     
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd && !this.isDesktop) {
-        this.sideNav.close();
-      }
-    });
     this.checkSideNav();
     this.auth.isAuth.subscribe(auth=>{
       this.isAuth = auth;
     });
-    
+    this.router.events.subscribe((event: Event) => {
+      switch (true) {
+        case (event instanceof NavigationStart && !this.isDesktop): {
+          this.sideNav.close();
+          this.isLoading = true;
+          break;
+        }
+
+        case event instanceof NavigationEnd:
+        case event instanceof NavigationCancel:
+        case event instanceof NavigationError: {
+          this.isLoading = false;
+          break;
+        }
+        default: {
+          break;
+        }
+      }
+    });
   }
 
   onResize(event) {

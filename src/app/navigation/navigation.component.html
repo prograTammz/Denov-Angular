@@ -31,7 +31,7 @@
 </mat-toolbar>
 
 
-<app-side-nav><ng-content></ng-content></app-side-nav>
+<app-side-nav><ng-content *ngIf="!isLoading"></ng-content><loading-spinner *ngIf="isLoading"></loading-spinner></app-side-nav>
 
 <nav id="bottomNavBar" role="navigation">
     <button mat-button routerLink="banking" class="bottomNavElm"><mat-icon>account_balance</mat-icon><div>Bank</div></button>

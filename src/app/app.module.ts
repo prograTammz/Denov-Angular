@@ -40,6 +40,8 @@ import { SoonComponent } from './page/soon/soon.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
 
+import{LoadingSpinnerModule} from './components/loading-spinner/loading-spinner.module';
+
 import { GraphQLModule } from './graphql.module';
 
 
@@ -75,7 +77,8 @@ import { GraphQLModule } from './graphql.module';
     MatProgressSpinnerModule,
     MatRippleModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    GraphQLModule
+    GraphQLModule,
+    LoadingSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent],
