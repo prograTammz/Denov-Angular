@@ -8,6 +8,9 @@ import { LoadingSpinnerComponent } from './loading-spinner.component';
   declarations: [LoadingSpinnerComponent],
   imports: [
     CommonModule
+  ],
+  exports:[
+    LoadingSpinnerComponent
   ]
 })
 export class LoadingSpinnerModule { }
