@@ -18,7 +18,10 @@
         <div class="row">
             <div class="vehicle-card col-4 col-s-6 col-es-4" *ngFor="let vehicle of vehicles">
                 <div class="vehicle-card-body ">
-                    <img class="vehicle-card-cover" src="https://api.denov.co/{{vehicle.img_url}}" alt="{{vehicle.name}} Vehicle image" loading="lazy">
+                    <picture class="vehicle-card-cover" loading="lazy">
+                        <source srcset="https://api.denov.co/{{vehicle.img_url}}.webp" type="image/webp">
+                        <img class="heading-img" src="https://api.denov.co/{{vehicle.img_url}}.jpg" alt="{{vehicle.name}} Vehicle image">
+                      </picture>
                     <div class="vehicle-card-content">
                         <h6>{{vehicle.name | titlecase}}</h6>
                         <p>You can puchase {{vehicle.name| titlecase}} at <strong>{{vehicle.dealership}}</strong> for <strong>{{vehicle.retail_price | currency:'USD':'symbol-narrow':'1.0-0'}}</strong></p>
