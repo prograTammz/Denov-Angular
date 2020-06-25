@@ -65,7 +65,8 @@ export class PriceguideDetailComponent implements OnInit {
       {name:"Wheels", price:1000},
       {name:"Liverys", price:3500},
       {name:"Plate", price:5000},
-      {name:"Turbo", price:10000},
+      {name:"Turbo non-sport", price:9000},
+      {name:"Turbo sport", price:11000},
       {name:"Xeon", price:400},
       {name:"Window Tint", price:200},
 
