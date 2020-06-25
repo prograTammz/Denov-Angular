@@ -44,6 +44,7 @@ export class PriceguideSearchComponent implements OnInit {
   }
   search(){
     this.location.replaceState("priceguide/search/"+this.searchValue);
+    this.loading = true;
     this.searchQuery();
   }
   searchQuery(){
