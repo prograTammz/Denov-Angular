@@ -342,3 +342,8 @@ h6{
     background-color: #F0F0F9 ;
     box-shadow: none;
 }
+loading-spinner{
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+}
