@@ -7,7 +7,7 @@
     <form [formGroup]="searchGroupInput" (ngSubmit)="search()">
         <mat-form-field  appearance="outline" class="col-12">
             <mat-label>Search</mat-label>
-            <mat-icon matSuffix>search</mat-icon>
+            <mat-icon matSuffix (click)="search()">search</mat-icon>
           <input matInput type="text" formControlName="searchInput" [(ngModel)]="searchValue" >
         </mat-form-field>
     </form>
