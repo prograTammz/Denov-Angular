@@ -1,11 +1,11 @@
 <section class="page-wrapper">
     <h1>Denov Vehicle Price Guide</h1>
-    <p class="body-1">The prices are based on the dealerships and the suggested price are based on the market, we have performed surveys while also monitoring the market,
+    <p  class="body-1">The prices are based on the dealerships and the suggested price are based on the market, we have performed surveys while also monitoring the market,
         In the future the price guide will be smart with power of the AI and will update the price and able to detect the high demand or trends based on the
         listed vehicles on Denov MarketPlace.
     </p>
-    <form [formGroup]="searchGroupInput" (ngSubmit)="search()">
-        <mat-form-field  appearance="outline" class="col-12">
+    <form #target [formGroup]="searchGroupInput" (ngSubmit)="search()">
+        <mat-form-field  appearance="outline" class="col-12" (click)="scroll(target)">
             <mat-label>Search</mat-label>
             <mat-icon matSuffix (click)="search()">search</mat-icon>
           <input matInput type="text" formControlName="searchInput" [(ngModel)]="searchValue" >

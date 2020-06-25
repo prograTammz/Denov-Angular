@@ -1,10 +1,10 @@
 <section class="page-wrapper">
-    <h2>Search</h2>
-    <form [formGroup]="searchGroupInput" (ngSubmit)="search()">
-        <mat-form-field  appearance="outline" class="col-12">
+    <h2 >Search</h2>
+    <form #target [formGroup]="searchGroupInput" (ngSubmit)="search()" >
+        <mat-form-field   appearance="outline" class="col-12" (click)="scroll(target)">
             <mat-label>Search</mat-label>
             <mat-icon matSuffix (click)="search()">search</mat-icon>
-          <input matInput type="text" formControlName="searchInput" [(ngModel)]="searchValue" >
+          <input  matInput type="text" formControlName="searchInput" [(ngModel)]="searchValue" >
         </mat-form-field>
     </form>
     <div *ngIf="loading">

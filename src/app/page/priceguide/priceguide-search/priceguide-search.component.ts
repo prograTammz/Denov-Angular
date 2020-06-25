@@ -59,4 +59,7 @@ export class PriceguideSearchComponent implements OnInit {
       this.error = result.error;
     })
   }
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior:"smooth", block: 'center' });
+  }
 }
