@@ -16,6 +16,9 @@ import { PriceguideOverviewComponent } from './priceguide-overview/priceguide-ov
 import { PriceguideClassListComponent } from './priceguide-class-list/priceguide-class-list.component';
 import { PriceguideDetailComponent } from './priceguide-detail/priceguide-detail.component';
 import { PriceguideSearchComponent } from './priceguide-search/priceguide-search.component';
+
+import {LoadingSpinnerModule} from '../../components/loading-spinner/loading-spinner.module';
+
 @NgModule({
   declarations: [PriceguideOverviewComponent, PriceguideClassListComponent, PriceguideDetailComponent, PriceguideSearchComponent],
   imports: [
@@ -29,7 +32,8 @@ import { PriceguideSearchComponent } from './priceguide-search/priceguide-search
     MatProgressSpinnerModule,
     MatDividerModule,
     MatFormFieldModule,
-    MatTableModule
+    MatTableModule,
+    LoadingSpinnerModule
   ]
 })
 export class PriceguideModule { }

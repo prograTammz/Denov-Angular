@@ -8,8 +8,8 @@
         </mat-form-field>
     </form>
     <div *ngIf="loading">
-        <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
-      </div>
+        <loading-spinner></loading-spinner>
+    </div>
       <div *ngIf="error">
         Error :(
       </div>
