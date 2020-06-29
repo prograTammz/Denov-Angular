@@ -5,6 +5,7 @@ import { PriceguideOverviewComponent } from './priceguide-overview/priceguide-ov
 import { PriceguideClassListComponent } from './priceguide-class-list/priceguide-class-list.component';
 import { PriceguideDetailComponent } from './priceguide-detail/priceguide-detail.component';
 import { PriceguideSearchComponent } from './priceguide-search/priceguide-search.component';
+import { PriceguideCalculatorComponent } from './priceguide-calculator/priceguide-calculator.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path:'overview', component: PriceguideOverviewComponent },
   {path:'class/:class',component: PriceguideClassListComponent},
   {path:'detail/:id',component: PriceguideDetailComponent},
-  {path:'search/:keyword', component: PriceguideSearchComponent}
+  {path:'search/:keyword', component: PriceguideSearchComponent},
+  {path:'calculator', component: PriceguideCalculatorComponent}
 ];
 
 @NgModule({
