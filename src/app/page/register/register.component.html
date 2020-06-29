@@ -1,37 +1,40 @@
-<h2>Register</h2>
-<form [formGroup]="register" (ngSubmit)="onSubmit()" class="row">
-    <mat-form-field appearance="outline" class="col-6 col-es-4">
-        <mat-label>First Name</mat-label>
-        <input matInput type="text" placeholder="First name" formControlName="firstName" required>
-        <mat-error>Only Characters allowed</mat-error>
-    </mat-form-field>
-    <mat-form-field appearance="outline" class="col-6 col-es-4"> 
-        <mat-label>Last Name</mat-label>
-        <input matInput type="text" placeholder="Second Name" formControlName="lastName" required>
-        <mat-error>Only Characters allowed</mat-error>
-    </mat-form-field>
-    <mat-form-field appearance="outline" class="col-6 col-es-4"> 
-        <mat-label>Email</mat-label>
-        <input matInput type="email" placeholder="Your Email" formControlName="email" required >
-        <mat-error>Wrong Format</mat-error>
-    </mat-form-field>
-    <mat-form-field appearance="outline" class="col-12" >
-        <mat-label>Password</mat-label>
-        <input matInput type="password" placeholder="password" formControlName="password" required>
-        <mat-error *ngIf="passError">Your password is not identical</mat-error>
-    </mat-form-field>
-    <mat-form-field appearance="outline" class="col-12">
-        <mat-label>Retype password</mat-label>
-        <input matInput type="password" placeholder="Retype password" formControlName="repassword" required>
-        <mat-error *ngIf="passError">Your password is not identical</mat-error>
-    </mat-form-field>
-    <mat-form-field appearance="outline" class="col-12">
-            <mat-label>Phone number</mat-label>
-            <input matInput type="tel" placeholder="Phone number" formControlName="phoneNumber" required>
-            <mat-error>Characters not allowed.</mat-error>
+<section class="page-wrapper">
+    <h2>Register</h2>
+    <form [formGroup]="register" (ngSubmit)="onSubmit()" class="row">
+        <mat-form-field appearance="outline" class="col-6 col-es-4">
+            <mat-label>First Name</mat-label>
+            <input matInput type="text" placeholder="First name" formControlName="firstName" required>
+            <mat-error>Only Characters allowed</mat-error>
         </mat-form-field>
-    <button mat-flat-button class="col-4 col-es-4" type="submit" [disabled]="!register.valid">
-        <span *ngIf="!isLoading">Register</span>
-        <mat-progress-spinner diameter= "20" mode="indeterminate" *ngIf="isLoading"></mat-progress-spinner>
-    </button>
-</form>
+        <mat-form-field appearance="outline" class="col-6 col-es-4"> 
+            <mat-label>Last Name</mat-label>
+            <input matInput type="text" placeholder="Second Name" formControlName="lastName" required>
+            <mat-error>Only Characters allowed</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="col-6 col-es-4"> 
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="Your Email" formControlName="email" required >
+            <mat-error>Wrong Format</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="col-12" >
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="password" formControlName="password" required>
+            <mat-error *ngIf="passError">Your password is not identical</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="col-12">
+            <mat-label>Retype password</mat-label>
+            <input matInput type="password" placeholder="Retype password" formControlName="repassword" required>
+            <mat-error *ngIf="passError">Your password is not identical</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="col-12">
+                <mat-label>Phone number</mat-label>
+                <input matInput type="tel" placeholder="Phone number" formControlName="phoneNumber" required>
+                <mat-error>Characters not allowed.</mat-error>
+            </mat-form-field>
+        <button mat-flat-button class="col-4 col-es-4" type="submit" [disabled]="!register.valid">
+            <span *ngIf="!isLoading">Register</span>
+            <mat-progress-spinner diameter= "20" mode="indeterminate" *ngIf="isLoading"></mat-progress-spinner>
+        </button>
+    </form>
+</section>
+
