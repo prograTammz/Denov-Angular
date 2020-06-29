@@ -1,0 +1,66 @@
+
+<section class="page-wrapper">
+    <h2>Vehicle Price Calculator</h2>
+    <img class="col-es-4 col-8" src="assets/illustrations/undraw_calculator.svg" loading="lazy" alt="Price guide calculator">
+    <p>
+        Denov vehicle price calculator helps you to know the value of the car your own, or the car you are willing to purchase as second hand. Denov vehicle price calculator
+        also helps you to know the value of the vehicle you are willing to purcahse new with installing all the possible upgrades on it. Denov also helps you to be able to 
+        determine the value of used cars with keeping the insurance and mileage in mind, and also will warn you if the vehicle you are willing to purchase has nearby service.
+    </p>
+    <form [formGroup]="priceCalculator">
+    <h6 class="subtitle-1">Vehicle</h6>
+    <mat-form-field appearance="outline"  class="col-12">
+        <input type="text"
+            placeholder="Pick a vehicle"
+            aria-label="Vehicle"
+            matInput
+            required
+            formControlName="vehicleName"
+            [matAutocomplete]="auto">
+        <mat-label>Vehicle</mat-label>
+        <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let vehicle of filteredVehicles | async" [value]="vehicle">
+            {{vehicle}}
+        </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+    <h6 class="subtitle-1">Mileage</h6>
+    <mat-form-field appearance="outline" class="col-12">
+        <mat-label>Mileage</mat-label>
+        <input matInput type="number" placeholder="Mileage" formControlName="mileage"  required>
+        <mat-error>Characters not allowed.</mat-error>
+    </mat-form-field>
+    <h3>Performance upgrades</h3>
+    <section class="upgrades">
+        
+    
+        <h6 class="subtitle-1">Engine</h6>
+        <mat-slider class="col-12" thumbLabel color="primary" formControlName="engine" tickInterval="1" min="0"max="4"></mat-slider>
+        <h6 class="subtitle-1">Suspension</h6>
+        <mat-slider class="col-12" thumbLabel color="primary" formControlName="suspension" tickInterval="1" min="0"max="4"></mat-slider>
+        <h6 class="subtitle-1">Transmission</h6>
+        <mat-slider class="col-12" thumbLabel color="primary" formControlName="transmission" tickInterval="1" min="0"max="4"></mat-slider>
+        <h6 class="subtitle-1">Brakes</h6>
+        <mat-slider class="col-12" thumbLabel color="primary" formControlName="brakes" tickInterval="1" min="0"max="4"></mat-slider>
+        
+        <div class="row">
+            <h6 class="subtitle-1 col-12">Others</h6>
+            <div class="col-6">
+                <mat-checkbox  color="primary" formControlName="neon">Neon</mat-checkbox>
+            </div>
+            <div class="col-6">
+                <mat-checkbox color="primary"formControlName="turbo">Turbo</mat-checkbox>
+            </div>
+        </div>
+    </section>
+    <h3>Secuirty upgrades</h3>
+    <section class="upgrades">
+        <h6 class="subtitle-1">Lock</h6>
+        <mat-slider class="col-12" thumbLabel color="primary" formControlName="locks" tickInterval="1" min="0"max="2"></mat-slider>
+        <h6 class="subtitle-1">Alarm</h6>
+        <mat-slider class="col-12" thumbLabel color="primary" formControlName="alarm" tickInterval="1" min="0"max="2"></mat-slider>
+        <h6 class="subtitle-1">Anti-thief</h6>
+        <mat-slider class="col-12" thumbLabel color="primary" formControlName="antiThief" tickInterval="1" min="0"max="4"></mat-slider>
+    </section>
+    </form>
+</section>
