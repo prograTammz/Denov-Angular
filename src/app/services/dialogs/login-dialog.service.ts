@@ -13,7 +13,7 @@ export class LoginDialogService {
    }
   openModal(): void{
     const dialogRef = this.dialog.open(LoginComponent,{
-      width:'80%'
+      width:'400px'
     });
     dialogRef.afterClosed().subscribe(result => {
     });
