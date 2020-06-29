@@ -58,11 +58,15 @@
         <h3 mat-subheader class="overline">Denov Market</h3>
         <mat-list-item [routerLink]="['/priceguide']">
           <mat-icon mat-list-icon>book</mat-icon>
-          <h4 mat-line>Vehicle price guide</h4>
+          <h4 mat-line>Vehicle Price Guide</h4>
         </mat-list-item>
-        <mat-list-item [routerLink]="['/dealership']">
+        <mat-list-item [routerLink]="['priceguide','calculator']">
+          <mat-icon mat-list-icon>calculate</mat-icon>
+          <h4 mat-line>Vehicle Price Calculator</h4>
+        </mat-list-item>
+        <mat-list-item [routerLink]="['priceguide','dealership']">
           <mat-icon mat-list-icon>drive_eta</mat-icon>
-          <h4 mat-line>Vehicle dealership</h4>
+          <h4 mat-line>Vehicle Dealership</h4>
         </mat-list-item>
         <mat-list-item class="disabled" disableRipple>
           <mat-icon mat-list-icon>
