@@ -4,18 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import {Apollo} from 'apollo-angular';
 import gql from 'graphql-tag';
 import { Location } from '@angular/common';
-const SearchQuery = gql`
-  query($keyword: String!){
-    searchName(name:$keyword){
-      name
-      img_url
-      id
-      retail_price
-      dealership
-    }
-  }
-`;
-
+import { PriceguideService } from 'src/app/services/api/priceguide.service';
 
 @Component({
   selector: 'app-priceguide-search',
@@ -31,7 +20,7 @@ export class PriceguideSearchComponent implements OnInit {
   vehicles:any[];
   loading = true;
   error: any;
-  constructor(private location: Location,private activatedroute:ActivatedRoute,private apollo: Apollo) {
+  constructor(private PriceGuideService: PriceguideService,private location: Location,private activatedroute:ActivatedRoute,private apollo: Apollo) {
     this.searchValue ="";
     this.vehicles = [];
    }
@@ -48,13 +37,7 @@ export class PriceguideSearchComponent implements OnInit {
     this.searchQuery();
   }
   searchQuery(){
-    this.apollo.watchQuery({
-      query: SearchQuery,
-      variables:{
-        keyword: this.searchValue.toLowerCase()
-    }
-    })
-    .valueChanges.subscribe((result:any)=>{
+    this.PriceGuideService.searchQuery(this.searchValue).subscribe((result:any)=>{
       this.vehicles = result.data.searchName;
       this.loading = result.loading;
       this.error = result.error;
