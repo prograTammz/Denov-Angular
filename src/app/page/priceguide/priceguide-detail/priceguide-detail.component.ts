@@ -1,28 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {Apollo} from 'apollo-angular';
-import gql from 'graphql-tag';
 
-const GetVehicle = gql`
-  query($id: Float!){
-    getVehicle(id:$id){
-      id
-      name
-      img_url
-      retail_price
-      registeration_cost
-      dealership_price
-      insurance_price
-      minimum_price
-      maximum_price
-      inventory
-      passenger_capacity
-      drive_train
-      vehicle_class
-      dealership
-    }
-  }
-`;
+import {PriceguideService} from '../../../services/api/priceguide.service'
+
 @Component({
   selector: 'app-priceguide-detail',
   templateUrl: './priceguide-detail.component.html',
@@ -36,7 +16,7 @@ export class PriceguideDetailComponent implements OnInit {
   upgrades: any[];
   maintance: any[];
   displayedColumns: string[] = ['mileage','cost','accumulativeCost'];
-  constructor(private apollo: Apollo,private activatedroute:ActivatedRoute) { 
+  constructor(private PriceGuideService: PriceguideService,private activatedroute:ActivatedRoute) { 
     this.upgrades=[
       {name:"Lock 2nd Generation",price:3000},
       {name:"Lock 3rd Generation", price:6000},
@@ -77,13 +57,8 @@ export class PriceguideDetailComponent implements OnInit {
     this.activatedroute.paramMap.subscribe(params=>{
       this.id = parseInt(params.get('id'));
     })
-    this.apollo.watchQuery({
-      query: GetVehicle,
-      variables:{
-        id: this.id
-    }
-    })
-    .valueChanges.subscribe((result:any)=>{
+    this.PriceGuideService.getVehicleDetail(this.id)
+    .subscribe((result:any)=>{
       this.vehicle = result.data.getVehicle;
       this.createTableDate();
       this.loading = result.loading;
