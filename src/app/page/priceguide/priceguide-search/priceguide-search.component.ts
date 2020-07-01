@@ -20,9 +20,11 @@ export class PriceguideSearchComponent implements OnInit {
   vehicles:any[];
   loading = true;
   error: any;
+  noresult: boolean;
   constructor(private PriceGuideService: PriceguideService,private location: Location,private activatedroute:ActivatedRoute,private apollo: Apollo) {
     this.searchValue ="";
     this.vehicles = [];
+    this.noresult = true;
    }
 
   ngOnInit(): void {
@@ -39,8 +41,10 @@ export class PriceguideSearchComponent implements OnInit {
   searchQuery(){
     this.PriceGuideService.searchQuery(this.searchValue).subscribe((result:any)=>{
       this.vehicles = result.data.searchName;
+      
       this.loading = result.loading;
       this.error = result.error;
+      this.noresult = this.vehicles.length ==0 ? true: false;
     })
   }
   scroll(el: HTMLElement) {
