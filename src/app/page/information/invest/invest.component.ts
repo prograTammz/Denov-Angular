@@ -38,6 +38,21 @@ export class InvestComponent implements OnInit {
         {"name":"14/6", "value":34.82},
         {"name":"15/6", "value":37.41},
         {"name":"16/6", "value":39.12},
+        {"name":"17/6", "value":40.03},
+        {"name":"18/6", "value":41.34},
+        {"name":"19/6", "value":42.09},
+        {"name":"20/6", "value":44.62},
+        {"name":"21/6", "value":47.21},
+        {"name":"22/6", "value":50.57},
+        {"name":"23/6", "value":52.01},
+        {"name":"24/6", "value":56.12},
+        {"name":"25/6", "value":58.78},
+        {"name":"26/6", "value":56.22},
+        {"name":"27/6", "value":59.32},
+        {"name":"28/6", "value":60.11},
+        {"name":"29/6", "value":60.58},
+        {"name":"30/6", "value":59.77},
+        {"name":"1/7", "value":61.33},
       ]
     }];
    }
