@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FadeAnimation} from './route-animation';
 import { Router, NavigationEnd } from '@angular/router';
+import { UpdateService } from './services/update.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,7 +10,7 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title = 'Denov.co';
-  constructor(public router: Router){
+  constructor(public router: Router, private updateService: UpdateService){
 
   }
   ngOnInit(){
