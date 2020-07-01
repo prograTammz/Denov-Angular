@@ -44,6 +44,8 @@ export class PriceguideOverviewComponent implements OnInit {
     this.router.navigate(['priceguide','search',this.searchValue.toLowerCase()])
   }
   scroll(el: HTMLElement) {
-    el.scrollIntoView({behavior:"smooth", block: 'center' });
+    const yOffset = -64;
+    const y = el.getBoundingClientRect().top + window.pageYOffset +yOffset;
+    window.scrollTo({behavior:"smooth",top: y});
   }
 }

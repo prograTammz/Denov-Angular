@@ -61,6 +61,8 @@ export class PriceguideSearchComponent implements OnInit {
     })
   }
   scroll(el: HTMLElement) {
-    el.scrollIntoView({behavior:"smooth", block: 'center' });
+    const yOffset = -56;
+    const y = el.getBoundingClientRect().top + window.pageYOffset +yOffset;
+    window.scrollTo({behavior:"smooth",top: y});
   }
 }
