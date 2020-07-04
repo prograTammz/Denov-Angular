@@ -1,5 +1,8 @@
-
-<section class="page-wrapper">
+<div *ngIf="loading">
+    <loading-spinner></loading-spinner>
+</div>
+<section class="page-wrapper" *ngIf="!loading">
+    
     <h2>Vehicle Price Calculator</h2>
     <img class="col-es-4 col-8" src="assets/illustrations/undraw_calculator.svg" loading="lazy" alt="Price guide calculator">
     <p>
@@ -19,8 +22,13 @@
             [matAutocomplete]="auto">
         <mat-label>Vehicle</mat-label>
         <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let vehicle of filteredVehicles | async" [value]="vehicle">
-            {{vehicle}}
+        <mat-option *ngFor="let vehicle of filteredVehicles | async" [value]="vehicle.name">
+            <!-- <picture class="vehicle-option-img" loading="lazy" height="25">
+                <source srcset="https://api.denov.co/{{vehicle.img_url}}.webp" type="image/webp">
+                <img class="heading-img" src="https://api.denov.co/{{vehicle.img_url}}.jpg" alt="{{vehicle.name}} Vehicle image">
+            </picture> -->
+            <span>{{vehicle.name| titlecase}}</span> |
+            <small>Price: {{vehicle.retail_price | currency:'USD':'symbol-narrow':'1.0-0'}}</small>
         </mat-option>
         </mat-autocomplete>
     </mat-form-field>
@@ -31,7 +39,7 @@
         <mat-error>Characters not allowed.</mat-error>
     </mat-form-field>
     <h3>Performance upgrades</h3>
-    <section class="upgrades">
+
         
     
         <h6 class="subtitle-1">Engine</h6>
@@ -52,15 +60,14 @@
                 <mat-checkbox color="primary"formControlName="turbo">Turbo</mat-checkbox>
             </div>
         </div>
-    </section>
     <h3>Secuirty upgrades</h3>
-    <section class="upgrades">
+
         <h6 class="subtitle-1">Lock</h6>
-        <mat-slider class="col-12" thumbLabel color="primary" formControlName="locks" tickInterval="1" min="0"max="2"></mat-slider>
+        <mat-slider class="col-12" thumbLabel color="primary" formControlName="locks" tickInterval="1" min="1"max="3"></mat-slider>
         <h6 class="subtitle-1">Alarm</h6>
-        <mat-slider class="col-12" thumbLabel color="primary" formControlName="alarm" tickInterval="1" min="0"max="2"></mat-slider>
+        <mat-slider class="col-12" thumbLabel color="primary" formControlName="alarm" tickInterval="1" min="1"max="3"></mat-slider>
         <h6 class="subtitle-1">Anti-thief</h6>
         <mat-slider class="col-12" thumbLabel color="primary" formControlName="antiThief" tickInterval="1" min="0"max="4"></mat-slider>
-    </section>
+        <button mat-stroked-button class="calculator-button" (click)="calculate()">Register</button>
     </form>
 </section>

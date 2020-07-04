@@ -33,6 +33,18 @@ const SearchQuery = gql`
     }
   }
 `;
+const VehicleListQuery = gql`
+  query{
+    listVehicles{
+      name
+      img_url
+      retail_price
+      registeration_cost
+      dealership_price
+      insurance_price
+    }
+  }
+`;
 const upgrades = [
   {name:"Lock 2nd Generation",price:3000},
   {name:"Lock 3rd Generation", price:6000},
@@ -91,6 +103,11 @@ export class PriceguideService {
     }
     })
     .valueChanges
+  }
+  getVehicleList(){
+    return this.apollo.watchQuery({
+      query: VehicleListQuery
+    }).valueChanges
   }
   getUpgrades(){
     return upgrades;
