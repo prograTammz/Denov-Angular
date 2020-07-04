@@ -25,6 +25,25 @@ export class NewsComponent implements OnInit {
     this.isAuthorized = true;
     this.isLoading = false;
     this.newsList = [
+    {title:"Saber Elmawardy offered more 900,000 shares",
+    body:`Saber Elmawardy has decided to to evaluate Denov at 3$ per share after offering more 900,000 share and giving 50,000 share to the Denov's CEO, Saladin Siregar.`,
+    author:"Denov Admin",
+    date:new Date("2020-07-4")},
+    {title:"Negotiations to sell Miloslav's share to an Egyptian Business man.",
+    body:`The disappearnce of Miloslav Lavrenty will force the Denov to sell his shares to an Egyptian Business man, Saber ElMawardy, The current situation of the negotiations is
+    that the Development team will more into the Smart Village in Cairo,Egypt, and won;t be moved to Los Santos due to the unsettled situation for tech companies in Los Santos.`,
+    author:"Denov Admin",
+    date:new Date("2020-07-4")},
+      {title:"Denov's huge loss in market value",
+    body:`Denov has lost it's control in LS. Denov will look into the current solutions until a new Owner is able to overtake the shares of Denov.
+     Denov development team will try to push updates as fast as possible to be able to maintain the current traffic, while also try to contact a company to handle
+     the marketing and advertising operations. Denov development team will try to offer the new service for free as it's unable to recieve any payments from LS to Paris, where the development team is located.`,
+    author:"Denov Admin",
+    date:new Date("2020-07-3")},
+    {title:"Denov' lost it's dealership",
+    body:`Denov has lost it's dealership after the disappearance of it's Founder & Chairman Miloslav Lavrenty, and Denov's CEO Saladin Siregar lost the control in it's office.`,
+    author:"Denov Admin",
+    date:new Date("2020-07-1")},
       {title:"Denov's Capital hit One Million dollars for the first time",
     body:`Miloslav Lavrenty expresses hish contentment with reaching 1 million in capital and hopes to reach 2.5M in capital by the end of July and the company value raises to 6 Million dollars.`,
     author:"Denov Admin",
