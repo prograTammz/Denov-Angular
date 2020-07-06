@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl,Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map,startWith } from 'rxjs/operators';
 import { PriceguideService } from 'src/app/services/api/priceguide.service';
@@ -14,6 +14,7 @@ export class PriceguideCalculatorComponent implements OnInit {
   priceCalculator: FormGroup = new FormGroup({
     vehicleName:  new FormControl(''),
     mileage:  new FormControl(''),
+    insurance: new FormControl('',Validators.compose([Validators.max(30), Validators.min(0)])),
     engine: new FormControl(''),
     turbo: new FormControl(''),
     suspension: new FormControl(''),
@@ -28,7 +29,12 @@ export class PriceguideCalculatorComponent implements OnInit {
   loading = true;
   error: any;
   filteredVehicles: Observable<string[]>;
-  constructor(private PriceGuideService: PriceguideService) { }
+  isCalculated: boolean;
+  vehicleNewPrice: number = 0;
+  vehicleUsedPrice: number = 0;
+  constructor(private PriceGuideService: PriceguideService) {
+    this.isCalculated = false;
+   }
 
   ngOnInit(): void {
     this.getVehicleList();
@@ -53,31 +59,70 @@ export class PriceguideCalculatorComponent implements OnInit {
   }
   private calculate(){
     let vehicle:any = this.vehicles.filter(option => option.name.toLowerCase().includes(this.priceCalculator.controls.vehicleName.value));
+
     let priceUsed = 0;
     let priceNew = 0;
-    priceNew += vehicle[0].dealership_price;
-    priceUsed += vehicle[0].retail_price * (this.priceCalculator.controls.mileage.value/150)/100;
-    let engineValue = this.priceCalculator.controls.engine.value/4 * 8000;
-    let suspensionValue = this.priceCalculator.controls.engine.value/4 * 5000;
-    let transmissionValue = this.priceCalculator.controls.engine.value/4 * 2000;
-    let brakesValue = this.priceCalculator.controls.engine.value/4 * 5000;
 
+    this.error = this.findInvalidControls ? "": "Missing value";
+
+    if(this.error){
+      console.log(this.error)
+    }else{
+      this.isCalculated = true;
+    }
+    priceNew += vehicle[0].dealership_price;
+    priceNew += this.performancePrice();
+    priceNew += this.security();
+
+    priceUsed += vehicle[0].retail_price * (100-(this.priceCalculator.controls.mileage.value/150))/100;
+    priceUsed += this.performancePriceValue();
+    priceUsed += this.security();
+    priceUsed += this.insuranceValue(vehicle[0].insurance_price);
+
+    this.vehicleNewPrice = priceNew;
+    this.vehicleUsedPrice = priceUsed;
+  }
+
+  private performancePrice(): number{
     let engine = this.priceCalculator.controls.engine.value >= 1? 8000: 0;
     let suspension = this.priceCalculator.controls.engine.value >= 1? 5000: 0;
     let transmission = this.priceCalculator.controls.engine.value >= 1? 2000: 0;
     let brakes = this.priceCalculator.controls.engine.value >= 1? 5000: 0;
-
-    let lock = this.priceCalculator.controls.locks.value *3000 - 3000;
-    let alarm = this.priceCalculator.controls.alarm.value *5000 - 5000;
-    let antiThief = this.priceCalculator.controls.antiThief.value *5000;
-    
     let neon = this.priceCalculator.controls.neon.value ? 7000 : 0;
     let turbo = this.priceCalculator.controls.turbo.value ? 10000 : 0;
-    console.log(engineValue + suspensionValue + transmissionValue + brakesValue);
-    console.log(engine + suspension + transmission + brakes);
-    console.log(lock + alarm + antiThief);
-    console.log(neon + turbo);
-
-    console.log(priceUsed);
+    return engine + suspension + transmission + brakes +neon + turbo;
   }
+
+  private performancePriceValue(): number{
+    let engineValue = this.priceCalculator.controls.engine.value/4 * 8000;
+    let suspensionValue = this.priceCalculator.controls.engine.value/4 * 5000;
+    let transmissionValue = this.priceCalculator.controls.engine.value/4 * 2000;
+    let brakesValue = this.priceCalculator.controls.engine.value/4 * 5000;
+    let neon = this.priceCalculator.controls.neon.value ? 7000 : 0;
+    let turbo = this.priceCalculator.controls.turbo.value ? 10000 : 0;
+    return engineValue + suspensionValue + transmissionValue + brakesValue + neon + turbo;
+  }
+
+  private security(): number{
+    let lock = this.priceCalculator.controls.locks.value >= 2? this.priceCalculator.controls.locks.value *3000 - 3000:0;
+    let alarm = this.priceCalculator.controls.alarm.value >= 2? this.priceCalculator.controls.alarm.value * 5000 -5000:0;
+    let antiThief = this.priceCalculator.controls.antiThief.value >= 1? this.priceCalculator.controls.antiThief.value * 5000:0;
+    return lock+alarm+ antiThief;
+  }
+
+  private insuranceValue(price: number): number{
+    let insurancePrice = price * this.priceCalculator.controls.insurance.value/30;
+    return insurancePrice;
+  }
+
+  private findInvalidControls() {
+    const invalid = [];
+    const controls = this.priceCalculator.controls;
+    for (const name in controls) {
+        if (controls[name].invalid) {
+            invalid.push(name);
+        }
+    }
+    return invalid;
+}
 }
