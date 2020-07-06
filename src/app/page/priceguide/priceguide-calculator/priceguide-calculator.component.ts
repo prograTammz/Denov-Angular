@@ -131,7 +131,7 @@ export class PriceguideCalculatorComponent implements OnInit {
     window.scrollTo({behavior:"smooth",top: y});
   }
   private scrollForm(el: HTMLElement) {
-    const yOffset = -90;
+    const yOffset = -95;
     const y = el.getBoundingClientRect().top + window.pageYOffset +yOffset;
     window.scrollTo({behavior:"smooth",top: y});
   }
