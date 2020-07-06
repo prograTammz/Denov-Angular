@@ -342,8 +342,16 @@ h6{
     background-color: #F0F0F9 ;
     box-shadow: none;
 }
+
+@media only screen and (max-width: 600px) {
+    loading-spinner{
+        position: absolute;
+        top: calc(50% - 45px);
+        left: calc(50% - 45px);
+    }
+}
 loading-spinner{
     position: absolute;
-    top: calc(50% - 50px);
-    left: calc(50% - 50px);
+    top: calc(50% - 101px);
+    left: calc(50% - 45px);
 }
