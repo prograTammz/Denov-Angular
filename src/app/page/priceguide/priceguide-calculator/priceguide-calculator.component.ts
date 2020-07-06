@@ -124,5 +124,15 @@ export class PriceguideCalculatorComponent implements OnInit {
         }
     }
     return invalid;
-}
+  }
+  private scroll(el: HTMLElement) {
+    const yOffset = -64;
+    const y = el.getBoundingClientRect().top + window.pageYOffset +yOffset;
+    window.scrollTo({behavior:"smooth",top: y});
+  }
+  private scrollForm(el: HTMLElement) {
+    const yOffset = -90;
+    const y = el.getBoundingClientRect().top + window.pageYOffset +yOffset;
+    window.scrollTo({behavior:"smooth",top: y});
+  }
 }
