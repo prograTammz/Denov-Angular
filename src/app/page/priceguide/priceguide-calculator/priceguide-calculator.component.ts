@@ -72,17 +72,24 @@ export class PriceguideCalculatorComponent implements OnInit {
     }
     priceNew += vehicle[0].dealership_price;
     priceNew += this.performancePrice();
-    priceNew += this.security();
+    priceNew += this.securityValue();
 
-    priceUsed += vehicle[0].retail_price * (100-(this.priceCalculator.controls.mileage.value/150))/100;
-    priceUsed += this.performancePriceValue();
-    priceUsed += this.security();
-    priceUsed += this.insuranceValue(vehicle[0].insurance_price);
+    priceUsed += vehicle[0].retail_price;
+    priceUsed *= this.getUsedPercentage(this.priceCalculator.controls.insurance.value,this.priceCalculator.controls.mileage.value)/100;
 
     this.vehicleNewPrice = priceNew;
     this.vehicleUsedPrice = priceUsed;
   }
 
+  private getUsedPercentage(insuranceDays: number, mileage: number):number{
+    let performancePercentage = this.performancePriceValue()/37000 *10;
+    let securityPercentage = this.securityValue()/36000 *10;
+    let mileagePercentage = 100 - mileage/150;
+    let insurancePercentage = insuranceDays/30 * 5;
+
+    let totalPercentage = performancePercentage + securityPercentage + mileagePercentage + insurancePercentage;
+    return totalPercentage;
+  }
   private performancePrice(): number{
     let engine = this.priceCalculator.controls.engine.value >= 1? 8000: 0;
     let suspension = this.priceCalculator.controls.engine.value >= 1? 5000: 0;
@@ -103,16 +110,11 @@ export class PriceguideCalculatorComponent implements OnInit {
     return engineValue + suspensionValue + transmissionValue + brakesValue + neon + turbo;
   }
 
-  private security(): number{
+  private securityValue(): number{
     let lock = this.priceCalculator.controls.locks.value >= 2? this.priceCalculator.controls.locks.value *3000 - 3000:0;
     let alarm = this.priceCalculator.controls.alarm.value >= 2? this.priceCalculator.controls.alarm.value * 5000 -5000:0;
     let antiThief = this.priceCalculator.controls.antiThief.value >= 1? this.priceCalculator.controls.antiThief.value * 5000:0;
     return lock+alarm+ antiThief;
-  }
-
-  private insuranceValue(price: number): number{
-    let insurancePrice = price * this.priceCalculator.controls.insurance.value/30;
-    return insurancePrice;
   }
 
   private findInvalidControls() {
