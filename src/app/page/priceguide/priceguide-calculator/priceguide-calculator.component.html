@@ -13,9 +13,11 @@
     <div #price>
         <div class="row" *ngIf="isCalculated">
             <h3  class="price-head">Vehicle's Price</h3>
-            <span class="col-12 price"><b><i>Value of new:</i></b> {{vehicleNewPrice | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
-            <span class="col-12 price"><b><i>Value of used*:</i></b> {{vehicleUsedPrice | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
-            <p><i>The price of used vehicle shouldn't surpass the 120% of retail price, if it's fully upgraded with low milage and freshly insured.</i></p>
+            <span class="col-12 price"><b><i>Price of new:</i></b> {{vehicleNewPrice | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
+            <span class="col-12 price"><b><i>Value of used*:</i></b> ~{{vehicleUsedPrice | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
+            <p><i>*The price of used vehicle shouldn't surpass the 125% of retail price, if it's fully upgraded with low milage and freshly insured. 
+                The pricing is based on experience with purchasing and selling over 500 Used vehicles.</i></p>
+            <p><i>*Denov recommends purchasing a used vehicle with less than 500 miles rather than purchasing a brand new one. to minimize the loss of the value.</i></p>
         </div>
     </div>
     
