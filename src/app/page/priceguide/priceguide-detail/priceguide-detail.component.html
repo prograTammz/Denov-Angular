@@ -24,6 +24,10 @@
             <mat-divider></mat-divider>
             <span class="vehicle-detail-item"><b>Suggested Used Stock Price</b>* {{vehicle.minimum_price | currency:'USD':'symbol-narrow':'1.0-0'}} - {{vehicle.maximum_price | currency:'USD':'symbol-narrow':'1.0-0'}}</span>
         </div>
+        <p>Still confused about the vehicle price ? check Denov's priceguide calculator which can help you to determine the value of the new and used vehicle, including the 
+            after-market parts.
+        </p>
+        <button mat-stroked-button class="vehicle-card-button" [routerLink]="['/priceguide','calculator']">Priceguide Calculator <mat-icon>calculate</mat-icon></button>
         <p><i>**The dealerships currently sell the vehicles for it's retail price, the registeration cost is free.</i></p>
         <p><i>*The suggested price is calculated according to 60% - 80% of the vehicle's retail price</i></p>
         
