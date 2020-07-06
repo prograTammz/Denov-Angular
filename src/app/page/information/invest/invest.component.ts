@@ -23,6 +23,8 @@ export class InvestComponent implements OnInit {
       "name":"Stock price",
       "series":[
         {"name":"4/7", "value":3.00},
+        {"name":"5/7", "value":2.97},
+        {"name":"6/7", "value":3.07},
       ]
     }];
    }
