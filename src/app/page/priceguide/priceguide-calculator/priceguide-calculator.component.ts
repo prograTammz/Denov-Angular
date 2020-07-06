@@ -30,10 +30,12 @@ export class PriceguideCalculatorComponent implements OnInit {
   error: any;
   filteredVehicles: Observable<string[]>;
   isCalculated: boolean;
+  serviceNear: boolean;
   vehicleNewPrice: number = 0;
   vehicleUsedPrice: number = 0;
   constructor(private PriceGuideService: PriceguideService) {
     this.isCalculated = false;
+    this.serviceNear = false;
    }
 
   ngOnInit(): void {
@@ -77,8 +79,19 @@ export class PriceguideCalculatorComponent implements OnInit {
     priceUsed += vehicle[0].retail_price;
     priceUsed *= this.getUsedPercentage(this.priceCalculator.controls.insurance.value,this.priceCalculator.controls.mileage.value)/100;
 
+    this.nearbyService(this.priceCalculator.controls.mileage.value);
+
     this.vehicleNewPrice = priceNew;
     this.vehicleUsedPrice = priceUsed;
+  }
+
+  private nearbyService(mileage: number){
+    let mileageLeft = mileage % 1500;
+    if(mileageLeft >= 1250){
+      this.serviceNear = true;
+    }else{
+      this.serviceNear = false;
+    }
   }
 
   private getUsedPercentage(insuranceDays: number, mileage: number):number{
